@@ -1,0 +1,7 @@
+/// @description screen shake alarm
+
+
+
+
+
+

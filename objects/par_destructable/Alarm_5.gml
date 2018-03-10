@@ -1,0 +1,1 @@
+/// @description white flash timer

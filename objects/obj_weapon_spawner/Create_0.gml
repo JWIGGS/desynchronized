@@ -1,0 +1,2 @@
+/// @description vars
+weapon = "";

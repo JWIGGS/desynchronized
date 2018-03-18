@@ -67,6 +67,9 @@ array_fill_1d(global.playerEndHealth,global.roundTotal*global.players,0);
 global.weaponPlayerSpawn[0] = "pistol";
 array_fill_1d(global.weaponPlayerSpawn,global.roundTotal,"pistol");
 
+global.hairPlayerSpawn[0] = 0;
+array_fill_1d(global.hairPlayerSpawn,global.roundTotal,0);
+
 //weapon spawn positions
 global.weaponSpawnX[0] = -1;
 global.weaponSpawnY[0] = -1;

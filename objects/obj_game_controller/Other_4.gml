@@ -43,6 +43,21 @@ if(room != rm_game_setup){
 			}
 		}
 		
+		//random hair
+		for(var i = 0; i<global.roundTotal; i++){
+				
+				global.hairPlayerSpawn[i] = irandom_range(0,sprite_get_number(spr_player_hair)-1);
+				
+				for(var j = 0; j<i; j++){
+					
+					while(global.hairPlayerSpawn[i] = global.hairPlayerSpawn[j]){
+						global.hairPlayerSpawn[i] = irandom_range(0,sprite_get_number(spr_player_hair)-1);
+					}
+					
+				}
+		
+			}
+		
 		
 		with(obj_background_controller){
 			//start track
@@ -111,8 +126,6 @@ if(room != rm_game_setup){
 		}
 	}
 
-	//pixelize - off for now
-	//surface_resize(application_surface,surface_get_width(application_surface)/2,surface_get_height(application_surface)/2);
 
 }
 

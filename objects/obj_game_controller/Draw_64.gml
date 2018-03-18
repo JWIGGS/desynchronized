@@ -76,7 +76,7 @@ if(overviewRound){
 			//draw round status
 			draw_text_formatting(c_white,fa_center,fa_middle,font_64);
 			draw_set_alpha(alarm[0]/60);
-			draw_text_transformed(displayWidth/2,(displayHeight/2)-64,"replay round",alarm[0]/120,alarm[0]/120,0);
+			draw_text_transformed(displayWidth/2,(displayHeight/2)-64,"overview",alarm[0]/120,alarm[0]/120,0);
 			draw_set_alpha(1);
 			
 			break;

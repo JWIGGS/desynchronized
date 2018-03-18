@@ -50,6 +50,19 @@ for(var i = 0; i<2; i++){
 		//wrap selection
 		weaponSelected[i] = wrap(weaponSelected[i],0,weaponAmount);
 		
+		
+		if(gamepad_button_check_pressed(i,gp_face1)){
+			
+			var colorPrev = global.color[i];
+			
+			global.color[i] = global.colorChoice[irandom_range(0,global.colorChoiceAmount-1)];
+			
+			while(global.color[i] = global.color[1-i] or global.color[i] = colorPrev){
+				global.color[i] = global.colorChoice[irandom_range(0,global.colorChoiceAmount-1)];	
+			}
+			
+			audio_play_sound(snd_selected,0,false);
+		}
 
 	
 	}

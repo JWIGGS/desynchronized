@@ -20,14 +20,17 @@ switch(global.mode){
 		draw_set_alpha(alpha);
 		break;
 		
-	case "selection":
-		alpha = 1;
-
+	case "selection in":
+		alpha = 1-(obj_game_controller.alarm[0]/10);
 		break;
 		
-	case "selection out":
-		alpha = obj_game_controller.alarm[0]/30;
+	case "selection":
+		alpha = 1;
+		break;
 
+		
+	case "selection out":
+		alpha = obj_game_controller.alarm[0]/10;
 		break;
 }
 	
@@ -47,10 +50,10 @@ else if(global.spawnStaggered and ((playerControl and global.timeCurrent<playerN
 	draw_text(uiCenterX,displayHeight-64,"synchronize in "+string(((playerNumber*60)-global.timeCurrent)div 60));
 		
 }
-else if(throwableWeapon = "" and reloading){
+else if(throwableWeapon = "" and reloading and weapon_get_data(weaponDataDisplayType,weapon)!="Melee"){
 	draw_text(uiCenterX,displayHeight-64,"reloading");	
 }
-else if(global.mode = "selection"){
+else if(global.mode = "selection in" or global.mode = "selection" or global.mode = "selection out"){
 	if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeMax]="dead"){
 		draw_text(uiCenterX,displayHeight-64,"dead");	
 	}

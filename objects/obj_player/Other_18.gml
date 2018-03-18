@@ -5,9 +5,11 @@ if(!obj_game_controller.overviewRound){
 	
 	repeat(4){
 		with(instance_create_depth(x,y,depth,obj_player_desync)){
-			image_angle = other.imageAngle;
-			sprite_index = asset_get_index("spr_player_"+other.weapon);
+			imageAngle = other.imageAngle;
+			playerNumber = other.playerNumber;
 			teamNumber = other.teamNumber;
+			weapon = other.weapon;
+			throwableWeapon = other.throwableWeapon;
 		}
 	
 	}
@@ -26,8 +28,10 @@ if(!obj_game_controller.overviewRound){
 }
 else{
 	with(instance_create_depth(x,y,depth,obj_player_desync_overview)){
-		image_angle = other.imageAngle;
-		sprite_index = asset_get_index("spr_player_"+other.weapon);
-		image_index = other.teamNumber;
+		imageAngle = other.imageAngle;
+		playerNumber = other.playerNumber;
+		teamNumber = other.teamNumber;
+		weapon = other.weapon;
+		throwableWeapon = other.throwableWeapon;
 	}
 }

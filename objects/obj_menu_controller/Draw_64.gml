@@ -9,7 +9,7 @@ if(global.mode = "loading"){
 //draw player responsiveness circles
 for(var i = 0; i<2; i++){
 
-	draw_sprite_ext(spr_player_indicator,i,playerResponseTargetX[i]-4,playerResponseTargetY[i]-4,4,4,0,c_white,.6)
+	draw_sprite_ext(spr_player_indicator,i,playerResponseTargetX[i]-4,playerResponseTargetY[i]-4,4,4,0,global.color[i],.6)
 
 	if(gamepad_is_connected(i)){
 		draw_text_formatting(global.color[i],fa_center,fa_middle,font_36);

@@ -17,7 +17,8 @@ switch(global.mode){
 			
 			else{
 				//go to selection
-				global.mode = "selection";
+				global.mode = "selection in";
+				alarm[0] = 10;
 			}
 			
 		}
@@ -32,9 +33,16 @@ switch(global.mode){
 	case "flyover":
 		//go to selection when timer is up
 		if(alarm[0] = 0){
-			global.mode = "selection";
+			global.mode = "selection in";
+			alarm[0] = 10;
 		}
 		
+		break;
+		
+	case "selection in":
+		if(alarm[0] = 0){
+			global.mode = "selection";	
+		}
 		break;
 		
 	case "selection":
@@ -156,7 +164,7 @@ switch(global.mode){
 		//go to countdown
 		if(bothReady){
 			global.mode = "selection out";
-			alarm[0] = 30;
+			alarm[0] = 10;
 			
 		}
 		

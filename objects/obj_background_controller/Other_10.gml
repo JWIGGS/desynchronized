@@ -1,5 +1,7 @@
 /// @description start new track
 
+randomize();
+
 dynamic = 2;
 dynamicDirection = 1;
 dynamicPrev = dynamic;

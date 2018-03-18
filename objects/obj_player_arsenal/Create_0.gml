@@ -29,5 +29,7 @@ throwablePowerMax = 20;
 throwablePowerAccel = .4;
 throwablePowerHold = false;
 
+hair = irandom_range(0,sprite_get_number(spr_player_hair)-1);
+
 
 

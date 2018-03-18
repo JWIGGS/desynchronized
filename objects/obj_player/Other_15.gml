@@ -23,7 +23,8 @@ if(throwableWeapon != ""){
 
 //create ragdoll
 with(instance_create_depth(x,y,0,obj_player_ragdoll)){
-	image_index = other.teamNumber;
+	hair = global.hairPlayerSpawn[other.playerNumber];
+	color = global.color[other.teamNumber];
 	image_angle = point_direction(other.shotFromX,other.shotFromY,other.x,other.y);
 }
 

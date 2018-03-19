@@ -55,7 +55,7 @@ else if(throwableWeapon = "" and reloading and weapon_get_data(weaponDataDisplay
 }
 else if(global.mode = "selection in" or global.mode = "selection" or global.mode = "selection out"){
 	if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeMax]="dead"){
-		draw_text(uiCenterX,displayHeight-64,"dead");	
+		draw_text(uiCenterX,displayHeight-64,"terminated");	
 	}
 	else{
 		draw_text(uiCenterX,displayHeight-64,"new timeline");
@@ -90,7 +90,7 @@ if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),glob
 	}
 	
 	//power bar
-	if(throwablePowerHold){
+	if(throwablePowerHold and throwableWeapon != ""){
 		draw_sprite_ext(spr_ui_power_bar,0,uiCenterX+(uiCenterDirection*240),displayHeight-96,-uiCenterDirection,1,0,c_white,.5*alpha);
 		
 		draw_sprite_part_ext(spr_ui_power_bar,1,0,(1-(throwablePower/throwablePowerMax))*sprite_get_height(spr_ui_power_bar),sprite_get_width(spr_ui_power_bar),(throwablePower/throwablePowerMax)*sprite_get_height(spr_ui_power_bar),uiCenterX+(uiCenterDirection*240),displayHeight-96-(throwablePower/throwablePowerMax)*sprite_get_height(spr_ui_power_bar)+1,-uiCenterDirection,1,color_blend(c_lime,c_red,throwablePower/throwablePowerMax),.5*alpha);

@@ -159,6 +159,22 @@ switch(settingsSelected){
 		}
 						
 		break;
+		
+	//player trails
+	case 8:
+				
+		if(leftPressed or rightPressed or selectPressed){
+			global.settingsTrailPlayer = !global.settingsTrailPlayer;
+			
+			ini_open(global.saveFile);
+			ini_write_real("_settings","trailPlayer",global.settingsTrailPlayer);
+			ini_close();
+			
+			audio_play_sound(snd_blip,0,false);
+		}
+						
+		break;
+		
 }
 		
 		
@@ -218,11 +234,14 @@ for(var i = 0; i<settingsAmount; i++){
 		case 6:
 			customTextValue =  boolean_return(!global.settingsMouse,"enabled","disabled");
 			break;
-		//mouse
+		//speed
 		case 7:
-			customTextValue =  boolean_return(!global.settingsSpeed,"enabled","disabled");
+			customTextValue =  boolean_return(global.settingsSpeed,"enabled","disabled");
 			break;
-
+		//trail player
+		case 8:
+			customTextValue =  boolean_return(global.settingsTrailPlayer,"enabled","disabled");
+			break;
 	}
 			
 			

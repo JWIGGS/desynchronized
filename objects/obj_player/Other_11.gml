@@ -1,11 +1,14 @@
 /// @description actions control
 
+//reload cancellling
+/*
 if(gamepad_button_check_pressed(teamNumber,gp_shoulderr) and reloading and clipCurrent>0){
 	reloading = false;
 	alarm[0] = -1;
 	audio_stop_sound(reloadingSound);
 	reloadingSound = -1;
 }
+*/
 
 //reset gamepad hold from throw
 if(!throwablePowerHold or gamepad_button_check_released(teamNumber,gp_shoulderr)){
@@ -90,6 +93,18 @@ else{
 	
 }
 
+//player trail
+
+if(global.settingsTrailPlayer){
+	
+	with(instance_create_depth(x,y,depth,obj_player_trail)){
+		imageAngle = other.imageAngle;
+		playerNumber = other.playerNumber;
+		teamNumber = other.teamNumber;
+		weapon = other.weapon;
+		throwableWeapon = other.throwableWeapon;
+	}
+}
 
 
 

@@ -143,7 +143,7 @@ settingsText[3] = "advanced rendering:";
 settingsDescription[3] = "beautifier for the fastest of computers";
 
 settingsText[4] = "exhibition mode:";
-settingsDescription[4] = "locks certain settings";
+settingsDescription[4] = "locks certain settings | hold escape to exit";
 
 settingsText[5] = "fps display:";
 settingsDescription[5] = "welcome to the nerd club";
@@ -152,10 +152,13 @@ settingsText[6] = "hide mouse:";
 settingsDescription[6] = "great if you have a cat";
 
 settingsText[7] = "faster games:";
-settingsDescription[7] = "slows and speeds up the game";
+settingsDescription[7] = "coming soon";
+
+settingsText[8] = "player trails:";
+settingsDescription[8] = "blow things up and look cool while doing it";
 
 settingsSelected = 0;
-settingsAmount = 8;
+settingsAmount = 9;
 
 
 

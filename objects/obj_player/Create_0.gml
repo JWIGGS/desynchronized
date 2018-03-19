@@ -30,6 +30,7 @@ depth = -50;
 weapon = "pistol"
 weaponPickedUp = false;
 
+
 //shot from
 shotFromX = 0;
 shotFromY = 0;

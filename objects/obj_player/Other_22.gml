@@ -9,7 +9,7 @@ if(!throwableActive){
 		angle = other.imageAngle;
 		spd = other.throwablePower;	
 	}
-	throwableWeapon = "";
+	
 }
 
 //throw active grenade
@@ -23,11 +23,13 @@ else{
 	
 	audio_play_sound(asset_get_index("snd_"+throwableWeapon),1,false);
 	
-	throwableWeapon = "";
 	throwableActive = false;
 	throwableTime = -1;
 	
 	
 }
 
+throwableWeapon = "";
+throwablePowerHold = false;
 throwablePressed = true;
+throwablePower = 0;

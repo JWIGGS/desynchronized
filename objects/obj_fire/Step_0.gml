@@ -1,5 +1,6 @@
 /// @description 
 image_index = irandom_range(0,image_number);
+image_alpha = clamp(image_alpha+.1,0,1);
 
 var distance = point_distance(startX,startY,x,y);
 

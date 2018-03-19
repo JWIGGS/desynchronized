@@ -14,3 +14,5 @@ coverObject = -1;
 spd = 10;
 xSpd = 0;
 ySpd = 0;
+
+image_alpha = 0;

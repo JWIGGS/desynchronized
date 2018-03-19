@@ -6,7 +6,11 @@ array_fill_1d(global.playerControlObject,global.players,-1);
 //set the end health if players alive
 with(obj_player){
 	global.playerEndHealth[value_to_1d(playerNumber,teamNumber,global.roundTotal)] = hp;
+	
+	
 	instance_destroy();
+	
+	
 }
 
 //despawn weapons

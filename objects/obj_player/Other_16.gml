@@ -1,7 +1,7 @@
 /// @description pick up items
 var weaponPickup = instance_nearest(x,y,par_pickupable);
 
-if(instance_exists(weaponPickup) and distance_to_object(weaponPickup)<16){
+if(instance_exists(weaponPickup) and distance_to_object(weaponPickup)<16 and weaponPickup.pickupable){
 	global.playerAction[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent] = "pickup";
 
 

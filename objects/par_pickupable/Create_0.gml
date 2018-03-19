@@ -6,3 +6,5 @@ angle = 0;
 
 coverObject = -1;
 creationTime = 0;
+
+pickupable = true;

@@ -17,10 +17,11 @@
         "307b892a-470c-4625-b008-d5446fd5f224",
         "d7cdb2d3-7678-4298-a7b8-f32c6878cb83",
         "bab43a1f-bd9a-4b56-8a3e-436e616b3127",
-        "9cad50e4-7d67-4629-beec-364623d1b1f3"
+        "9cad50e4-7d67-4629-beec-364623d1b1f3",
+        "e8b5d130-bd79-4166-a27d-9edccfc8a9fd"
     ],
     "filterType": "GMObject",
-    "folderName": "effects",
+    "folderName": "effects and weapons",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

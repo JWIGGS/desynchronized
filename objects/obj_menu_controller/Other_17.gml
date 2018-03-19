@@ -53,7 +53,7 @@ if(selectPressed){
 
 	ini_close();
 
-	menuScreen = "custom";
+	menuScreen = "map";
 	customSelected = customTextAmount-1;
 	
 	audio_play_sound(snd_selected,0,false);

@@ -571,6 +571,25 @@
             }
         },
         {
+            "Key": "0f9e33ac-fa5e-4a6e-9bf5-93e7f65f7655",
+            "Value": {
+                "id": "4430aa86-1105-4170-9bc8-3dca643356ce",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/heal_object\/heal_object.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0ff70b30-70ae-4e60-91e3-26b90027da58",
             "Value": {
                 "id": "46a059d1-d9ab-478b-a075-a04e473b4a42",
@@ -1385,6 +1404,25 @@
                 ],
                 "resourcePath": "scripts\/audio_play_sound_player\/audio_play_sound_player.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2a64d96b-516c-4817-a8c7-73cee0d52e87",
+            "Value": {
+                "id": "f59bffb9-2fa0-4582-a0e7-0b8b3aa95d04",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_heal\/snd_heal.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3459,6 +3497,25 @@
             }
         },
         {
+            "Key": "71ecde92-1baa-407c-a7f5-5120a91f0bcf",
+            "Value": {
+                "id": "0ba047b4-f7c7-4536-932a-7453c9a4e192",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_biotic\/snd_biotic.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
             "Value": {
                 "id": "7ad1d03b-556e-41cd-aef1-3f0cf551ea08",
@@ -4333,6 +4390,25 @@
             }
         },
         {
+            "Key": "8b49c768-1102-45c2-8578-07e1917c3f51",
+            "Value": {
+                "id": "5fd12860-51d4-4686-920d-54b6864199ca",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_player_trail\/obj_player_trail.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8b9ca24b-ccc7-4da1-ba8e-8381bcb64bb0",
             "Value": {
                 "id": "e5df05be-c50b-4704-8c83-00a218eec95a",
@@ -4596,6 +4672,25 @@
                 ],
                 "resourcePath": "sounds\/snd_hurt1\/snd_hurt1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "9424eea7-3acf-4056-86d5-31a41e284009",
+            "Value": {
+                "id": "4549a753-9891-4ace-8395-e593ffc82a90",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_weapon_biotic\/spr_weapon_biotic.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5796,6 +5891,25 @@
             }
         },
         {
+            "Key": "b78cd853-2f3e-4aa6-93e1-c7f33fea8f92",
+            "Value": {
+                "id": "0ca29768-396a-4917-b247-cf162cd892b6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_biotic\/spr_player_biotic.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b82eaa69-9b81-429f-9b88-397b02dd984c",
             "Value": {
                 "id": "3b8a19e8-241e-4311-baaf-365df7c4c136",
@@ -6898,6 +7012,25 @@
             }
         },
         {
+            "Key": "de7b68da-7f14-43eb-b286-88d70240913c",
+            "Value": {
+                "id": "3ff64ac2-a457-49ed-9cb8-af6b9a7137f9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_biotic_reload\/snd_biotic_reload.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "deaef249-945c-4110-bdad-b49568888943",
             "Value": {
                 "id": "26dff94e-5f5c-4be3-ab1f-493397a9f3e4",
@@ -7008,6 +7141,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_weapon_ak\/spr_weapon_ak.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e3520740-e6d1-4aab-bf1f-d6af040e38c0",
+            "Value": {
+                "id": "0a77f55e-23d7-49f8-8941-db69984abf61",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_ui_weapon_biotic\/spr_ui_weapon_biotic.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7161,6 +7313,25 @@
                 ],
                 "resourcePath": "sounds\/snd_background_laser4\/snd_background_laser4.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e8b5d130-bd79-4166-a27d-9edccfc8a9fd",
+            "Value": {
+                "id": "bff10cfb-117c-4a51-ad4e-e05328d6f2df",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_biotic\/obj_biotic.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7899,7 +8070,8 @@
         "19277ae4-9bbd-4c9d-9ce5-e3dd47a12f88",
         "e649f44c-e6f3-42d6-a5d0-5045e1462aff",
         "55f15d37-ccb8-4cea-be5d-f0c8002bd0bb",
-        "7c546ac7-6922-440b-babd-24fc72701b2d"
+        "7c546ac7-6922-440b-babd-24fc72701b2d",
+        "0f9e33ac-fa5e-4a6e-9bf5-93e7f65f7655"
     ],
     "tutorial": ""
 }

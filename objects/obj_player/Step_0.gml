@@ -20,7 +20,7 @@ if(global.mode = "play"){
 	
 
 }
-else if(playerControl and global.mode != "flyover" and global.mode!= "selection"){
+else if(playerControl and global.mode != "flyover" and global.mode!= "selection" and global.mode!= "selection in" and global.mode!= "selection out"){
 	//allow player to aim
 	event_user(2);	
 	
@@ -46,6 +46,8 @@ if(throwableActive){
 
 //hp effect
 hpEffect += smooth_to_target(hp,hpEffect,4);
+
+
 
 
 

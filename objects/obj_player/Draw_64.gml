@@ -124,7 +124,6 @@ if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),glob
 	}
 	//actual bar
 	else{
-	
 		//red effect
 		draw_sprite_part_ext(spr_ui_bar,1,0,0,(hpEffect/hpMax)*sprite_get_width(spr_ui_bar),sprite_get_height(spr_ui_bar),uiCenterX+(-uiCenterDirection*(248)),displayHeight-sprite_get_height(spr_ui_bar)-8,uiCenterDirection,1,c_white,alpha)
 
@@ -156,19 +155,57 @@ if(global.mode!="selection" and global.mode!="selection out"){
 			var clampedX = clamp(drawX,32+((displayWidth/2)*teamNumber),displayWidth/2+((displayWidth/2)*teamNumber)-32);
 			var clampedY = clamp(drawY,32,displayHeight-sprite_get_height(spr_ui_bar)-8);
 			
+			
 			if(drawX != clampedX or drawY != clampedY){
-
 				draw_sprite_ext(spr_ui_player_pointer,teamNumber,clampedX,clampedY,distanceScale,distanceScale,drawAngle,c_white,alpha);
-
 			}
 		}
 			
 
 	}
 }
-	
-	
-draw_set_alpha(1);
+
+with(obj_player){
+	if(alarm[3]!=-1 and id!=other.id){
+		if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent]="alive"){
+				
+			var alpha = 1;
+			if(alarm[3]<10){
+				alpha = alarm[3]/10;
+			}
+			else if(alarm[3]>170){
+				alpha = 1-((alarm[3]-170)/180);
+			}
+			
+			var drawAngle = 90-other.imageAngle+point_direction(other.x,other.y,x,y);
+			var distance = point_distance(other.x,other.y,x,y);
+			
+			distance *= 2;
+			distance += 28;
+			
+			var drawX = uiCenterX+lengthdir_x(distance,drawAngle) ;
+			var drawY = displayHeight-102+lengthdir_y(distance,drawAngle);
+			
+			var clampedX = clamp(drawX,32+((displayWidth/2)*other.teamNumber),displayWidth/2+((displayWidth/2)*other.teamNumber)-32);
+			var clampedY = clamp(drawY,32,displayHeight-sprite_get_height(spr_ui_bar)-8);
+			
+			if(clampedX = drawX and clampedY = drawY){
+				
+				drawX -= lengthdir_x(sprite_get_width(spr_ui_bar_small)/2,drawAngle-90) - lengthdir_x(sprite_get_height(spr_ui_bar_small)/2,drawAngle-90);
+				drawY -= lengthdir_y(sprite_get_width(spr_ui_bar_small)/2,drawAngle-90) - lengthdir_y(sprite_get_height(spr_ui_bar_small)/2,drawAngle-90);
+			
+				draw_sprite_ext(spr_ui_bar_small,0,drawX,drawY,1,1,drawAngle-90,c_white,alpha);
+			
+				draw_sprite_general(spr_ui_bar,1,0,0,(hpEffect/hpMax)*sprite_get_width(spr_ui_bar_small),sprite_get_height(spr_ui_bar_small),drawX,drawY,1,1,drawAngle-90,c_white,c_white,c_white,c_white,alpha);
+
+				draw_sprite_general(spr_ui_bar,1,0,0,(hp/hpMax)*sprite_get_width(spr_ui_bar_small),sprite_get_height(spr_ui_bar_small),drawX,drawY,1,1,drawAngle-90,global.color[teamNumber],global.color[teamNumber],global.color[teamNumber],global.color[teamNumber],alpha)
+			}
+				
+
+		}
+	}
+}
+
 
 
 

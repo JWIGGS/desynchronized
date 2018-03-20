@@ -4,6 +4,7 @@ var healing = argument1; ///@param healing
 with(object){
 	hp += healing*global.multiplierDamage;
 	alarm[5] = 2;
+	alarm[3] = 180;
 	
 	
 	if(hp>hpMax){

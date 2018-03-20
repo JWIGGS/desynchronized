@@ -699,7 +699,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_ui_bar_large\/spr_ui_bar_large.yy",
+                "resourcePath": "sprites\/spr_ui_bar_small\/spr_ui_bar_small.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4558,6 +4558,25 @@
                 ],
                 "resourcePath": "rooms\/rm_game_setup\/rm_game_setup.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "902e3e58-0870-41b1-8eb4-da14c694aa3c",
+            "Value": {
+                "id": "2f21f922-d582-428b-99c3-3911cb8af6d9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "notes\/TODO.yy",
+                "resourceType": "GMNotes"
             }
         },
         {

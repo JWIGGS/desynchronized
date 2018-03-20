@@ -4,6 +4,7 @@ var damage = argument1; ///@param damage
 with(object){
 	hp -= damage*global.multiplierDamage;
 	alarm[5] = 2;
+	alarm[3] = 180;
 	
 	//damage taken script
 	event_user(11);

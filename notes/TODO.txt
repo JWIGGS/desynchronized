@@ -1,0 +1,41 @@
+Confirmed Changes
+
+Weapon Additions:
+	Zone Grenade
+	Healing Grenade
+	Land Mine
+	Knockback Grenade
+	
+Health Regen
+
+GUI healthbars over players
+
+Kickback
+
+Knockback
+
+Help message queue, controller, and setting
+
+Background music bug
+
+Tabulate Settings -> graphics, sound, gameplay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

@@ -146,80 +146,8 @@ ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
-var object = "shotgun";
-global.weapon[1] = "shotgun";
-ds_map_add(global.weaponName,object,"Shotgun");
-ds_map_add(global.weaponDescription,object,"A mid range weapon with a decent spread.");
-ds_map_add(global.weaponAutofire,object,true);
-ds_map_add(global.weaponType,object,"weapon");
-ds_map_add(global.weaponDisplayType,object,"Shotgun");
-ds_map_add(global.weaponStance,object,"rifle");
-ds_map_add(global.weaponDamage,object,30.0);
-ds_map_add(global.weaponRof,object,90.0);
-ds_map_add(global.weaponDisplayRange,object,"Short");
-ds_map_add(global.weaponRangeEffective,object,128.0);
-ds_map_add(global.weaponRangeMax,object,256.0);
-ds_map_add(global.weaponDeviation,object,8.0);
-ds_map_add(global.weaponShotAmount,object,6.0);
-ds_map_add(global.weaponClip,object,6.0);
-ds_map_add(global.weaponReloadTime,object,180.0);
-ds_map_add(global.weaponOffsetX,object,21.0);
-ds_map_add(global.weaponOffsetY,object,4.0);
-ds_map_add(global.weaponObjectCreate,object,obj_bullet);
-ds_map_add(global.weaponSpeedMultiplier,object,0.9);
-ds_map_add(global.weaponDisplaySpeed,object,"Slow");
-
-
-var object = "rifle";
-global.weapon[2] = "rifle";
-ds_map_add(global.weaponName,object,"Assault Rifle");
-ds_map_add(global.weaponDescription,object,"A standard assault rifle with a decent range.");
-ds_map_add(global.weaponAutofire,object,true);
-ds_map_add(global.weaponType,object,"weapon");
-ds_map_add(global.weaponDisplayType,object,"Assault");
-ds_map_add(global.weaponStance,object,"rifle");
-ds_map_add(global.weaponDamage,object,12.0);
-ds_map_add(global.weaponRof,object,5.0);
-ds_map_add(global.weaponDisplayRange,object,"Far");
-ds_map_add(global.weaponRangeEffective,object,256.0);
-ds_map_add(global.weaponRangeMax,object,384.0);
-ds_map_add(global.weaponDeviation,object,0.0);
-ds_map_add(global.weaponShotAmount,object,1.0);
-ds_map_add(global.weaponClip,object,20.0);
-ds_map_add(global.weaponReloadTime,object,120.0);
-ds_map_add(global.weaponOffsetX,object,22.0);
-ds_map_add(global.weaponOffsetY,object,4.0);
-ds_map_add(global.weaponObjectCreate,object,obj_bullet);
-ds_map_add(global.weaponSpeedMultiplier,object,0.9);
-ds_map_add(global.weaponDisplaySpeed,object,"Slow");
-
-
-var object = "shaftgun";
-global.weapon[3] = "shaftgun";
-ds_map_add(global.weaponName,object,"Shaftgun");
-ds_map_add(global.weaponDescription,object,"A weapon useful only when fired at point blank range.");
-ds_map_add(global.weaponAutofire,object,true);
-ds_map_add(global.weaponType,object,"weapon");
-ds_map_add(global.weaponDisplayType,object,"Shotgun");
-ds_map_add(global.weaponStance,object,"rifle");
-ds_map_add(global.weaponDamage,object,25.0);
-ds_map_add(global.weaponRof,object,50.0);
-ds_map_add(global.weaponDisplayRange,object,"Point Blank");
-ds_map_add(global.weaponRangeEffective,object,96.0);
-ds_map_add(global.weaponRangeMax,object,192.0);
-ds_map_add(global.weaponDeviation,object,15.0);
-ds_map_add(global.weaponShotAmount,object,8.0);
-ds_map_add(global.weaponClip,object,4.0);
-ds_map_add(global.weaponReloadTime,object,150.0);
-ds_map_add(global.weaponOffsetX,object,16.0);
-ds_map_add(global.weaponOffsetY,object,4.0);
-ds_map_add(global.weaponObjectCreate,object,obj_bullet);
-ds_map_add(global.weaponSpeedMultiplier,object,1.0);
-ds_map_add(global.weaponDisplaySpeed,object,"Normal");
-
-
 var object = "revolver";
-global.weapon[4] = "revolver";
+global.weapon[1] = "revolver";
 ds_map_add(global.weaponName,object,"Revolver");
 ds_map_add(global.weaponDescription,object,"A weapon that transforms you into  a cowboy. YEEEE HAAA!");
 ds_map_add(global.weaponAutofire,object,true);
@@ -243,7 +171,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "silenced";
-global.weapon[5] = "silenced";
+global.weapon[2] = "silenced";
 ds_map_add(global.weaponName,object,"Silenced Pistol");
 ds_map_add(global.weaponDescription,object,"An hitman's favourite weapon for mid range engagements.");
 ds_map_add(global.weaponAutofire,object,true);
@@ -266,8 +194,128 @@ ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
+var object = "shotgun";
+global.weapon[3] = "shotgun";
+ds_map_add(global.weaponName,object,"Shotgun");
+ds_map_add(global.weaponDescription,object,"A mid range weapon with a decent spread.");
+ds_map_add(global.weaponAutofire,object,true);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Shotgun");
+ds_map_add(global.weaponStance,object,"rifle");
+ds_map_add(global.weaponDamage,object,30.0);
+ds_map_add(global.weaponRof,object,90.0);
+ds_map_add(global.weaponDisplayRange,object,"Short");
+ds_map_add(global.weaponRangeEffective,object,128.0);
+ds_map_add(global.weaponRangeMax,object,256.0);
+ds_map_add(global.weaponDeviation,object,8.0);
+ds_map_add(global.weaponShotAmount,object,6.0);
+ds_map_add(global.weaponClip,object,6.0);
+ds_map_add(global.weaponReloadTime,object,180.0);
+ds_map_add(global.weaponOffsetX,object,21.0);
+ds_map_add(global.weaponOffsetY,object,4.0);
+ds_map_add(global.weaponObjectCreate,object,obj_bullet);
+ds_map_add(global.weaponSpeedMultiplier,object,0.9);
+ds_map_add(global.weaponDisplaySpeed,object,"Slow");
+
+
+var object = "shaftgun";
+global.weapon[4] = "shaftgun";
+ds_map_add(global.weaponName,object,"Shaftgun");
+ds_map_add(global.weaponDescription,object,"A weapon useful only when fired at point blank range.");
+ds_map_add(global.weaponAutofire,object,true);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Shotgun");
+ds_map_add(global.weaponStance,object,"rifle");
+ds_map_add(global.weaponDamage,object,25.0);
+ds_map_add(global.weaponRof,object,50.0);
+ds_map_add(global.weaponDisplayRange,object,"Point Blank");
+ds_map_add(global.weaponRangeEffective,object,96.0);
+ds_map_add(global.weaponRangeMax,object,192.0);
+ds_map_add(global.weaponDeviation,object,15.0);
+ds_map_add(global.weaponShotAmount,object,8.0);
+ds_map_add(global.weaponClip,object,4.0);
+ds_map_add(global.weaponReloadTime,object,150.0);
+ds_map_add(global.weaponOffsetX,object,16.0);
+ds_map_add(global.weaponOffsetY,object,4.0);
+ds_map_add(global.weaponObjectCreate,object,obj_bullet);
+ds_map_add(global.weaponSpeedMultiplier,object,1.0);
+ds_map_add(global.weaponDisplaySpeed,object,"Normal");
+
+
+var object = "ak";
+global.weapon[5] = "ak";
+ds_map_add(global.weaponName,object,"AK-47");
+ds_map_add(global.weaponDescription,object,"An incredibly reliable weapon that packs a decent punch.");
+ds_map_add(global.weaponAutofire,object,true);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Assault");
+ds_map_add(global.weaponStance,object,"rifle");
+ds_map_add(global.weaponDamage,object,27.0);
+ds_map_add(global.weaponRof,object,7.0);
+ds_map_add(global.weaponDisplayRange,object,"Medium");
+ds_map_add(global.weaponRangeEffective,object,196.0);
+ds_map_add(global.weaponRangeMax,object,304.0);
+ds_map_add(global.weaponDeviation,object,0.0);
+ds_map_add(global.weaponShotAmount,object,1.0);
+ds_map_add(global.weaponClip,object,15.0);
+ds_map_add(global.weaponReloadTime,object,120.0);
+ds_map_add(global.weaponOffsetX,object,21.0);
+ds_map_add(global.weaponOffsetY,object,5.0);
+ds_map_add(global.weaponObjectCreate,object,obj_bullet);
+ds_map_add(global.weaponSpeedMultiplier,object,0.9);
+ds_map_add(global.weaponDisplaySpeed,object,"Slow");
+
+
+var object = "rifle";
+global.weapon[6] = "rifle";
+ds_map_add(global.weaponName,object,"Assault Rifle");
+ds_map_add(global.weaponDescription,object,"A standard assault rifle with a decent range.");
+ds_map_add(global.weaponAutofire,object,true);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Assault");
+ds_map_add(global.weaponStance,object,"rifle");
+ds_map_add(global.weaponDamage,object,12.0);
+ds_map_add(global.weaponRof,object,5.0);
+ds_map_add(global.weaponDisplayRange,object,"Far");
+ds_map_add(global.weaponRangeEffective,object,256.0);
+ds_map_add(global.weaponRangeMax,object,384.0);
+ds_map_add(global.weaponDeviation,object,0.0);
+ds_map_add(global.weaponShotAmount,object,1.0);
+ds_map_add(global.weaponClip,object,20.0);
+ds_map_add(global.weaponReloadTime,object,120.0);
+ds_map_add(global.weaponOffsetX,object,22.0);
+ds_map_add(global.weaponOffsetY,object,4.0);
+ds_map_add(global.weaponObjectCreate,object,obj_bullet);
+ds_map_add(global.weaponSpeedMultiplier,object,0.9);
+ds_map_add(global.weaponDisplaySpeed,object,"Slow");
+
+
+var object = "biotic";
+global.weapon[7] = "biotic";
+ds_map_add(global.weaponName,object,"Biotic Rifle");
+ds_map_add(global.weaponDescription,object,"Heal your teammates, kill your enemies.");
+ds_map_add(global.weaponAutofire,object,true);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Burst");
+ds_map_add(global.weaponStance,object,"rifle");
+ds_map_add(global.weaponDamage,object,15.0);
+ds_map_add(global.weaponRof,object,7.0);
+ds_map_add(global.weaponDisplayRange,object,"Medium");
+ds_map_add(global.weaponRangeEffective,object,196.0);
+ds_map_add(global.weaponRangeMax,object,304.0);
+ds_map_add(global.weaponDeviation,object,0.0);
+ds_map_add(global.weaponShotAmount,object,1.0);
+ds_map_add(global.weaponClip,object,3.0);
+ds_map_add(global.weaponReloadTime,object,120.0);
+ds_map_add(global.weaponOffsetX,object,20.0);
+ds_map_add(global.weaponOffsetY,object,4.0);
+ds_map_add(global.weaponObjectCreate,object,obj_biotic);
+ds_map_add(global.weaponSpeedMultiplier,object,1.0);
+ds_map_add(global.weaponDisplaySpeed,object,"Normal");
+
+
 var object = "uzi";
-global.weapon[6] = "uzi";
+global.weapon[8] = "uzi";
 ds_map_add(global.weaponName,object,"Uzi");
 ds_map_add(global.weaponDescription,object,"Spews bullets like there is not tomorrow, because why not.");
 ds_map_add(global.weaponAutofire,object,true);
@@ -290,32 +338,8 @@ ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
-var object = "shield";
-global.weapon[7] = "shield";
-ds_map_add(global.weaponName,object,"Riot Shield");
-ds_map_add(global.weaponDescription,object,"Strong, sturdy, and only takes 20% of damage from the front.");
-ds_map_add(global.weaponAutofire,object,false);
-ds_map_add(global.weaponType,object,"weapon");
-ds_map_add(global.weaponDisplayType,object,"Melee");
-ds_map_add(global.weaponStance,object,"push");
-ds_map_add(global.weaponDamage,object,6.0);
-ds_map_add(global.weaponRof,object,30.0);
-ds_map_add(global.weaponDisplayRange,object,"Point Blank");
-ds_map_add(global.weaponRangeEffective,object,16.0);
-ds_map_add(global.weaponRangeMax,object,16.0);
-ds_map_add(global.weaponDeviation,object,20.0);
-ds_map_add(global.weaponShotAmount,object,3.0);
-ds_map_add(global.weaponClip,object,0.0);
-ds_map_add(global.weaponReloadTime,object,0.0);
-ds_map_add(global.weaponOffsetX,object,12.0);
-ds_map_add(global.weaponOffsetY,object,0.0);
-ds_map_add(global.weaponObjectCreate,object,obj_melee);
-ds_map_add(global.weaponSpeedMultiplier,object,0.8);
-ds_map_add(global.weaponDisplaySpeed,object,"Very Slow");
-
-
 var object = "sniper";
-global.weapon[8] = "sniper";
+global.weapon[9] = "sniper";
 ds_map_add(global.weaponName,object,"Sniper Rifle");
 ds_map_add(global.weaponDescription,object,"An incredibly long range one shot weapon.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -332,30 +356,6 @@ ds_map_add(global.weaponShotAmount,object,1.0);
 ds_map_add(global.weaponClip,object,1.0);
 ds_map_add(global.weaponReloadTime,object,150.0);
 ds_map_add(global.weaponOffsetX,object,24.0);
-ds_map_add(global.weaponOffsetY,object,5.0);
-ds_map_add(global.weaponObjectCreate,object,obj_bullet);
-ds_map_add(global.weaponSpeedMultiplier,object,0.9);
-ds_map_add(global.weaponDisplaySpeed,object,"Slow");
-
-
-var object = "ak";
-global.weapon[9] = "ak";
-ds_map_add(global.weaponName,object,"AK-47");
-ds_map_add(global.weaponDescription,object,"An incredibly reliable weapon that packs a decent punch.");
-ds_map_add(global.weaponAutofire,object,true);
-ds_map_add(global.weaponType,object,"weapon");
-ds_map_add(global.weaponDisplayType,object,"Assault");
-ds_map_add(global.weaponStance,object,"rifle");
-ds_map_add(global.weaponDamage,object,27.0);
-ds_map_add(global.weaponRof,object,7.0);
-ds_map_add(global.weaponDisplayRange,object,"Medium");
-ds_map_add(global.weaponRangeEffective,object,196.0);
-ds_map_add(global.weaponRangeMax,object,304.0);
-ds_map_add(global.weaponDeviation,object,0.0);
-ds_map_add(global.weaponShotAmount,object,1.0);
-ds_map_add(global.weaponClip,object,15.0);
-ds_map_add(global.weaponReloadTime,object,120.0);
-ds_map_add(global.weaponOffsetX,object,21.0);
 ds_map_add(global.weaponOffsetY,object,5.0);
 ds_map_add(global.weaponObjectCreate,object,obj_bullet);
 ds_map_add(global.weaponSpeedMultiplier,object,0.9);
@@ -386,32 +386,8 @@ ds_map_add(global.weaponSpeedMultiplier,object,0.9);
 ds_map_add(global.weaponDisplaySpeed,object,"Slow");
 
 
-var object = "grenade";
-global.weapon[11] = "grenade";
-ds_map_add(global.weaponName,object,"Grenade");
-ds_map_add(global.weaponDescription,object,"Pull the pin and fire away.");
-ds_map_add(global.weaponAutofire,object,false);
-ds_map_add(global.weaponType,object,"throwable");
-ds_map_add(global.weaponDisplayType,object,"Grenade");
-ds_map_add(global.weaponStance,object,"throw");
-ds_map_add(global.weaponDamage,object,200.0);
-ds_map_add(global.weaponRof,object,0.0);
-ds_map_add(global.weaponDisplayRange,object,"Variable");
-ds_map_add(global.weaponRangeEffective,object,48.0);
-ds_map_add(global.weaponRangeMax,object,96.0);
-ds_map_add(global.weaponDeviation,object,0.0);
-ds_map_add(global.weaponShotAmount,object,1.0);
-ds_map_add(global.weaponClip,object,1.0);
-ds_map_add(global.weaponReloadTime,object,300.0);
-ds_map_add(global.weaponOffsetX,object,8.0);
-ds_map_add(global.weaponOffsetY,object,4.0);
-ds_map_add(global.weaponObjectCreate,object,obj_grenade);
-ds_map_add(global.weaponSpeedMultiplier,object,1.0);
-ds_map_add(global.weaponDisplaySpeed,object,"Normal");
-
-
 var object = "laser";
-global.weapon[12] = "laser";
+global.weapon[11] = "laser";
 ds_map_add(global.weaponName,object,"Laser Cannon");
 ds_map_add(global.weaponDescription,object,"Nothing like the sweet humming of a laser beam to annihilate your enemies.");
 ds_map_add(global.weaponAutofire,object,true);
@@ -432,6 +408,30 @@ ds_map_add(global.weaponOffsetY,object,4.0);
 ds_map_add(global.weaponObjectCreate,object,obj_laser);
 ds_map_add(global.weaponSpeedMultiplier,object,0.9);
 ds_map_add(global.weaponDisplaySpeed,object,"Slow");
+
+
+var object = "shield";
+global.weapon[12] = "shield";
+ds_map_add(global.weaponName,object,"Riot Shield");
+ds_map_add(global.weaponDescription,object,"Strong, sturdy, and only takes 20% of damage from the front.");
+ds_map_add(global.weaponAutofire,object,false);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Melee");
+ds_map_add(global.weaponStance,object,"push");
+ds_map_add(global.weaponDamage,object,6.0);
+ds_map_add(global.weaponRof,object,30.0);
+ds_map_add(global.weaponDisplayRange,object,"Point Blank");
+ds_map_add(global.weaponRangeEffective,object,16.0);
+ds_map_add(global.weaponRangeMax,object,16.0);
+ds_map_add(global.weaponDeviation,object,20.0);
+ds_map_add(global.weaponShotAmount,object,3.0);
+ds_map_add(global.weaponClip,object,0.0);
+ds_map_add(global.weaponReloadTime,object,0.0);
+ds_map_add(global.weaponOffsetX,object,12.0);
+ds_map_add(global.weaponOffsetY,object,0.0);
+ds_map_add(global.weaponObjectCreate,object,obj_melee);
+ds_map_add(global.weaponSpeedMultiplier,object,0.8);
+ds_map_add(global.weaponDisplaySpeed,object,"Very Slow");
 
 
 var object = "sword";
@@ -458,32 +458,8 @@ ds_map_add(global.weaponSpeedMultiplier,object,1.1);
 ds_map_add(global.weaponDisplaySpeed,object,"Fast");
 
 
-var object = "incendiary";
-global.weapon[14] = "incendiary";
-ds_map_add(global.weaponName,object,"Incendiary Grenade");
-ds_map_add(global.weaponDescription,object,"Exhausts a stream of fire once detonated.");
-ds_map_add(global.weaponAutofire,object,false);
-ds_map_add(global.weaponType,object,"throwable");
-ds_map_add(global.weaponDisplayType,object,"Grenade");
-ds_map_add(global.weaponStance,object,"throw");
-ds_map_add(global.weaponDamage,object,1.0);
-ds_map_add(global.weaponRof,object,1.0);
-ds_map_add(global.weaponDisplayRange,object,"Variable");
-ds_map_add(global.weaponRangeEffective,object,96.0);
-ds_map_add(global.weaponRangeMax,object,168.0);
-ds_map_add(global.weaponDeviation,object,20.0);
-ds_map_add(global.weaponShotAmount,object,5.0);
-ds_map_add(global.weaponClip,object,1.0);
-ds_map_add(global.weaponReloadTime,object,180.0);
-ds_map_add(global.weaponOffsetX,object,8.0);
-ds_map_add(global.weaponOffsetY,object,4.0);
-ds_map_add(global.weaponObjectCreate,object,obj_incendiary);
-ds_map_add(global.weaponSpeedMultiplier,object,1.0);
-ds_map_add(global.weaponDisplaySpeed,object,"Normal");
-
-
 var object = "axe";
-global.weapon[15] = "axe";
+global.weapon[14] = "axe";
 ds_map_add(global.weaponName,object,"Battle Axe");
 ds_map_add(global.weaponDescription,object,"Hack first. Axe questions later.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -506,26 +482,50 @@ ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
-var object = "biotic";
-global.weapon[16] = "biotic";
-ds_map_add(global.weaponName,object,"Biotic Rifle");
-ds_map_add(global.weaponDescription,object,"Heal your teammates, kill your enemies.");
-ds_map_add(global.weaponAutofire,object,true);
-ds_map_add(global.weaponType,object,"weapon");
-ds_map_add(global.weaponDisplayType,object,"Burst");
-ds_map_add(global.weaponStance,object,"rifle");
-ds_map_add(global.weaponDamage,object,15.0);
-ds_map_add(global.weaponRof,object,7.0);
-ds_map_add(global.weaponDisplayRange,object,"Medium");
-ds_map_add(global.weaponRangeEffective,object,196.0);
-ds_map_add(global.weaponRangeMax,object,304.0);
+var object = "grenade";
+global.weapon[15] = "grenade";
+ds_map_add(global.weaponName,object,"Grenade");
+ds_map_add(global.weaponDescription,object,"Pull the pin and fire away.");
+ds_map_add(global.weaponAutofire,object,false);
+ds_map_add(global.weaponType,object,"throwable");
+ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponStance,object,"throw");
+ds_map_add(global.weaponDamage,object,200.0);
+ds_map_add(global.weaponRof,object,0.0);
+ds_map_add(global.weaponDisplayRange,object,"Variable");
+ds_map_add(global.weaponRangeEffective,object,48.0);
+ds_map_add(global.weaponRangeMax,object,96.0);
 ds_map_add(global.weaponDeviation,object,0.0);
 ds_map_add(global.weaponShotAmount,object,1.0);
-ds_map_add(global.weaponClip,object,3.0);
-ds_map_add(global.weaponReloadTime,object,120.0);
-ds_map_add(global.weaponOffsetX,object,20.0);
+ds_map_add(global.weaponClip,object,1.0);
+ds_map_add(global.weaponReloadTime,object,300.0);
+ds_map_add(global.weaponOffsetX,object,8.0);
 ds_map_add(global.weaponOffsetY,object,4.0);
-ds_map_add(global.weaponObjectCreate,object,obj_biotic);
+ds_map_add(global.weaponObjectCreate,object,obj_grenade);
+ds_map_add(global.weaponSpeedMultiplier,object,1.0);
+ds_map_add(global.weaponDisplaySpeed,object,"Normal");
+
+
+var object = "incendiary";
+global.weapon[16] = "incendiary";
+ds_map_add(global.weaponName,object,"Incendiary Grenade");
+ds_map_add(global.weaponDescription,object,"Exhausts a stream of fire once detonated.");
+ds_map_add(global.weaponAutofire,object,false);
+ds_map_add(global.weaponType,object,"throwable");
+ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponStance,object,"throw");
+ds_map_add(global.weaponDamage,object,1.0);
+ds_map_add(global.weaponRof,object,1.0);
+ds_map_add(global.weaponDisplayRange,object,"Variable");
+ds_map_add(global.weaponRangeEffective,object,96.0);
+ds_map_add(global.weaponRangeMax,object,168.0);
+ds_map_add(global.weaponDeviation,object,20.0);
+ds_map_add(global.weaponShotAmount,object,5.0);
+ds_map_add(global.weaponClip,object,1.0);
+ds_map_add(global.weaponReloadTime,object,180.0);
+ds_map_add(global.weaponOffsetX,object,8.0);
+ds_map_add(global.weaponOffsetY,object,4.0);
+ds_map_add(global.weaponObjectCreate,object,obj_incendiary);
 ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 

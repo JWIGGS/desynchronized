@@ -175,8 +175,18 @@ switch(customSelected){
 					
 		break;
 		
-	//save preset
+	//health regen
 	case 10:
+					
+		if(leftPressed or rightPressed or selectPressed){
+			global.healthRegen = !global.healthRegen;
+			audio_play_sound(snd_blip,0,false);
+		}
+					
+		break;
+		
+	//save preset
+	case 11:
 	
 		if(selectPressed){
 			presetName = "";
@@ -188,7 +198,7 @@ switch(customSelected){
 	
 						
 	//battle
-	case 11:
+	case 12:
 						
 		if(selectPressed){
 			menuScreen = "map";
@@ -272,6 +282,11 @@ for(var i = customPosition; i<customPosition+customHeight; i++){
 		//random weapon
 		case 9:
 			customTextValue = boolean_return(global.spawnStaggered,"enabled","disabled");
+			break;
+			
+		//health regen
+		case 10:
+			customTextValue = boolean_return(global.healthRegen,"enabled","disabled");
 			break;
 				
 	}

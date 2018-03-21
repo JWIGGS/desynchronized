@@ -6,9 +6,9 @@ dynamic = clamp(dynamic + dynamicDirection,2,sndAmount);
 
 if(dynamic != dynamicPrev){
 	
-	//choose to change dynamic direction
-	if(dynamic<0 and random_chance(.3)){
-		dynamicDirection = -sign(dynamicDirection);
+	//force change of dynamic direction
+	if(dynamic<2){
+		dynamicDirection = 1;;
 	}
 
 	

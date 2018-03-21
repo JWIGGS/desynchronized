@@ -51,6 +51,7 @@ global.multiplierSpeed = 1;
 global.weaponRandom = false;
 global.weaponSpawnChance = .4;
 global.spawnStaggered = false;
+global.healthRegen = false;
 
 
 //maps

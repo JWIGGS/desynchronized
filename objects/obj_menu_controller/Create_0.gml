@@ -114,13 +114,16 @@ customDescription[8] = "this party wont last forever";
 customText[9] = "staggered spawns: ";
 customDescription[9] = "its okay to be late to the party";
 
-customText[10] = "save preset";
-customDescription[10] = "save some of the fun for next time (COMING SOON)";
+customText[10] = "health regen: ";
+customDescription[10] = "rewards for avoiding combat? why not!";
 
-customText[11] = "battle";
-customDescription[11] = "let the games begin";
+customText[11] = "save preset";
+customDescription[11] = "save some of the fun for next time (COMING SOON)";
 
-customTextAmount = 12;
+customText[12] = "battle";
+customDescription[12] = "let the games begin";
+
+customTextAmount = 13;
 customSelected = 0;
 
 customPosition = 0;

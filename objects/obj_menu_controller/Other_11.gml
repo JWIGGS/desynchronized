@@ -43,6 +43,7 @@ if(selectPressed){
 			global.weaponRandom = false;
 			global.weaponSpawnChance = .4;
 			global.spawnStaggered = false;
+			global.healthRegen = false;
 
 			menuScreen = "map";
 			
@@ -64,6 +65,7 @@ if(selectPressed){
 			global.weaponRandom = false;
 			global.weaponSpawnChance = .4;
 			global.spawnStaggered = false;
+			global.healthRegen = false;
 			
 			menuScreen = "map";
 		
@@ -85,6 +87,7 @@ if(selectPressed){
 			global.weaponRandom = false;
 			global.weaponSpawnChance = .4;
 			global.spawnStaggered = false;
+			global.healthRegen = false;
 			
 			customSelected = 0;
 			customPosition = 0;

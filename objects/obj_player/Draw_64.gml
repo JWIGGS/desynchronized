@@ -157,7 +157,7 @@ if(global.mode!="selection" and global.mode!="selection out"){
 			
 			
 			if(drawX != clampedX or drawY != clampedY){
-				draw_sprite_ext(spr_ui_player_pointer,teamNumber,clampedX,clampedY,distanceScale,distanceScale,drawAngle,c_white,alpha);
+				draw_sprite_ext(spr_ui_player_pointer,0,clampedX,clampedY,distanceScale,distanceScale,drawAngle,global.color[teamNumber],alpha);
 			}
 		}
 			

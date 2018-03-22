@@ -45,7 +45,7 @@ if(throwableActive){
 }
 
 //hp effect
-hpEffect += smooth_to_target(hp,hpEffect,4);
+hpEffect += smooth_to_target(hp,hpEffect,20);
 
 
 

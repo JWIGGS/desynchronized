@@ -24,8 +24,6 @@ if(global.mode = "selection"){
 		
 }
 
-
-
 if(alarm[5]!=-1){
 	shader_set(shd_white);
 }

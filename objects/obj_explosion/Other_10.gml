@@ -1,7 +1,4 @@
 /// @description trigger explosion
-
-
-
 with(par_destructable){
 
 	var distance = point_distance(x,y,other.x,other.y);

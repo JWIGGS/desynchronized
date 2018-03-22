@@ -32,4 +32,3 @@ else{
 throwableWeapon = "";
 throwablePowerHold = false;
 throwablePressed = true;
-throwablePower = 0;

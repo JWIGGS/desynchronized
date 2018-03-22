@@ -20,7 +20,9 @@
         "5683582e-97ba-41bc-9979-a2cfe2d99998",
         "1a2081ad-a6d0-4a9d-8e60-dd7fd9f9bbba",
         "6223a93f-82d1-41bc-84db-310e233c57a0",
-        "e3520740-e6d1-4aab-bf1f-d6af040e38c0"
+        "e3520740-e6d1-4aab-bf1f-d6af040e38c0",
+        "3a6485d2-3426-42c8-9e49-edbcca9653b4",
+        "2f3b9ea9-c44a-49a3-8f65-5fe8c0041950"
     ],
     "filterType": "GMSprite",
     "folderName": "ui weapons",

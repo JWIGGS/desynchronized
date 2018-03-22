@@ -69,7 +69,7 @@ for(var i = -8; i<range; i++){
 //create bullet paritcles along line
 for(var i =0; i<distance; i++){
 	with(instance_create_depth(x+lengthdir_x(i,angle),y+lengthdir_y(i,angle),depth,obj_laser_effect)){
-		image_index = parentTeamNumber;
+		image_blend = global.color[parentTeamNumber];
 		image_alpha = 1;
 	}
 }

@@ -77,7 +77,7 @@ for(var i = -16; i<range; i++){
 
 for(var i =0; i<distance; i++){
 	with(instance_create_depth(x+lengthdir_x(i,angle),y+lengthdir_y(i,angle),depth,obj_bullet_effect)){
-		image_index = parentTeamNumber;
+		image_blend = global.color[parentTeamNumber];
 		image_alpha = damage_falloff_multiplier(other.rangeEffective,other.range,i)/2;
 	}
 }

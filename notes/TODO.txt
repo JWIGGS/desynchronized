@@ -1,10 +1,10 @@
 Confirmed Changes
 
 Weapon Additions:
-	Zone Grenade
-	Healing Grenade
 	Land Mine
 	Knockback Grenade
+	
+Grenades to read variables off of numbers map
 
 Kickback
 
@@ -13,6 +13,10 @@ Knockback
 Help message queue, controller, and setting
 
 Tabulate Settings -> graphics, sound, gameplay
+
+Hold A to zoom out
+
+
 
 
 

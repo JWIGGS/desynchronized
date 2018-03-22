@@ -3,7 +3,7 @@
 x = parent.x+lengthdir_x(weapon_get_data(weaponDataOffsetX,parent.weapon),angle);
 y = parent.y+lengthdir_y(weapon_get_data(weaponDataOffsetX,parent.weapon),angle);
 
-image_index = parent.teamNumber;
+image_blend = global.color[parent.teamNumber];
 image_alpha = alarm[0]/3;
 
 

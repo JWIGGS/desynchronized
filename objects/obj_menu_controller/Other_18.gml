@@ -75,7 +75,6 @@ if(loadVars){
 	global.multiplierHealth = ini_read_real(loadText[loadSelected],"multiplierHealth",global.multiplierHealth);
 	global.multiplierDamage = ini_read_real(loadText[loadSelected],"multiplierDamage",global.multiplierDamage);
 	global.multiplierSpeed = ini_read_real(loadText[loadSelected],"multiplierSpeed",global.multiplierSpeed);
-	global.weaponRandom = ini_read_real(loadText[loadSelected],"weaponRandom",global.weaponRandom);
 	global.weaponSpawnChance = ini_read_real(loadText[loadSelected],"weaponSpawnChance",global.weaponSpawnChance);
 	global.spawnStaggered = ini_read_real(loadText[loadSelected],"spawnStaggered",global.spawnStaggered);
 	
@@ -91,10 +90,6 @@ if(loadVars){
 	if(global.zone){
 		loadDescription += " | ";
 		loadDescription += "battle royale";
-	}
-	if(global.weaponRandom){
-		loadDescription += " | ";
-		loadDescription += "random weapons";
 	}
 	
 	if(global.spawnStaggered){

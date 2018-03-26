@@ -5,4 +5,4 @@ player = -1;
 targetAngle = 0;
 angle = 0;
 
-zoomMultiplier = 1;
+zoomMultiplier = 2;

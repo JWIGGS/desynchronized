@@ -42,7 +42,6 @@ if(selectPressed){
 	ini_write_real(presetName,"multiplierHealth",global.multiplierHealth);
 	ini_write_real(presetName,"multiplierDamage",global.multiplierDamage);
 	ini_write_real(presetName,"multiplierSpeed",global.multiplierSpeed);
-	ini_write_real(presetName,"weaponRandom",global.weaponRandom);
 	ini_write_real(presetName,"weaponSpawnChance",global.weaponSpawnChance);
 	ini_write_real(presetName,"spawnStaggered",global.spawnStaggered);
 	

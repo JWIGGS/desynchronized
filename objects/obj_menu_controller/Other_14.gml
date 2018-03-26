@@ -123,18 +123,9 @@ switch(customSelected){
 					
 		break;
 	
-	//random weapons
-	case 6:
-					
-		if(leftPressed or rightPressed or selectPressed){
-			global.weaponRandom = !global.weaponRandom;
-			audio_play_sound(snd_blip,0,false);
-		}
-					
-		break;
 		
 	//weapon spawn chance
-	case 7:
+	case 6:
 					
 		if(leftPressed){
 			global.weaponSpawnChance -= .1;	
@@ -150,7 +141,7 @@ switch(customSelected){
 		break;
 				
 	//time limit
-	case 8:
+	case 7:
 					
 		if(leftPressed){
 			global.timeTotal -= 300;	
@@ -166,7 +157,7 @@ switch(customSelected){
 		break;
 		
 	//staggered spawns
-	case 9:
+	case 8:
 					
 		if(leftPressed or rightPressed or selectPressed){
 			global.spawnStaggered = !global.spawnStaggered;
@@ -176,7 +167,7 @@ switch(customSelected){
 		break;
 		
 	//health regen
-	case 10:
+	case 9:
 					
 		if(leftPressed or rightPressed or selectPressed){
 			global.healthRegen = !global.healthRegen;
@@ -186,7 +177,7 @@ switch(customSelected){
 		break;
 		
 	//save preset
-	case 11:
+	case 10:
 	
 		if(selectPressed){
 			presetName = "";
@@ -198,7 +189,7 @@ switch(customSelected){
 	
 						
 	//battle
-	case 12:
+	case 11:
 						
 		if(selectPressed){
 			menuScreen = "map";
@@ -265,27 +256,23 @@ for(var i = customPosition; i<customPosition+customHeight; i++){
 		case 5:
 			customTextValue = string(round(global.multiplierSpeed * 100)) + "%";
 			break;
-		//random weapon
-		case 6:
-			customTextValue = boolean_return(global.weaponRandom,"enabled","disabled");
-			break;
 		//spawn chance
-		case 7:
+		case 6:
 			customTextValue = string(round(global.weaponSpawnChance * 100)) + "%";
 			break;
 					
 		//time
-		case 8:
+		case 7:
 			customTextValue = string(round(global.timeTotal div 60));
 			break;
 			
 		//random weapon
-		case 9:
+		case 8:
 			customTextValue = boolean_return(global.spawnStaggered,"enabled","disabled");
 			break;
 			
 		//health regen
-		case 10:
+		case 9:
 			customTextValue = boolean_return(global.healthRegen,"enabled","disabled");
 			break;
 				

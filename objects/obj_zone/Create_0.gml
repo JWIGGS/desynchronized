@@ -6,4 +6,4 @@ offset = 0;
 teamNumber = -1;
 
 radius = 0;
-maxRadius = 128;
+maxRadius = weapon_get_data(weaponDataRangeMax,weapon);

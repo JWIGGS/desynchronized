@@ -102,28 +102,25 @@ customDescription[4] = "make every weapon overpowered so that none of them are";
 customText[5] = "movement scale: ";
 customDescription[5] = "you will never catch me, I'm the gingerbread man";
 
-customText[6] = "random weapons: ";
-customDescription[6] = "start the game with all sorts of weapons";
+customText[6] = "weapon spawn chance: ";
+customDescription[6] = "here comes the chaos";
 
-customText[7] = "weapon spawn chance: ";
-customDescription[7] = "here comes the chaos";
+customText[7] = "time limit: ";
+customDescription[7] = "this party wont last forever";
 
-customText[8] = "time limit: ";
-customDescription[8] = "this party wont last forever";
+customText[8] = "staggered spawns: ";
+customDescription[8] = "its okay to be late to the party";
 
-customText[9] = "staggered spawns: ";
-customDescription[9] = "its okay to be late to the party";
+customText[9] = "health regen: ";
+customDescription[9] = "rewards for avoiding combat? why not!";
 
-customText[10] = "health regen: ";
-customDescription[10] = "rewards for avoiding combat? why not!";
+customText[10] = "save preset";
+customDescription[10] = "save some of the fun for next time (COMING SOON)";
 
-customText[11] = "save preset";
-customDescription[11] = "save some of the fun for next time (COMING SOON)";
+customText[11] = "battle";
+customDescription[11] = "let the games begin";
 
-customText[12] = "battle";
-customDescription[12] = "let the games begin";
-
-customTextAmount = 13;
+customTextAmount = 12;
 customSelected = 0;
 
 customPosition = 0;
@@ -167,10 +164,10 @@ settingsAmount = 9;
 
 //play texts
 playText[0] = "quick battle";
-playDescription[0] = "3 rounds | 45 seconds";
+playDescription[0] = "3 rounds | 45 seconds | health regen";
 
-playText[1] = "competitive battle";
-playDescription[1] = "5 rounds | 120 seconds | friendly fire";
+playText[1] = "blitz battle";
+playDescription[1] = "5 rounds | 30 seconds | more weapons";
 
 playText[2] = "custom battle";
 playDescription[2] = "whatever you say goes, even if it is absolute insanity";

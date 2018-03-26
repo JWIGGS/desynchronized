@@ -2,19 +2,46 @@ Confirmed Changes
 
 Weapon Additions:
 	Land Mine
-	Knockback Grenade
+
+Move Slower while aiming
+
+Tabulate Settings
+	graphics
+	sound
+	gameplay
+
+Tutorial Map -> 0 Damage
 	
-Grenades to read variables off of numbers map
+	Selecting Timeline
+	Aiming
+	Moving
+	Shooting
+	Reloading
+	Picking Up Grenades
+	Using Cover
+	
+Healthbars in overview round
 
-Kickback
+Environmental Hazards
+	pits
+	toxic waste
+	cars
 
-Knockback
-
-Help message queue, controller, and setting
-
-Tabulate Settings -> graphics, sound, gameplay
-
-Hold A to zoom out
+Status Effects
+	Shield Bubble
+		Negates next damage for entire step
+		Not sure how to obtain
+		
+	Fire
+		Damage over time
+		From flames
+	
+	
+	
+	
+	
+	
+	
 
 
 

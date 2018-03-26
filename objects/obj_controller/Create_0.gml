@@ -48,7 +48,6 @@ global.zone = false;
 global.multiplierHealth = 1;
 global.multiplierDamage = 1;
 global.multiplierSpeed = 1;
-global.weaponRandom = false;
 global.weaponSpawnChance = .4;
 global.spawnStaggered = false;
 global.healthRegen = false;

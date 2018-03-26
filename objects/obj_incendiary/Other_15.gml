@@ -8,7 +8,6 @@ if(alarm[1] = -1){
 }
 else{
 	if(alarm[2] = 0){
-	
 		
 		for(var i = -weapon_get_data(weaponDataDeviation,weapon)+(weapon_get_data(weaponDataDeviation,weapon)*2/weapon_get_data(weaponDataShotAmount,weapon)); i<weapon_get_data(weaponDataDeviation,weapon); i +=weapon_get_data(weaponDataDeviation,weapon)*2/weapon_get_data(weaponDataShotAmount,weapon)){
 			with(instance_create_depth(x,y,depth-1,obj_fire)){

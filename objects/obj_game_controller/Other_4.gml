@@ -15,7 +15,7 @@ if(room != rm_game_setup){
 		
 		//set random zone center
 		global.zoneX = irandom_range(128,room_width-128);
-		global.zoneY = room_height-global.zoneX;
+		global.zoneY = (room_height-global.zoneX)+irandom_range(-256,256);
 		
 		//set random weapon spawn
 		with(obj_weapon_spawner){
@@ -31,17 +31,17 @@ if(room != rm_game_setup){
 		
 
 		//random weapons
-		if(global.weaponRandom){
-			for(var i = 0; i<global.roundTotal; i++){
+
+		for(var i = 0; i<global.roundTotal; i++){
 				
+			global.weaponPlayerSpawn[i] = global.weapon[irandom_range(0,weaponAmount-1)];
+		
+			while(weapon_get_data(weaponDataType,global.weaponPlayerSpawn[i])="throwable"){
 				global.weaponPlayerSpawn[i] = global.weapon[irandom_range(0,weaponAmount-1)];
-		
-				while(weapon_get_data(weaponDataType,global.weaponPlayerSpawn[i])="throwable"){
-					global.weaponPlayerSpawn[i] = global.weapon[irandom_range(0,weaponAmount-1)];
-				}
-		
 			}
+		
 		}
+		
 		
 		//random hair
 		for(var i = 0; i<global.roundTotal; i++){

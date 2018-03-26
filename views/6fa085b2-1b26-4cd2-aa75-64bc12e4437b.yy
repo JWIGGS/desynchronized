@@ -17,7 +17,9 @@
         "6cc3907d-ef28-44cf-998b-62a668582bb5",
         "082611b2-3c23-40ca-bde3-081ec02922d8",
         "86afa7a4-c876-4696-87b6-a9388fdd7373",
-        "de7b68da-7f14-43eb-b286-88d70240913c"
+        "de7b68da-7f14-43eb-b286-88d70240913c",
+        "71b1a19f-7b48-4dcb-be47-dd0bfa87b696",
+        "de3f5c79-7a09-4463-ab7e-41080eadd92a"
     ],
     "filterType": "GMSound",
     "folderName": "weapon reload",

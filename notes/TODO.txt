@@ -1,9 +1,9 @@
 Confirmed Changes
 
+Healthbars in overview round
+
 Weapon Additions:
 	Land Mine
-
-Move Slower while aiming
 
 Tabulate Settings
 	graphics
@@ -20,12 +20,14 @@ Tutorial Map -> 0 Damage
 	Picking Up Grenades
 	Using Cover
 	
-Healthbars in overview round
+
 
 Environmental Hazards
 	pits
 	toxic waste
 	cars
+	blades
+	fire
 
 Status Effects
 	Shield Bubble

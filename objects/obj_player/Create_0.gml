@@ -4,11 +4,14 @@ event_inherited();
 //spd
 xSpd = 0;
 ySpd = 0;
+
 spdWalk= 1.5*global.multiplierSpeed;
+spdAim = 1.2*global.multiplierSpeed;
 
 //angle
 imageAngle = 0;
 aimAngle = 0;
+aiming = false;
 
 //identifiers
 teamNumber = -1;

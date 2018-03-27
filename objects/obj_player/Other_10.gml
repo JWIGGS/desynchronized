@@ -5,8 +5,13 @@ if(gamepad_is_connected(teamNumber)){
 	//aiming
 	event_user(2);
 	
-
-	var spd = spdWalk*weapon_get_data(weaponDataSpeedMultiplier,weapon);
+	var spdVar = spdWalk;
+	
+	if(aiming){
+		spdVar = spdAim;	
+	}
+	
+	var spd = spdVar*weapon_get_data(weaponDataSpeedMultiplier,weapon);
 	
 	
 	//relative movement

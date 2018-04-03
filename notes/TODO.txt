@@ -1,6 +1,5 @@
 Confirmed Changes
 
-Healthbars in overview round
 
 Weapon Additions:
 	Land Mine
@@ -20,23 +19,10 @@ Tutorial Map -> 0 Damage
 	Picking Up Grenades
 	Using Cover
 	
-
-
-Environmental Hazards
-	pits
-	toxic waste
-	cars
-	blades
-	fire
-
-Status Effects
-	Shield Bubble
-		Negates next damage for entire step
-		Not sure how to obtain
-		
-	Fire
-		Damage over time
-		From flames
+Maps
+	Park
+	Wareshouse
+	
 	
 	
 	

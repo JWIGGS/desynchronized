@@ -6,7 +6,7 @@ xSpd = 0;
 ySpd = 0;
 
 spdWalk= 1.5*global.multiplierSpeed;
-spdAim = 1.2*global.multiplierSpeed;
+spdAim = 1*global.multiplierSpeed;
 
 //angle
 imageAngle = 0;

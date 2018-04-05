@@ -3,7 +3,9 @@
 if(gamepad_is_connected(teamNumber)){
 	
 	//aiming
+	
 	event_user(2);
+	
 	
 	var spdVar = spdWalk;
 	

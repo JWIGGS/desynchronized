@@ -94,7 +94,12 @@ victor = 2;
 
 winnerText[0] = "Blue Team Wins";
 winnerText[1] = "Green Team Wins";
-winnerText[2] = "Draw";
+winnerText[2] = "Yellow Team Wins";
+winnerText[3] = "Orange Team Wins";
+winnerText[4] = "Pink Team Wins";
+winnerText[5] = "Purple Team Wins";
+winnerText[6] = "Draw";
+
 
 //zone
 global.zoneX = -1;

@@ -21,7 +21,7 @@ if(player!=-1 and instance_exists(global.playerControlObject[player]) and global
 		x = playerObject.x;
 		y = playerObject.y;
 	
-		angle = 90-playerObject.imageAngle;
+		angle = 90-playerObject.imageAngle
 	}
 	
 	//screenshake
@@ -32,8 +32,8 @@ if(player!=-1 and instance_exists(global.playerControlObject[player]) and global
 	}
 	
 	
-	if(gamepad_is_connected(playerObject.teamNumber) and gamepad_button_check(playerObject.teamNumber,gp_face3)){
-		zoomMultiplier += smooth_to_target(1,zoomMultiplier,10);	
+	if(gamepad_is_connected(playerObject.teamNumber) and gamepad_button_check(playerObject.teamNumber,gp_control_look)){
+		zoomMultiplier += smooth_to_target(1,zoomMultiplier,10);
 	}
 	else{
 		zoomMultiplier += smooth_to_target(2,zoomMultiplier,10);

@@ -21,6 +21,7 @@ with(obj_player){
 				teamNumber = other.teamNumber;
 				global.playerControlObject[teamNumber] = id;
 				imageAngle = other.imageAngle;
+				status = "desynchronized";
 			}
 		}
 		

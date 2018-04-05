@@ -1,13 +1,22 @@
-Confirmed Changes
+BUGS:
 
+TODO:
 
 Weapon Additions:
-	Land Mine
-
+	Land Mine - place and detonates on enemies
+	Machine gun - longer ranged uzi
+	Rocket launcher - projectile sniper - high damage, high reload time
+	
+	
 Tabulate Settings
 	graphics
 	sound
 	gameplay
+	
+Status Effects
+	Fire - from fire weapons
+	Invisibility - cannot be seen
+	Shield - prevents an instance of damage
 
 Tutorial Map -> 0 Damage
 	
@@ -21,8 +30,44 @@ Tutorial Map -> 0 Damage
 	
 Maps
 	Park
+		Benches
+		Campfire
+		Tent
+		Picnic Table
+		Pine Tree
+		Caravan Car
+		Truck/Jeep Car
+		small lake
+		
+
 	Wareshouse
+		Crate
+		Forklift car
+		Explosives
+		Crate Container
+		Long Semi truck
+		--pretty boring right now
+		
+
+Healthbars in overview round
+
+Control Schemes
+	Movement	Aiming	Reload
+	WSAD		Mouse	RF
+	WSAD		QE		RF
+	IJKL		UO		YH
+	GP0			GP0		GP0
+	GP1			GP1		GP1
+
+Single Player vs AI
+
+Lobby area to add/remove players
+Lobby area to select control schemes
+
+
 	
+
+
 	
 	
 	

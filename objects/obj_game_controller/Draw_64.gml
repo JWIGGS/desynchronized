@@ -84,7 +84,7 @@ if(overviewRound){
 		case "victory":
 		
 			//draw round status
-			draw_text_formatting(global.color[victor],fa_center,fa_middle,font_64);
+			draw_text_formatting(global.colorChoice[victor],fa_center,fa_middle,font_64);
 			draw_set_alpha(1-(alarm[0]/300));
 			draw_text_transformed(displayWidth/2,(displayHeight/2)-64,winnerText[victor],1-(alarm[0]/300),1-(alarm[0]/300),0);
 			draw_set_alpha(1);

@@ -44,9 +44,9 @@ for(var i = 0; i<2; i++){
 		
 		//select pressed
 		
-		selectPressed = gamepad_button_check_pressed(i,gp_face1) or selectPressed;
+		selectPressed = gamepad_button_check_pressed(i,gp_control_select) or selectPressed;
 		
-		backPressed = gamepad_button_check_pressed(i,gp_face2) or backPressed;
+		backPressed = gamepad_button_check_pressed(i,gp_control_back) or backPressed;
 	
 	}
 }

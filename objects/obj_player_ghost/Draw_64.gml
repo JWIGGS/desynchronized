@@ -13,8 +13,10 @@ draw_text(uiCenterX+(-uiCenterDirection*(240)),displayHeight-24,string(hp)+"/"+s
 
 
 //dead text (just in case they forgot)
+draw_text_formatting(c_white,fa_center,fa_middle,font_12);
+draw_text(uiCenterX,displayHeight-96,"spectating");
 draw_text_formatting(c_white,fa_center,fa_middle,font_24);
-draw_text(uiCenterX,displayHeight-64,"spectating");
+draw_text(uiCenterX,displayHeight-56,status);
 
 	
 	

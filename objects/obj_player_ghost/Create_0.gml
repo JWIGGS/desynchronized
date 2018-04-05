@@ -12,6 +12,8 @@ hpMax = 100;
 
 depth = -50;
 
+status = "";
+
 
 
 

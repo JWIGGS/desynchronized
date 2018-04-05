@@ -56,7 +56,7 @@ switch(global.mode){
 				if(!global.playerSelectionReady[i]){
 					
 					//right
-					if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5)){
+					if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)>(gamepad_deadzone*5)){
 						if(alarm[i+1] = -1){
 							
 							//revoke player control from previous timeline
@@ -84,7 +84,7 @@ switch(global.mode){
 					}
 					
 					//left
-					else if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5)){
+					else if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)<(-gamepad_deadzone*5)){
 						if(alarm[i+1] = -1){
 							
 							//revoke player control from previous timeline
@@ -118,7 +118,7 @@ switch(global.mode){
 				}
 		
 				//select pressed
-				if(gamepad_button_check_pressed(i,gp_face1)){
+				if(gamepad_button_check_pressed(i,gp_control_select)){
 					
 					if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
 						
@@ -138,7 +138,7 @@ switch(global.mode){
 				}
 				
 				//back pressed
-				if(gamepad_button_check_pressed(i,gp_face2)){
+				if(gamepad_button_check_pressed(i,gp_control_back)){
 					
 					//not ready
 					global.playerSelectionReady[i] = false;
@@ -300,20 +300,20 @@ switch(global.mode){
 				
 				//set victor
 				if(global.playerAliveCount[0]+global.playerDesyncCount[0]>global.playerAliveCount[1]+global.playerDesyncCount[1]){
-					victor = 0;	
+					victor = global.colorSelected[0];	
 				}
 				else if(global.playerAliveCount[0]+global.playerDesyncCount[0]<global.playerAliveCount[1]+global.playerDesyncCount[1]){
-					victor = 1;	
+					victor = global.colorSelected[1];	
 				}
 				else{
 					if(global.playerAliveCount[0]>global.playerAliveCount[1]){
-						victor = 0;
+						victor = global.colorSelected[0];
 					}
 					else if(global.playerAliveCount[0]<global.playerAliveCount[1]){
-						victor = 1;	
+						victor = global.colorSelected[1];	
 					}
 					else{
-						victor = 2;	
+						victor = global.colorSelected[global.global.colorChoiceAmount];	
 					}
 					
 					

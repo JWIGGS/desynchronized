@@ -79,8 +79,8 @@ for(var i = 0; i<2; i++){
 		
 		//navigation buttons
 		
-		selectPressed = gamepad_button_check_pressed(i,gp_face1) or selectPressed;
-		backPressed = gamepad_button_check_pressed(i,gp_face2) or backPressed;
+		selectPressed = gamepad_button_check_pressed(i,gp_control_select) or selectPressed;
+		backPressed = gamepad_button_check_pressed(i,gp_control_back) or backPressed;
 	
 	}
 }

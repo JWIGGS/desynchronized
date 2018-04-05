@@ -12,3 +12,5 @@ zoom = 1;
 
 angle = 0;
 targetAngle = 90-playerObject.imageAngle;
+
+angleSpd = abs(angle-targetAngle)/180;

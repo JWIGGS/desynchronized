@@ -347,7 +347,7 @@ ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Bolt Action");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,300.0);
-ds_map_add(global.weaponRof,object,120.0);
+ds_map_add(global.weaponRof,object,60.0);
 ds_map_add(global.weaponDisplayRange,object,"Insane");
 ds_map_add(global.weaponRangeEffective,object,304.0);
 ds_map_add(global.weaponRangeMax,object,512.0);
@@ -362,8 +362,32 @@ ds_map_add(global.weaponSpeedMultiplier,object,0.9);
 ds_map_add(global.weaponDisplaySpeed,object,"Slow");
 
 
+var object = "rocket";
+global.weapon[10] = "rocket";
+ds_map_add(global.weaponName,object,"Rocket Launcher");
+ds_map_add(global.weaponDescription,object,"I have a rocket launcher. Your argument is INVALID!!!!");
+ds_map_add(global.weaponAutofire,object,false);
+ds_map_add(global.weaponType,object,"weapon");
+ds_map_add(global.weaponDisplayType,object,"Launcher");
+ds_map_add(global.weaponStance,object,"rifle");
+ds_map_add(global.weaponDamage,object,150.0);
+ds_map_add(global.weaponRof,object,60.0);
+ds_map_add(global.weaponDisplayRange,object,"Insane");
+ds_map_add(global.weaponRangeEffective,object,4.0);
+ds_map_add(global.weaponRangeMax,object,64.0);
+ds_map_add(global.weaponDeviation,object,0.0);
+ds_map_add(global.weaponShotAmount,object,1.0);
+ds_map_add(global.weaponClip,object,1.0);
+ds_map_add(global.weaponReloadTime,object,210.0);
+ds_map_add(global.weaponOffsetX,object,24.0);
+ds_map_add(global.weaponOffsetY,object,5.0);
+ds_map_add(global.weaponObjectCreate,object,obj_rocket);
+ds_map_add(global.weaponSpeedMultiplier,object,0.8);
+ds_map_add(global.weaponDisplaySpeed,object,"Very Slow");
+
+
 var object = "flamethrower";
-global.weapon[10] = "flamethrower";
+global.weapon[11] = "flamethrower";
 ds_map_add(global.weaponName,object,"Flamethrower");
 ds_map_add(global.weaponDescription,object,"Gives a whole new meaning to the term friendly fire.");
 ds_map_add(global.weaponAutofire,object,true);
@@ -387,7 +411,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Slow");
 
 
 var object = "laser";
-global.weapon[11] = "laser";
+global.weapon[12] = "laser";
 ds_map_add(global.weaponName,object,"Laser Cannon");
 ds_map_add(global.weaponDescription,object,"Nothing like the sweet humming of a laser beam to annihilate your enemies.");
 ds_map_add(global.weaponAutofire,object,true);
@@ -411,7 +435,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Slow");
 
 
 var object = "shield";
-global.weapon[12] = "shield";
+global.weapon[13] = "shield";
 ds_map_add(global.weaponName,object,"Riot Shield");
 ds_map_add(global.weaponDescription,object,"Strong, sturdy, and only takes 20% of damage from the front.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -430,12 +454,12 @@ ds_map_add(global.weaponReloadTime,object,0.0);
 ds_map_add(global.weaponOffsetX,object,12.0);
 ds_map_add(global.weaponOffsetY,object,0.0);
 ds_map_add(global.weaponObjectCreate,object,obj_melee);
-ds_map_add(global.weaponSpeedMultiplier,object,0.8);
-ds_map_add(global.weaponDisplaySpeed,object,"Very Slow");
+ds_map_add(global.weaponSpeedMultiplier,object,0.9);
+ds_map_add(global.weaponDisplaySpeed,object,"Slow");
 
 
 var object = "sword";
-global.weapon[13] = "sword";
+global.weapon[14] = "sword";
 ds_map_add(global.weaponName,object,"Broadsword");
 ds_map_add(global.weaponDescription,object,"The ultimate weapon to turn your foes into a wonderful sushi.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -459,7 +483,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Fast");
 
 
 var object = "axe";
-global.weapon[14] = "axe";
+global.weapon[15] = "axe";
 ds_map_add(global.weaponName,object,"Battle Axe");
 ds_map_add(global.weaponDescription,object,"Hack first. Axe questions later.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -483,7 +507,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "grenade";
-global.weapon[15] = "grenade";
+global.weapon[16] = "grenade";
 ds_map_add(global.weaponName,object,"Grenade");
 ds_map_add(global.weaponDescription,object,"Walk away and look cool while things blow up behind you. Oh yeah.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -494,7 +518,7 @@ ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
 ds_map_add(global.weaponDisplayRange,object,"Variable");
 ds_map_add(global.weaponRangeEffective,object,4.0);
-ds_map_add(global.weaponRangeMax,object,96.0);
+ds_map_add(global.weaponRangeMax,object,64.0);
 ds_map_add(global.weaponDeviation,object,0.0);
 ds_map_add(global.weaponShotAmount,object,1.0);
 ds_map_add(global.weaponClip,object,1.0);
@@ -507,7 +531,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "incendiary";
-global.weapon[16] = "incendiary";
+global.weapon[17] = "incendiary";
 ds_map_add(global.weaponName,object,"Incendiary Grenade");
 ds_map_add(global.weaponDescription,object,"Exhausts a stream of fire once detonated.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -531,7 +555,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "zone";
-global.weapon[17] = "zone";
+global.weapon[18] = "zone";
 ds_map_add(global.weaponName,object,"The Zone");
 ds_map_add(global.weaponDescription,object,"A dense bomb full of a slowly expanding evil.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -555,7 +579,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "bionade";
-global.weapon[18] = "bionade";
+global.weapon[19] = "bionade";
 ds_map_add(global.weaponName,object,"Bionade");
 ds_map_add(global.weaponDescription,object,"You get free healing! And You get free healing! Everybody gets free healing!!!");
 ds_map_add(global.weaponAutofire,object,false);
@@ -579,7 +603,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "glassnade";
-global.weapon[19] = "glassnade";
+global.weapon[20] = "glassnade";
 ds_map_add(global.weaponName,object,"Frostspark");
 ds_map_add(global.weaponDescription,object,"Creates a protective barrier of ice around it.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -603,7 +627,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 var object = "mine";
-global.weapon[20] = "mine";
+global.weapon[21] = "mine";
 ds_map_add(global.weaponName,object,"Land Mine");
 ds_map_add(global.weaponDescription,object,"Nothing better to claim territory than than placing one of these down.");
 ds_map_add(global.weaponAutofire,object,false);
@@ -614,7 +638,7 @@ ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
 ds_map_add(global.weaponDisplayRange,object,"Variable");
 ds_map_add(global.weaponRangeEffective,object,4.0);
-ds_map_add(global.weaponRangeMax,object,96.0);
+ds_map_add(global.weaponRangeMax,object,64.0);
 ds_map_add(global.weaponDeviation,object,0.0);
 ds_map_add(global.weaponShotAmount,object,1.0);
 ds_map_add(global.weaponClip,object,1.0);
@@ -622,7 +646,6 @@ ds_map_add(global.weaponReloadTime,object,60.0);
 ds_map_add(global.weaponOffsetX,object,8.0);
 ds_map_add(global.weaponOffsetY,object,4.0);
 ds_map_add(global.weaponObjectCreate,object,obj_mine);
-ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 
 
-#macro weaponAmount 21
+#macro weaponAmount 22

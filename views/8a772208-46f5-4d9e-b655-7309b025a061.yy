@@ -25,7 +25,8 @@
         "2428e39a-2212-4e5f-9e11-3f5c9bbaf970",
         "9cad50e4-7d67-4629-beec-364623d1b1f3",
         "e8b5d130-bd79-4166-a27d-9edccfc8a9fd",
-        "2f3a375d-267f-427f-96b0-4299c8dc6402"
+        "2f3a375d-267f-427f-96b0-4299c8dc6402",
+        "b01bbbc0-1431-4c49-a5d3-6a086a359e92"
     ],
     "filterType": "GMObject",
     "folderName": "effects and weapons",

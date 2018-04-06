@@ -2566,6 +2566,25 @@
             }
         },
         {
+            "Key": "452bab19-c7ff-4211-bb3e-c26c7a5d3f62",
+            "Value": {
+                "id": "bcfa7954-b29a-49d9-bb73-64b9e6f5d584",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_ui_weapon_rocket\/spr_ui_weapon_rocket.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "45396c50-9b28-4a08-a393-1ac652a5f4fe",
             "Value": {
                 "id": "94129150-0ebb-46c0-96ce-96a1f10745c1",
@@ -4656,6 +4675,25 @@
             }
         },
         {
+            "Key": "8616da79-1b1b-4bf2-b516-6a34c59e6e77",
+            "Value": {
+                "id": "8a1e63b7-1281-4138-aa32-6dbb74e4edf1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_rocket_fly\/snd_rocket_fly.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "86afa7a4-c876-4696-87b6-a9388fdd7373",
             "Value": {
                 "id": "0326f383-0aea-44bb-9399-1fbf0f68f4ca",
@@ -4979,6 +5017,25 @@
             }
         },
         {
+            "Key": "8de7194a-9f30-4bfb-a769-fb5944df1a28",
+            "Value": {
+                "id": "cb0d5f3b-15b6-475d-be6c-b387c83f78d5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_rocket\/snd_rocket.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8e04f639-9c1b-401e-848a-cd838c5c0e1e",
             "Value": {
                 "id": "67ff5243-738d-4318-8033-717ba6e8f503",
@@ -5185,6 +5242,25 @@
                 ],
                 "resourcePath": "views\/90e35550-1915-491c-a81f-9ad5df8197c3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "91129859-1ef1-443f-bc0f-aaf03bc53c67",
+            "Value": {
+                "id": "64084656-3ec1-4ce2-b266-f90773e45627",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_rocket_reload\/snd_rocket_reload.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -6328,6 +6404,25 @@
             }
         },
         {
+            "Key": "b01bbbc0-1431-4c49-a5d3-6a086a359e92",
+            "Value": {
+                "id": "8925dc75-2d0f-4cee-ac57-b087a6b5c344",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_rocket\/obj_rocket.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b0e92293-217b-4e29-8ccd-11597d021646",
             "Value": {
                 "id": "9034c21f-390d-47c2-90e2-e00527f5017f",
@@ -6860,6 +6955,25 @@
             }
         },
         {
+            "Key": "c0cc10d9-f60d-4fcb-ac9f-3dd0a7bdb597",
+            "Value": {
+                "id": "97df5930-2e7e-4522-bb9d-d0454d8fa876",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_rocket\/spr_rocket.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c2052717-439e-4ec2-9ed4-7f865c25835f",
             "Value": {
                 "id": "bbfb9dab-deeb-4517-a36c-6b908cc97701",
@@ -7008,6 +7122,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_car_blue\/spr_car_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c64917a9-7851-4ca7-9ad5-f8ca23d80cde",
+            "Value": {
+                "id": "fb37cf8d-d5cb-4ee2-bfb0-d6bf213bdd91",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_rocket\/spr_player_rocket.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7369,6 +7502,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_hexplosion\/spr_hexplosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ce6438bd-b7d0-46d7-8da9-c61c9498e971",
+            "Value": {
+                "id": "4345a80f-5335-4096-9557-bbf95afc9a4c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_weapon_rocket\/spr_weapon_rocket.yy",
                 "resourceType": "GMSprite"
             }
         },

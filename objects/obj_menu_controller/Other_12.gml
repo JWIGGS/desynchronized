@@ -22,7 +22,7 @@ for(var i = 0; i<2; i++){
 	if(gamepad_is_connected(i)){
 
 		//left
-		if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5)){
+		if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)<(-gamepad_deadzone*5)){
 			if(alarm[i] = 10){
 				weaponSelected[i]--;
 				weaponSelectedDirection[i] = -1;
@@ -33,7 +33,7 @@ for(var i = 0; i<2; i++){
 			}
 		}
 		//right
-		else if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5)){
+		else if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)>(gamepad_deadzone*5)){
 			if(alarm[i] = 10){
 				weaponSelected[i]++;
 				weaponSelectedDirection[i] = 1;

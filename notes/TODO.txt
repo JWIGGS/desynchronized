@@ -2,11 +2,6 @@ BUGS:
 
 TODO:
 
-Weapon Additions:
-	Land Mine - place and detonates on enemies
-	Machine gun - longer ranged uzi
-	Rocket launcher - projectile sniper - high damage, high reload time
-	
 	
 Tabulate Settings
 	graphics

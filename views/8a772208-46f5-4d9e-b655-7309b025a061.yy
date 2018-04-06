@@ -20,10 +20,12 @@
         "d7cdb2d3-7678-4298-a7b8-f32c6878cb83",
         "be8fa222-8350-4153-b7c1-9e771010b0cd",
         "c6a82abc-ca0c-4b8b-aee1-7b1532f55007",
+        "d9ea2f19-23d7-4b01-8566-a2a90d74103d",
         "bab43a1f-bd9a-4b56-8a3e-436e616b3127",
         "2428e39a-2212-4e5f-9e11-3f5c9bbaf970",
         "9cad50e4-7d67-4629-beec-364623d1b1f3",
-        "e8b5d130-bd79-4166-a27d-9edccfc8a9fd"
+        "e8b5d130-bd79-4166-a27d-9edccfc8a9fd",
+        "2f3a375d-267f-427f-96b0-4299c8dc6402"
     ],
     "filterType": "GMObject",
     "folderName": "effects and weapons",

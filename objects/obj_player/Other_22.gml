@@ -19,6 +19,7 @@ else{
 		timer = other.throwableTime;
 		angle = other.imageAngle;
 		spd = other.throwablePower;
+		teamNumber = other.teamNumber;
 	}
 	
 	audio_play_sound(asset_get_index("snd_"+throwableWeapon),1,false);

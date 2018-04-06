@@ -293,7 +293,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Slow");
 var object = "biotic";
 global.weapon[7] = "biotic";
 ds_map_add(global.weaponName,object,"Biotic Rifle");
-ds_map_add(global.weaponDescription,object,"Heal your teammates, kill your enemies.");
+ds_map_add(global.weaponDescription,object,"Heal your teammates, kill your enemies. Not the other way around.");
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Burst");
@@ -485,7 +485,7 @@ ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 var object = "grenade";
 global.weapon[15] = "grenade";
 ds_map_add(global.weaponName,object,"Grenade");
-ds_map_add(global.weaponDescription,object,"Pull the pin and fire away.");
+ds_map_add(global.weaponDescription,object,"Walk away and look cool while things blow up behind you. Oh yeah.");
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
@@ -602,4 +602,27 @@ ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
-#macro weaponAmount 20
+var object = "mine";
+global.weapon[20] = "mine";
+ds_map_add(global.weaponName,object,"Land Mine");
+ds_map_add(global.weaponDescription,object,"Nothing better to claim territory than than placing one of these down.");
+ds_map_add(global.weaponAutofire,object,false);
+ds_map_add(global.weaponType,object,"throwable");
+ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponStance,object,"throw");
+ds_map_add(global.weaponDamage,object,150.0);
+ds_map_add(global.weaponRof,object,0.0);
+ds_map_add(global.weaponDisplayRange,object,"Variable");
+ds_map_add(global.weaponRangeEffective,object,4.0);
+ds_map_add(global.weaponRangeMax,object,96.0);
+ds_map_add(global.weaponDeviation,object,0.0);
+ds_map_add(global.weaponShotAmount,object,1.0);
+ds_map_add(global.weaponClip,object,1.0);
+ds_map_add(global.weaponReloadTime,object,60.0);
+ds_map_add(global.weaponOffsetX,object,8.0);
+ds_map_add(global.weaponOffsetY,object,4.0);
+ds_map_add(global.weaponObjectCreate,object,obj_mine);
+ds_map_add(global.weaponSpeedMultiplier,object,1.0);
+
+
+#macro weaponAmount 21

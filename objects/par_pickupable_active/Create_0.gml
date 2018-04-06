@@ -7,3 +7,5 @@ image_index = 1;
 inRange = false;
 
 weapon = "";
+
+teamNumber = -1;

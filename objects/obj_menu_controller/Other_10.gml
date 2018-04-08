@@ -28,12 +28,12 @@ else{
 			
 //up
 if(upPressed){
-	menuSelected++;
+	menuSelected--;
 	audio_play_sound(snd_blip,0,false);
 }
 //down
 if(downPressed){
-	menuSelected--;
+	menuSelected++;
 	audio_play_sound(snd_blip,0,false);
 }
 

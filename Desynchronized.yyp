@@ -1597,6 +1597,25 @@
             }
         },
         {
+            "Key": "2b62186c-ef33-4d72-afc2-f816be33be34",
+            "Value": {
+                "id": "ef4fa7e5-332c-4719-8e02-4cd8c0e80121",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_input_controller\/obj_input_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2b6ac2b5-05b9-46e3-9e05-fc5b1f66c6e0",
             "Value": {
                 "id": "9c27d01a-a8dd-4ddd-8608-7fb16e3b9798",
@@ -6363,6 +6382,25 @@
                 ],
                 "resourcePath": "sounds\/snd_hurt7\/snd_hurt7.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "ac6e1f43-9c2e-4689-9123-dcb457ba21a2",
+            "Value": {
+                "id": "d6b417f5-c3a2-4edd-9d00-5c377e6f7219",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_control\/spr_control.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

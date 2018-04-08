@@ -32,7 +32,7 @@ if(player!=-1 and instance_exists(global.playerControlObject[player]) and global
 	}
 	
 	
-	if(gamepad_is_connected(playerObject.teamNumber) and gamepad_button_check(playerObject.teamNumber,gp_control_look)){
+	if(global.controlLook[playerObject.teamNumber]){
 		zoomMultiplier += smooth_to_target(1,zoomMultiplier,10);
 	}
 	else{

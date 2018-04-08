@@ -8,47 +8,46 @@ backPressed = false;
 
 for(var i = 0; i<2; i++){
 	
-	if(gamepad_is_connected(i)){
 	
-		//up
-		if(gamepad_axis_value(i,gp_axislv)>(gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				upPressed = true;
-				alarm[i] = 10;
-			}
+	//up
+	if(global.controlUp[i]){
+		if(alarm[i] = -1){
+			upPressed = true;
+			alarm[i] = 10;
 		}
-		//down
-		else if(gamepad_axis_value(i,gp_axislv)<(-gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				downPressed = true;
-				alarm[i] = 10;
-			}
-		}
-		//left
-		else if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				leftPressed = true;
-				alarm[i] = 10;
-			}
-		}
-		//down
-		else if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				rightPressed = true;
-				alarm[i] = 10;
-			}
-		}
-		else{
-			alarm[i] = -1;
-		}
-		
-		//select pressed
-		
-		selectPressed = gamepad_button_check_pressed(i,gp_control_select) or selectPressed;
-		
-		backPressed = gamepad_button_check_pressed(i,gp_control_back) or backPressed;
-	
 	}
+	//down
+	else if(global.controlDown[i]){
+		if(alarm[i] = -1){
+			downPressed = true;
+			alarm[i] = 10;
+		}
+	}
+	//left
+	else if(global.controlLeft[i]){
+		if(alarm[i] = -1){
+			leftPressed = true;
+			alarm[i] = 10;
+		}
+	}
+	//down
+	else if(global.controlRight[i]){
+		if(alarm[i] = -1){
+			rightPressed = true;
+			alarm[i] = 10;
+		}
+	}
+	else{
+		alarm[i] = -1;
+	}
+		
+	//select pressed
+		
+	selectPressed = global.controlSelectPressed[i] or selectPressed;
+		
+	backPressed = global.controlBackPressed[i] or backPressed;
+	
+
 }
 
 if(upPressed){
@@ -64,9 +63,7 @@ pauseSelected = wrap(pauseSelected,0,pauseTextAmount);
 
 
 if(selectPressed){
-	
-	
-	
+
 	switch(pauseSelected){
 
 		//resume game

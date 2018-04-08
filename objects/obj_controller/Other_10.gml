@@ -562,7 +562,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponStance,object,"throw");
-ds_map_add(global.weaponDamage,object,5.0);
+ds_map_add(global.weaponDamage,object,20.0);
 ds_map_add(global.weaponRof,object,600.0);
 ds_map_add(global.weaponDisplayRange,object,"Variable");
 ds_map_add(global.weaponRangeEffective,object,96.0);

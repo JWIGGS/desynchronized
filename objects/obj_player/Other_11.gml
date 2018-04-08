@@ -1,7 +1,7 @@
 /// @description actions control
 
-//reset gamepad hold from throw
-if(!throwablePowerHold or gamepad_button_check_released(teamNumber,gp_control_shoot)){
+//reset hold from throw
+if(!throwablePowerHold or global.controlShootReleased[teamNumber]){
 	throwablePressed = false;
 }
 
@@ -9,16 +9,16 @@ if(!throwablePowerHold or gamepad_button_check_released(teamNumber,gp_control_sh
 if(alarm[0] = -1 and !throwablePressed){
 	
 	//has weapon
-	if(throwableWeapon = "" and !gamepad_button_check(teamNumber,gp_control_look)){
+	if(throwableWeapon = "" and !global.controlLook[teamNumber]){
 		if(weapon_get_data(weaponDataAutofire,weapon)){
-			if(gamepad_button_check(teamNumber,gp_control_shoot) and (clipCurrent>0 or clipSize=0)){
+			if(global.controlShoot[teamNumber] and (clipCurrent>0 or clipSize=0)){
 				//shoot
 				event_user(3);
 				exit;
 			}
 		}
 		else{
-			if(gamepad_button_check_pressed(teamNumber,gp_control_shoot) and (clipCurrent>0 or clipSize = 0)){
+			if(global.controlShootPressed[teamNumber] and (clipCurrent>0 or clipSize = 0)){
 				//shoot
 				event_user(3);
 				exit;
@@ -29,16 +29,16 @@ if(alarm[0] = -1 and !throwablePressed){
 	//has throwable
 	else{
 		
-		if(gamepad_button_check_pressed(teamNumber,gp_control_shoot)){
+		if(global.controlShootPressed[teamNumber]){
 			throwablePowerHold = true;
 			throwablePower = 0;
 		}
 		
-		if(throwablePowerHold and gamepad_button_check(teamNumber,gp_control_shoot)){
+		if(throwablePowerHold and global.controlShoot[teamNumber]){
 			throwablePower = clamp(throwablePower+throwablePowerAccel,0,throwablePowerMax);	
 		}
 		
-		if(gamepad_button_check_released(teamNumber,gp_control_shoot)){
+		if(global.controlShootReleased[teamNumber]){
 			//throwable interaction
 			event_user(12);
 			throwablePowerHold = false;
@@ -54,13 +54,13 @@ if(throwableWeapon = ""){
 
 	//pickup weapons
 	weaponPickedUp = false;
-	if(gamepad_button_check_pressed(teamNumber,gp_control_pickup)){
+	if(global.controlPickupPressed[teamNumber]){
 		event_user(6);
 	}
 
 	//manual reload
 	if(!weaponPickedUp and !reloading){
-		if(gamepad_button_check_pressed(teamNumber,gp_control_reload) and clipCurrent!=clipSize){
+		if(global.controlReloadPressed[teamNumber] and clipCurrent!=clipSize){
 			event_user(9);
 		}
 
@@ -76,26 +76,12 @@ if(throwableWeapon = ""){
 else{
 	
 	//prime grenade
-	if(gamepad_button_check_pressed(teamNumber,gp_control_reload)){
+	if(global.controlReloadPressed[teamNumber]){
 		event_user(13);
 		exit;
 	}	
 	
 }
-
-//player trail
-
-if(global.settingsTrailPlayer){
-	
-	with(instance_create_depth(x,y,depth,obj_player_trail)){
-		imageAngle = other.imageAngle;
-		playerNumber = other.playerNumber;
-		teamNumber = other.teamNumber;
-		weapon = other.weapon;
-		throwableWeapon = other.throwableWeapon;
-	}
-}
-
 
 
 

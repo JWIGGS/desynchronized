@@ -1,21 +1,8 @@
 /// @description 
 
 //display constants
-#macro displayWidth 1024
-#macro displayHeight 768
-
-//deadzone
-#macro gamepad_deadzone .15
-
-
-//controls
-#macro gp_control_shoot gp_shoulderrb
-#macro gp_control_look gp_shoulderr
-#macro gp_control_reload gp_shoulderlb
-#macro gp_control_pickup gp_shoulderl
-#macro gp_control_select gp_face1
-#macro gp_control_back gp_face2
-
+#macro displayWidth		1024
+#macro displayHeight	768
 
 //numbers import constants
 #macro TRUE true
@@ -52,8 +39,6 @@ global.settingsFullscreen = false;
 global.settingsPretty = false;
 global.settingsExhibition = false;
 global.settingsDebug = false;
-global.settingsMouse = true;
-global.settingsSpeed = false;
 
 //match settings
 global.friendlyFire = false;

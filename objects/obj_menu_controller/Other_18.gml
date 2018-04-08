@@ -9,14 +9,14 @@
 
 //up
 if(upPressed){
-	loadSelected++;
+	loadSelected--;
 	loadVars = true;
 	audio_play_sound(snd_blip,0,false);
 }
 				
 //down
 if(downPressed){
-	loadSelected--;
+	loadSelected++;
 	loadVars = true;
 	audio_play_sound(snd_blip,0,false);
 

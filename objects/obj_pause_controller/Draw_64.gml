@@ -8,6 +8,7 @@ if(backgroundSurface = -1){
 	surface_copy(backgroundSurface,0,0,application_surface);
 	
 	instance_deactivate_all(true);
+	instance_activate_object(obj_input_controller);
 
 	audio_pause_all();	
 	

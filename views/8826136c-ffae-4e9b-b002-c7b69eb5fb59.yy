@@ -13,7 +13,8 @@
         "f80b942b-cc4f-4ad2-bc78-2c167aac15a3",
         "692b5142-5c7b-4ed2-96e4-1d39779d7b0b",
         "a8ec792d-23ac-4bba-bc23-0c0f2f5a2de7",
-        "f6391759-db8d-4346-8495-5eb53c784b51"
+        "f6391759-db8d-4346-8495-5eb53c784b51",
+        "2b62186c-ef33-4d72-afc2-f816be33be34"
     ],
     "filterType": "GMObject",
     "folderName": "controller",

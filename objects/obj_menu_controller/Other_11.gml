@@ -8,12 +8,12 @@
 
 //up
 if(upPressed){
-	playSelected++;
+	playSelected--;
 	audio_play_sound(snd_blip,0,false);
 }
 //down
 if(downPressed){
-	playSelected--;
+	playSelected++;
 	audio_play_sound(snd_blip,0,false);
 }
 

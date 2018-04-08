@@ -3,31 +3,26 @@
 //player responsiveness
 for(var i = 0; i<2; i++){
 	
-	if(gamepad_is_connected(i)){
-		
-		playerResponseTargetX[i] += smooth_to_target(playerResponseX[i]+(gamepad_axis_value(i,gp_axislh)*playerResponseMovement),playerResponseTargetX[i],5); 	
-		playerResponseTargetY[i] += smooth_to_target(playerResponseY[i]+(gamepad_axis_value(i,gp_axislv)*playerResponseMovement),playerResponseTargetY[i],5);
+	playerResponseTargetX[i] += smooth_to_target(playerResponseX[i]+(global.controlMoveX[i]*playerResponseMovement),playerResponseTargetX[i],5); 	
+	playerResponseTargetY[i] += smooth_to_target(playerResponseY[i]+(global.controlMoveY[i]*playerResponseMovement),playerResponseTargetY[i],5);
 		
 
-		if(abs(gamepad_axis_value(i,gp_axisrh))>(gamepad_deadzone*5) or abs(gamepad_axis_value(i,gp_axisrv))>(gamepad_deadzone*5)){
+	if(global.controlAim[i]!=0){
 
-			playerResponseAngle[i] = round(point_direction(0,0,gamepad_axis_value(i,gp_axisrh),gamepad_axis_value(i,gp_axisrv)))-90;
+		playerResponseAngle[i] = global.controlAim[i];
 
-				if(playerResponseAngle[i]>180){
-					playerResponseAngle[i] -= 360;	
-				}
 
-				playerResponseTargetAngle[i] += smooth_to_target(playerResponseAngle[i],playerResponseTargetAngle[i],5);
+		playerResponseTargetAngle[i] += smooth_to_target(playerResponseAngle[i],playerResponseTargetAngle[i],5);
 		
-		}
-	
-		else{
-			playerResponseTargetAngle[i] += smooth_to_target(0,playerResponseTargetAngle[i],5);
-		}
-		
-		playerResponseSize[i] = 10;
-
 	}
+	
+	else{
+		playerResponseTargetAngle[i] += smooth_to_target(0,playerResponseTargetAngle[i],5);
+	}
+		
+	playerResponseSize[i] = 10;
+
+	
 
 }
 
@@ -39,53 +34,50 @@ rightPressed = false;
 selectPressed = false;
 backPressed = false;
 
-//gamepad input
+//input
 for(var i = 0; i<2; i++){
 	
-	if(gamepad_is_connected(i)){
-	
-		//up
-		if(gamepad_axis_value(i,gp_axislv)>(gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				upPressed = true;
-				alarm[i] = 10;
-			}
+	//up
+	if(global.controlUp[i]){
+		if(alarm[i] = -1){
+			upPressed = true;
+			alarm[i] = 10;
 		}
-		//down
-		else if(gamepad_axis_value(i,gp_axislv)<(-gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				downPressed = true;
-				alarm[i] = 10;
-			}
-		}
-		//left
-		else if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				leftPressed = true;
-				alarm[i] = 10;
-			}
-		}
-		//right
-		else if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5)){
-			if(alarm[i] = -1){
-				rightPressed = true;
-				alarm[i] = 10;
-			}
-		}
-		//reset
-		else{
-			alarm[i] = -1;
-		}
-		
-		//navigation buttons
-		
-		selectPressed = gamepad_button_check_pressed(i,gp_control_select) or selectPressed;
-		backPressed = gamepad_button_check_pressed(i,gp_control_back) or backPressed;
-	
 	}
+	//down
+	else if(global.controlDown[i]){
+		if(alarm[i] = -1){
+			downPressed = true;
+			alarm[i] = 10;
+		}
+	}
+	//left
+	else if(global.controlLeft[i]){
+		if(alarm[i] = -1){
+			leftPressed = true;
+			alarm[i] = 10;
+		}
+	}
+	//right
+	else if(global.controlRight[i]){
+		if(alarm[i] = -1){
+			rightPressed = true;
+			alarm[i] = 10;
+		}
+	}
+	//reset
+	else{
+		alarm[i] = -1;
+	}
+		
+	//navigation buttons
+		
+	selectPressed = global.controlSelectPressed[i] or selectPressed;
+	backPressed = global.controlBackPressed[i] or backPressed;
+
 }
 
-//keyboard input
+//keyboard hacking
 upPressed = upPressed or keyboard_check_pressed(vk_down);
 downPressed = downPressed or keyboard_check_pressed(vk_up);
 leftPressed = leftPressed or keyboard_check_pressed(vk_left);

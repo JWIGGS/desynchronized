@@ -130,35 +130,49 @@ customHeight = 9;
 
 //settings texts
 
-settingsText[0] = "music volume:";
-settingsDescription[0] = "blast that dynamic background music";
+settingsText[0] = "audio";
+settingsDescription[0] = "get those sounds at the right levels";
 
-settingsText[1] = "effects volume:";
-settingsDescription[1] = "the sound of the clicks is really satisfying";
+settingsText[1] = "graphics";
+settingsDescription[1] = "makes the game look cooler";
 
-settingsText[2] = "fullscreen:";
-settingsDescription[2] = "go big or go home";
-
-settingsText[3] = "advanced rendering:";
-settingsDescription[3] = "beautifier for the fastest of computers";
-
-settingsText[4] = "exhibition mode:";
-settingsDescription[4] = "locks certain settings | hold escape to exit";
-
-settingsText[5] = "fps display:";
-settingsDescription[5] = "welcome to the nerd club";
-
-settingsText[6] = "hide mouse:";
-settingsDescription[6] = "great if you have a cat";
-
-settingsText[7] = "faster games:";
-settingsDescription[7] = "coming soon";
-
-settingsText[8] = "player trails:";
-settingsDescription[8] = "blow things up and look cool while doing it";
+settingsText[2] = "input";
+settingsDescription[2] = "play with controllers or keyboard";
 
 settingsSelected = 0;
-settingsAmount = 9;
+settingsAmount = 3;
+
+
+
+settingsAudioText[0] = "music volume: ";
+settingsAudioDescription[0] = "blast that dynamic background music";
+
+settingsAudioText[1] = "effects volume: ";
+settingsAudioDescription[1] = "the sound of the clicks is really satisfying";
+
+settingsAudioSelected = 0;
+settingsAudioAmount = 2;
+
+
+
+settingsGraphicsText[0] = "fullscreen:";
+settingsGraphicsDescription[0] = "go big or go home";
+
+settingsGraphicsText[1] = "advanced rendering:";
+settingsGraphicsDescription[1] = "beautifier for the fastest of computers";
+
+settingsGraphicsText[2] = "exhibition mode:";
+settingsGraphicsDescription[2] = "locks certain settings | hold escape to exit";
+
+settingsGraphicsText[3] = "fps display:";
+settingsGraphicsDescription[3] = "welcome to the nerd club";
+
+
+settingsGraphicsSelected = 0;
+settingsGraphicsAmount = 4;
+
+
+
 
 
 

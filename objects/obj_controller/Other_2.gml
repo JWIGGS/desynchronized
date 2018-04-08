@@ -22,9 +22,6 @@ if(!ini_key_exists("_settings","exists")){
 	ini_write_real("_settings","fullscreen",0);
 	ini_write_real("_settings","pretty",0);
 	ini_write_real("_settings","debug",0);
-	ini_write_real("_settings","mouse",1);
-	ini_write_real("_settings","speed",0);
-	ini_write_real("_settings","trailPlayer",0);
 }
 
 //load save settings
@@ -42,12 +39,6 @@ global.settingsPretty = ini_read_real("_settings","pretty",0);
 global.settingsDebug = ini_read_real("_settings","debug",0);
 show_debug_overlay(global.settingsDebug);
 
-global.settingsMouse = ini_read_real("_settings","mouse",1);
-window_set_cursor(boolean_return(global.settingsMouse,cr_default,cr_none));
-
-global.settingsSpeed = ini_read_real("_settings","speed",1);
-
-global.settingsTrailPlayer = ini_read_real("_settings","trailPlayer",0);
 
 
 

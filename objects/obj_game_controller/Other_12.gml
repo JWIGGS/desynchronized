@@ -48,107 +48,104 @@ switch(global.mode){
 	case "selection":
 		
 		for(var i = 0; i<global.players; i++){
-			
-			//player input
-			if(gamepad_is_connected(i)){
 				
-				//select timeline
-				if(!global.playerSelectionReady[i]){
+			//select timeline
+			if(!global.playerSelectionReady[i]){
 					
-					//right
-					if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)>(gamepad_deadzone*5)){
-						if(alarm[i+1] = -1){
+				//right
+				if(global.controlRight[i]){
+					if(alarm[i+1] = -1){
 							
-							//revoke player control from previous timeline
-							with(global.playerControlObject[i]){
-								playerControl = false;	
-							}
-							
-							//wrap timeline selection
-							global.playerSelection[i] = wrap(global.playerSelection[i]+1,0,global.roundTotal);
-							
-							//give new timeline player control
-							with(obj_player){
-								if(teamNumber = i and playerNumber = global.playerSelection[i]){
-									global.playerControlObject[i] = id;	
-									playerControl = true;
-								}
-							}
-							
-							//input delay
-							alarm[i+1] = 30;
-							
-							//sound
-							audio_play_sound(snd_blip,1,false);
+						//revoke player control from previous timeline
+						with(global.playerControlObject[i]){
+							playerControl = false;	
 						}
-					}
-					
-					//left
-					else if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)<(-gamepad_deadzone*5)){
-						if(alarm[i+1] = -1){
 							
-							//revoke player control from previous timeline
-							with(global.playerControlObject[i]){
-								playerControl = false;	
+						//wrap timeline selection
+						global.playerSelection[i] = wrap(global.playerSelection[i]+1,0,global.roundTotal);
+							
+						//give new timeline player control
+						with(obj_player){
+							if(teamNumber = i and playerNumber = global.playerSelection[i]){
+								global.playerControlObject[i] = id;	
+								playerControl = true;
 							}
-							
-							//wrap timeline selection
-							global.playerSelection[i] = wrap(global.playerSelection[i]-1,0,global.roundTotal);
-							
-							//give new timeline player control
-							with(obj_player){
-								if(teamNumber = i and playerNumber = global.playerSelection[i]){
-									global.playerControlObject[i] = id;	
-									playerControl = true;
-								}
-							}
-						
-							//input delay
-							alarm[i+1] = 30;
-							
-							//sound
-							audio_play_sound(snd_blip,1,false);
 						}
-					}
-					//reset input delay
-					else{
-						alarm[i+1] = -1;
-					}
-				
-				}
-		
-				//select pressed
-				if(gamepad_button_check_pressed(i,gp_control_select)){
-					
-					if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
-						
-						//timeline ready
-						global.playerSelectionReady[i] = true;
-					
-						
+							
+						//input delay
+						alarm[i+1] = 30;
+							
 						//sound
-						audio_play_sound(snd_selected,1,false);
+						audio_play_sound(snd_blip,1,false);
 					}
+				}
 					
-					//dont give control to dead timeline
-					else{
-						audio_play_sound(snd_alarm_double,1,false);	
+				//left
+				else if(global.controlLeft[i]){
+					if(alarm[i+1] = -1){
+							
+						//revoke player control from previous timeline
+						with(global.playerControlObject[i]){
+							playerControl = false;	
+						}
+							
+						//wrap timeline selection
+						global.playerSelection[i] = wrap(global.playerSelection[i]-1,0,global.roundTotal);
+							
+						//give new timeline player control
+						with(obj_player){
+							if(teamNumber = i and playerNumber = global.playerSelection[i]){
+								global.playerControlObject[i] = id;	
+								playerControl = true;
+							}
+						}
+						
+						//input delay
+						alarm[i+1] = 30;
+							
+						//sound
+						audio_play_sound(snd_blip,1,false);
 					}
-					
+				}
+				//reset input delay
+				else{
+					alarm[i+1] = -1;
 				}
 				
-				//back pressed
-				if(gamepad_button_check_pressed(i,gp_control_back)){
+			}
+		
+			//select pressed
+			if(global.controlSelectPressed[i]){
 					
-					//not ready
-					global.playerSelectionReady[i] = false;
+				if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
+						
+					//timeline ready
+					global.playerSelectionReady[i] = true;
 					
+						
 					//sound
 					audio_play_sound(snd_selected,1,false);
-					
 				}
-	
+					
+				//dont give control to dead timeline
+				else{
+					audio_play_sound(snd_alarm_double,1,false);	
+				}
+					
 			}
+				
+			//back pressed
+			if(global.controlBackPressed[i]){
+					
+				//not ready
+				global.playerSelectionReady[i] = false;
+					
+				//sound
+				audio_play_sound(snd_selected,1,false);
+					
+			}
+	
+			
 			
 			
 		}

@@ -17,56 +17,51 @@ for(var i = 0; i<2; i++){
 
 //weapon selection control
 for(var i = 0; i<2; i++){
-	
 
-	if(gamepad_is_connected(i)){
-
-		//left
-		if(gamepad_axis_value(i,gp_axislh)<(-gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)<(-gamepad_deadzone*5)){
-			if(alarm[i] = 10){
-				weaponSelected[i]--;
-				weaponSelectedDirection[i] = -1;
-				alarm[i+2] = 5;
+	//left
+	if(global.controlLeft[i]){
+		if(alarm[i] = 10){
+			weaponSelected[i]--;
+			weaponSelectedDirection[i] = -1;
+			alarm[i+2] = 5;
 				
 				
-				audio_play_sound(snd_blip,0,false);
-			}
+			audio_play_sound(snd_blip,0,false);
 		}
-		//right
-		else if(gamepad_axis_value(i,gp_axislh)>(gamepad_deadzone*5) or gamepad_axis_value(i,gp_axisrh)>(gamepad_deadzone*5)){
-			if(alarm[i] = 10){
-				weaponSelected[i]++;
-				weaponSelectedDirection[i] = 1;
-				alarm[i+2] = 5;
-				
-				audio_play_sound(snd_blip,0,false);
-			}
-		}
-		//reset
-		else{
-			alarm[i] = -1;
-		}
-		
-		//wrap selection
-		weaponSelected[i] = wrap(weaponSelected[i],0,weaponAmount);
-		
-		
-		if(gamepad_button_check_pressed(i,gp_control_select)){
-			
-			var colorSelectedPrev = global.colorSelected[i];
-			
-			do{
-				global.colorSelected[i] = irandom_range(0,global.colorChoiceAmount-1);
-			}
-			until(global.colorSelected[i] != global.colorSelected[1-i] and global.colorSelected[i] != colorSelectedPrev);
-			
-			global.color[i] = global.colorChoice[global.colorSelected[i]];
-			
-			audio_play_sound(snd_selected,0,false);
-		}
-
-	
 	}
+	//right
+	else if(global.controlRight[i]){
+		if(alarm[i] = 10){
+			weaponSelected[i]++;
+			weaponSelectedDirection[i] = 1;
+			alarm[i+2] = 5;
+				
+			audio_play_sound(snd_blip,0,false);
+		}
+	}
+	//reset
+	else{
+		alarm[i] = -1;
+	}
+		
+	//wrap selection
+	weaponSelected[i] = wrap(weaponSelected[i],0,weaponAmount);
+		
+		
+	if(global.controlSelectPressed[i]){
+			
+		var colorSelectedPrev = global.colorSelected[i];
+			
+		do{
+			global.colorSelected[i] = irandom_range(0,global.colorChoiceAmount-1);
+		}
+		until(global.colorSelected[i] != global.colorSelected[1-i] and global.colorSelected[i] != colorSelectedPrev);
+			
+		global.color[i] = global.colorChoice[global.colorSelected[i]];
+			
+		audio_play_sound(snd_selected,0,false);
+	}
+	
 }
 
 		

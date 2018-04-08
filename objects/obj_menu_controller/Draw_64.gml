@@ -11,7 +11,7 @@ for(var i = 0; i<2; i++){
 
 	draw_sprite_ext(spr_player_indicator,i,playerResponseTargetX[i]-4,playerResponseTargetY[i]-4,4,4,0,global.color[i],.6)
 
-	if(gamepad_is_connected(i)){
+	if(global.controlAvailable[global.controlType[i]]){
 		draw_text_formatting(global.color[i],fa_center,fa_middle,font_36);
 	}
 	else{
@@ -62,7 +62,18 @@ switch(menuScreen){
 	case "load":
 		event_user(8);
 		break;
-	
+		
+	case "settings audio":
+		event_user(9);
+		break;
+		
+	case "settings graphics":
+		event_user(10);
+		break;
+		
+	case "settings input":
+		event_user(11);
+		break;
 }
 
 

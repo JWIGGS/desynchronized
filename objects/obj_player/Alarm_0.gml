@@ -6,6 +6,6 @@ if(reloading){
 	reloading = false;
 	reloadingSound = -1;
 	if(playerControl){
-		audio_play_sound(snd_blip,1,false);	
+		audio_play_sound_player(snd_blip,playerControl);	
 	}
 }

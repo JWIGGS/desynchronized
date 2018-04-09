@@ -2,9 +2,13 @@
 global.controlAvailable[control_gamepad0] = gamepad_is_connected(0);
 global.controlAvailable[control_gamepad1] = gamepad_is_connected(1);
 global.controlAvailable[control_keyboard] = true;
+global.controlAvailable[control_none] = true;
+
+
 
 
 for(var i = 0; i<2; i++){
+
 	if(global.controlAvailable[global.controlType[i]]){
 		//gamepad inputs
 		
@@ -91,13 +95,13 @@ for(var i = 0; i<2; i++){
 				global.controlRightPressed[i] = keyboard_check_pressed(ord("D"));
 				global.controlRightReleased[i] = keyboard_check_released(ord("D"));
 				
-				global.controlSelect[i] = keyboard_check(vk_enter);
-				global.controlSelectPressed[i] = keyboard_check_pressed(vk_enter);
-				global.controlSelectReleased[i] = keyboard_check_released(vk_enter);
+				global.controlSelect[i] = mouse_check_button(mb_left);
+				global.controlSelectPressed[i] = mouse_check_button_pressed(mb_left);
+				global.controlSelectReleased[i] = mouse_check_button_released(mb_left);
 				
-				global.controlBack[i] = keyboard_check(vk_rshift);
-				global.controlBackPressed[i] = keyboard_check_pressed(vk_rshift);
-				global.controlBackReleased[i] = keyboard_check_released(vk_rshift);
+				global.controlBack[i] = mouse_check_button(mb_right);
+				global.controlBackPressed[i] = mouse_check_button_pressed(mb_right);
+				global.controlBackReleased[i] = mouse_check_button_released(mb_right);
 				
 				global.controlShoot[i] = mouse_check_button(mb_left);
 				global.controlShootPressed[i] = mouse_check_button_pressed(mb_left);
@@ -122,10 +126,10 @@ for(var i = 0; i<2; i++){
 				global.controlMoveX[i] = global.controlRight[i]-global.controlLeft[i];
 				global.controlMoveY[i] = global.controlDown[i]-global.controlUp[i];
 				
-				global.controlAim[i] = (displayWidth/2)-window_mouse_get_x();
+				global.controlAim[i] = ((displayWidth/2)-window_mouse_get_x())/5;
 				
 				
-				window_mouse_set(displayWidth/2,displayHeight/2);
+				//window_mouse_set(displayWidth/2,displayHeight/2);
 				
 			
 				break;
@@ -165,16 +169,6 @@ for(var i = 0; i<2; i++){
 		global.controlBackReleased[i] = false;
 		global.controlBackPrev[i] = false;
 	
-		global.controlAimLeftPressed[i] = false;
-		global.controlAimLeft[i] = false;
-		global.controlAimLeftReleased[i] = false;
-		global.controlAimLeftPrev[i] = false;
-	
-		global.controlAimRightPressed[i] = false;
-		global.controlAimRight[i] = false;
-		global.controlAimRightReleased[i] = false;
-		global.controlAimRightPrev[i] = false;
-	
 		global.controlAim[i] = 0;
 		global.controlMoveX[i] = 0;
 		global.controlMoveY[i] = 0;
@@ -198,6 +192,23 @@ for(var i = 0; i<2; i++){
 		global.controlPickup[i] = false;
 		global.controlPickupReleased[i] = false;
 		global.controlPickupPrev[i] = false;
+	
+		global.controlPausePressed[i] = false;
+		global.controlPause[i] = false;
+		global.controlPauseReleased[i] = false;
+		global.controlPausePrev[i] = false;
+		
+		
+		
+		
+		if(global.controlType[0] != control_keyboard and global.controlType[1] != control_keyboard){
+			global.controlType[i] = control_keyboard;	
+		}
+		
+		else{
+			global.controlType[i] = control_none;	
+		}	
+		
 		
 	}
 }

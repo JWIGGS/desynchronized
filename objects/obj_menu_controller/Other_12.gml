@@ -47,20 +47,6 @@ for(var i = 0; i<2; i++){
 	//wrap selection
 	weaponSelected[i] = wrap(weaponSelected[i],0,weaponAmount);
 		
-		
-	if(global.controlSelectPressed[i]){
-			
-		var colorSelectedPrev = global.colorSelected[i];
-			
-		do{
-			global.colorSelected[i] = irandom_range(0,global.colorChoiceAmount-1);
-		}
-		until(global.colorSelected[i] != global.colorSelected[1-i] and global.colorSelected[i] != colorSelectedPrev);
-			
-		global.color[i] = global.colorChoice[global.colorSelected[i]];
-			
-		audio_play_sound(snd_selected,0,false);
-	}
 	
 }
 

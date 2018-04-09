@@ -197,21 +197,32 @@ switch(global.mode){
 	case "overview":
 		
 		//check if someone is resyncing to speed up game
+		
+		/*
 		var isResync = false;
 		var closestResyncTime = global.timeTotal;
-		
+		var playerControlCount = 0;
 		with(obj_player){
-			if(playerControl and resyncTime-global.timeCurrent>0 and resyncTime<closestResyncTime){
+			if(playerControl and resyncTime-global.timeCurrent>0 and resyncTime-global.timeCurrent<closestResyncTime and closestResyncTime != global.timeTotal+1){
 				closestResyncTime = resyncTime-global.timeCurrent;
+			}
+			if(playerControl){
+				playerControlCount++;	
+			}
+			if(resyncTime<3){
+				closestResyncTime = global.timeTotal+1;	
 			}
 		}
 		
-		if(closestResyncTime > 0 and closestResyncTime!= global.timeTotal){
+		if((closestResyncTime > 0 and closestResyncTime< global.timeTotal) or playerControlCount = 0 and !global.controlSelect[0] and !global.controlSelect[1]){
 			//speed up - nothing here yet
+			room_speed = 90;
 		}
 		else{
 			//normal - nothing here yet
+			room_speed = 60;
 		}
+		*/
 		
 
 		//zone shrinking

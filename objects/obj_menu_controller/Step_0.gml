@@ -78,12 +78,12 @@ for(var i = 0; i<2; i++){
 }
 
 //keyboard hacking
-upPressed = upPressed or keyboard_check_pressed(vk_down);
-downPressed = downPressed or keyboard_check_pressed(vk_up);
+upPressed = upPressed or keyboard_check_pressed(vk_up);
+downPressed = downPressed or keyboard_check_pressed(vk_down);
 leftPressed = leftPressed or keyboard_check_pressed(vk_left);
-rightPressed = rightPressed or keyboard_check_pressed(vk_right);
-selectPressed = selectPressed or keyboard_check_pressed(vk_enter);
-backPressed = backPressed or keyboard_check_pressed(vk_rshift);
+rightPressed = rightPressed or keyboard_check_pressed(vk_right) or (alarm[4] !=-1 and mouse_check_button_pressed(mb_left));
+selectPressed = selectPressed or keyboard_check_pressed(vk_enter) or (alarm[4] !=-1 and mouse_check_button_pressed(mb_left));
+backPressed = backPressed or keyboard_check_pressed(vk_rshift) or keyboard_check_pressed(vk_lshift) or mouse_check_button_pressed(mb_right);
 
 
 
@@ -100,6 +100,17 @@ if(global.mode = "fade out finished"){
 	}
 	global.mode = "loading";
 }
+
+if(mouse_x!= mouseXPrev or mouse_y != mouseYPrev){
+	alarm[4] = 300;	
+}
+
+mouseXPrev = mouse_x;
+mouseYPrev = mouse_y;
+
+
+
+
 
 
 

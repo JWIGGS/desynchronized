@@ -39,6 +39,7 @@ global.settingsFullscreen = false;
 global.settingsPretty = false;
 global.settingsExhibition = false;
 global.settingsDebug = false;
+global.settingsVsync = false;
 
 //match settings
 global.friendlyFire = false;

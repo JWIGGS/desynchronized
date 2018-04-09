@@ -7,24 +7,28 @@
 //							//
 //////////////////////////////
 
-//up
-if(leftPressed){
-	global.mapSelected--;
-	audio_play_sound(snd_blip,0,false);
-}
-				
-//down
-if(rightPressed){
-	global.mapSelected++;
-	audio_play_sound(snd_blip,0,false);
 
-}
-
-global.mapSelected = wrap(global.mapSelected,0,global.mapAmount);
 
 if(selectPressed){
 	audio_play_sound(snd_selected,1,false);	
 	event_user(15);
+}
+else{
+	//up
+	if(leftPressed){
+		global.mapSelected--;
+		audio_play_sound(snd_blip,0,false);
+	}
+				
+	//down
+	if(rightPressed){
+		global.mapSelected++;
+		audio_play_sound(snd_blip,0,false);
+
+	}
+
+	global.mapSelected = wrap(global.mapSelected,0,global.mapAmount);
+	
 }
 		
 //go back to menu

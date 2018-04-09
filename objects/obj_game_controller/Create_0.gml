@@ -1,4 +1,5 @@
 /// @description declare vars
+room_speed = 60;
 
 //game settings (not changed by custom)
 global.roundCurrent = 0;

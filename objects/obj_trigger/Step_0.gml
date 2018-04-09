@@ -7,6 +7,6 @@ if(nearestPlayer = noone){
 }
 else if(point_distance(x,y,nearestPlayer.x,nearestPlayer.y)<16 and nearestPlayer.teamNumber!=teamNumber and alarm[0] =-1){
 	alarm[0] = 60;
-	audio_play_sound(snd_mine_warning,1,false);
+	audio_play_sound_player(snd_mine_warning,true);
 }
 

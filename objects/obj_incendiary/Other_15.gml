@@ -21,7 +21,7 @@ else{
 		}
 		
 		
-		audio_play_sound(snd_flamethrower,0,false);
+		audio_play_sound_player(snd_flamethrower,true);
 	}
 	
 	if(alarm[2] <=0){

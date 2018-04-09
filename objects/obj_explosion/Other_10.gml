@@ -20,7 +20,7 @@ repeat(irandom_range(8,10)){
 }
 
 //explosion sound
-audio_play_sound(snd_explosion,1,false);
+audio_play_sound_player(snd_explosion,true);
 
 
 

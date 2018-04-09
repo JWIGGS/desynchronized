@@ -13,4 +13,4 @@ with(object){
 }
 
 
-audio_play_sound(snd_heal,1,false);
+audio_play_sound_player(snd_heal,true);

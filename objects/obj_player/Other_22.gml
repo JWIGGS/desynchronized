@@ -22,7 +22,7 @@ else{
 		teamNumber = other.teamNumber;
 	}
 	
-	audio_play_sound(asset_get_index("snd_"+throwableWeapon),1,false);
+	audio_play_sound_player(asset_get_index("snd_"+throwableWeapon),playerControl);
 	
 	throwableActive = false;
 	throwableTime = -1;

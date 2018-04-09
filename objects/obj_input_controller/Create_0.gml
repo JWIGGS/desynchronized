@@ -1,10 +1,11 @@
 /// @description 
 
 //control types
-#macro control_none					-1
 #macro control_gamepad0				0
 #macro control_gamepad1				1
 #macro control_keyboard				2
+#macro control_none					3
+#macro controlAmount				4
 
 
 //deadzone
@@ -14,13 +15,15 @@
 global.controlAvailable[control_gamepad0] = gamepad_is_connected(0);
 global.controlAvailable[control_gamepad1] = gamepad_is_connected(1);
 global.controlAvailable[control_keyboard] = true;
+global.controlAvailable[control_none] = true;
 
 global.controlType[0] = control_keyboard;
-global.controlType[1] = control_gamepad0;
+global.controlType[1] = control_none;
 
 global.controlText[control_gamepad0] = "gamepad 1";
 global.controlText[control_gamepad1] = "gamepad 2";
 global.controlText[control_keyboard] = "keyboard and mouse";
+global.controlText[control_none] = "none";
 
 
 //controls
@@ -100,8 +103,6 @@ for(var i = 0; i<2; i++){
 	global.controlPause[i] = false;
 	global.controlPauseReleased[i] = false;
 	global.controlPausePrev[i] = false;
-	
-	
 	
 	
 }

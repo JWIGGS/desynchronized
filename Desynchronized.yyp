@@ -6399,7 +6399,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_control\/spr_control.yy",
+                "resourcePath": "sprites\/spr_ui_control\/spr_ui_control.yy",
                 "resourceType": "GMSprite"
             }
         },

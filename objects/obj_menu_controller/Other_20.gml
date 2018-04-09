@@ -9,12 +9,14 @@
 //up
 if(upPressed){
 	settingsGraphicsSelected--;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 				
 //down
 if(downPressed){
 	settingsGraphicsSelected++;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 
 }
@@ -22,7 +24,10 @@ if(downPressed){
 		
 //wrap selection
 settingsGraphicsSelected = wrap(settingsGraphicsSelected,0,settingsGraphicsAmount);
-				
+
+if(selectPressed and settingsGraphicsSelected = settingsGraphicsAmount-1){
+	backPressed = true;	
+}
 				
 //selection actions			
 switch(settingsGraphicsSelected){
@@ -86,6 +91,22 @@ switch(settingsGraphicsSelected){
 		
 		break;
 		
+	//vsync
+	case 4:
+					
+		if(leftPressed or rightPressed or selectPressed){
+			global.settingsVsync = !global.settingsVsync;
+			display_reset(0,global.settingsVsync);
+			
+			ini_open(global.saveFile);
+			ini_write_real("_settings","vsync",global.settingsVsync);
+			ini_close();
+			
+			audio_play_sound(snd_blip,0,false);
+		}
+					
+		break;
+		
 }
 		
 		
@@ -107,7 +128,7 @@ if(backPressed){
 
 //title
 draw_text_formatting(c_white,fa_center,fa_middle,font_36);
-draw_text(displayWidth/2,64,"graphics settings");
+draw_text(displayWidth/2,128,"graphics settings");
 	
 //menu text
 for(var i = 0; i<settingsGraphicsAmount; i++){
@@ -133,20 +154,27 @@ for(var i = 0; i<settingsGraphicsAmount; i++){
 		case 3:
 			customTextValue =  boolean_return(global.settingsDebug,"enabled","disabled");
 			break;
+		//vsync
+		case 4:
+			customTextValue =  boolean_return(global.settingsVsync,"enabled","disabled");
+			break;
 
 	}
-			
+		
+	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,256 + (64*i)-24,displayWidth,256 + (64*i) +24)){
+		settingsGraphicsSelected = i;
+	}
 			
 	if(i = settingsGraphicsSelected){
 		
-		draw_text_transformed(displayWidth/2,144 + (64*i),"- "+settingsGraphicsText[i]+customTextValue+" -",wave(1.25,1.5,1.5,0),wave(1.25,1.5,1.5,0),0);	
+		draw_text_transformed(displayWidth/2,256 + (64*i),"- "+settingsGraphicsText[i]+customTextValue+" -",wave(1.25,1.5,1.5,0),wave(1.25,1.5,1.5,0),0);	
 		
 		draw_text_formatting(c_white,fa_center,fa_middle,font_12);
-		draw_text(displayWidth/2,144 +24+ (64*i),settingsGraphicsDescription[i]);
+		draw_text(displayWidth/2,256 +24+ (64*i),settingsGraphicsDescription[i]);
 	
 	}
 	else{
-		draw_text(displayWidth/2,144 + (64*i),settingsGraphicsText[i]+customTextValue);
+		draw_text(displayWidth/2,256 + (64*i),settingsGraphicsText[i]+customTextValue);
 	}
 	
 	

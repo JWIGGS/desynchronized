@@ -9,12 +9,14 @@
 //up
 if(upPressed){
 	customSelected--;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 				
 //down
 if(downPressed){
 	customSelected++;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 
 }
@@ -31,6 +33,9 @@ if(customSelected< customPosition){
 	customPosition --;	
 }
 
+if(selectPressed and customSelected = customTextAmount-1){
+	backPressed = true;	
+}
 
 
 //selection actions		
@@ -279,6 +284,10 @@ for(var i = customPosition; i<customPosition+customHeight; i++){
 	}
 	
 	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
+	
+	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,144 + (64*i)-24,displayWidth,144 + (64*i) +24)){
+		customSelected = i;
+	}
 	
 	if(i = customSelected){
 		

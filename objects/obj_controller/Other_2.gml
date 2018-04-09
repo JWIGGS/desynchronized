@@ -22,6 +22,7 @@ if(!ini_key_exists("_settings","exists")){
 	ini_write_real("_settings","fullscreen",0);
 	ini_write_real("_settings","pretty",0);
 	ini_write_real("_settings","debug",0);
+	ini_write_real("_settings","vsync",0);
 }
 
 //load save settings
@@ -39,6 +40,8 @@ global.settingsPretty = ini_read_real("_settings","pretty",0);
 global.settingsDebug = ini_read_real("_settings","debug",0);
 show_debug_overlay(global.settingsDebug);
 
+global.settingsVsync = ini_read_real("_settings","vsync",0);
+display_reset(0,global.settingsVsync);
 
 
 

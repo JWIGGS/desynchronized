@@ -120,7 +120,10 @@ customDescription[10] = "save some of the fun for next time (COMING SOON)";
 customText[11] = "battle";
 customDescription[11] = "let the games begin";
 
-customTextAmount = 12;
+customText[12] = "back";
+customDescription[12] = "";
+
+customTextAmount = 13;
 customSelected = 0;
 
 customPosition = 0;
@@ -139,8 +142,11 @@ settingsDescription[1] = "makes the game look cooler";
 settingsText[2] = "input";
 settingsDescription[2] = "play with controllers or keyboard";
 
+settingsText[3] = "back";
+settingsDescription[3] = "";
+
 settingsSelected = 0;
-settingsAmount = 3;
+settingsAmount = 4;
 
 
 
@@ -150,8 +156,12 @@ settingsAudioDescription[0] = "blast that dynamic background music";
 settingsAudioText[1] = "effects volume: ";
 settingsAudioDescription[1] = "the sound of the clicks is really satisfying";
 
+settingsAudioText[2] = "back";
+settingsAudioDescription[2] = "";
+
+
 settingsAudioSelected = 0;
-settingsAudioAmount = 2;
+settingsAudioAmount = 3;
 
 
 
@@ -167,12 +177,18 @@ settingsGraphicsDescription[2] = "locks certain settings | hold escape to exit";
 settingsGraphicsText[3] = "fps display:";
 settingsGraphicsDescription[3] = "welcome to the nerd club";
 
+settingsGraphicsText[4] = "display synchronization:";
+settingsGraphicsDescription[4] = "prevents screen tearing";
+
+settingsGraphicsText[5] = "back";
+settingsGraphicsDescription[5] = "";
 
 settingsGraphicsSelected = 0;
-settingsGraphicsAmount = 4;
+settingsGraphicsAmount = 6;
 
 
-
+settingsControlGrabPlayer = -1;
+settingsControlGrabFrom = -1;
 
 
 
@@ -189,7 +205,11 @@ playDescription[2] = "whatever you say goes, even if it is absolute insanity";
 playText[3] = "load preset";
 playDescription[3] = "remember those rules you made a while back";
 
-playTextAmount = 4;
+playText[4] = "back";
+playDescription[4] = "";
+
+
+playTextAmount = 5;
 playSelected = 0;
 
 //tutorial texts
@@ -226,6 +246,8 @@ loadDelete = 0;
 loadVars = false;
 loadDescription = "";
 
+mouseXPrev = mouse_x;
+mouseYPrev = mouse_y;
 
 
 

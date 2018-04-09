@@ -29,11 +29,13 @@ else{
 //up
 if(upPressed){
 	menuSelected--;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 //down
 if(downPressed){
 	menuSelected++;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 
@@ -109,6 +111,12 @@ draw_text(displayWidth/2,256,"DESYNCHRONIZED");
 for(var i = 0; i<menuTextAmount; i++){
 	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
 	
+	
+	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,384 + (64*i)-32,displayWidth,384 + (64*i) +32)){
+		menuSelected = i;
+	}
+	
+	
 	if(i = menuSelected){
 		
 		draw_text_transformed(displayWidth/2,384 + (64*i),"- "+menuText[i]+" -",wave(1.25,1.5,1.5,0),wave(1.25,1.5,1.5,0),0);	
@@ -119,7 +127,6 @@ for(var i = 0; i<menuTextAmount; i++){
 	
 	}
 	else if(!global.settingsExhibition or (global.settingsExhibition and i<menuTextAmount-2)){
-		
 		draw_text(displayWidth/2,384 + (64*i),menuText[i]);
 	}
 	

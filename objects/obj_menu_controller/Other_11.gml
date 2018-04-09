@@ -9,11 +9,13 @@
 //up
 if(upPressed){
 	playSelected--;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 //down
 if(downPressed){
 	playSelected++;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 
@@ -21,9 +23,12 @@ if(downPressed){
 playSelected = wrap(playSelected,0,playTextAmount);
 
 
+if(selectPressed and playSelected = playTextAmount-1){
+	backPressed = true;	
+}
+
 //select actions
 if(selectPressed){
-	
 	
 	switch(playSelected){
 		
@@ -157,7 +162,10 @@ draw_text(displayWidth/2,128,"play");
 //play texts
 for(var i = 0; i<playTextAmount; i++){
 	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
-				
+	
+	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,256 + (64*i)-32,displayWidth,256 + (64*i) +32)){
+		playSelected = i;
+	}
 			
 	if(i = playSelected){
 		

@@ -2,26 +2,28 @@ BUGS:
 
 TODO:
 
+Keyboard control mouse lock only in game
+
+load preset back button*
+
+room speeding up
+
+
 	
-Tabulate Settings
-	graphics
-	sound
-	gameplay
-	controls
-	
-Status Effects
+Status Effects?
 	Fire - from fire weapons
 	Invisibility - cannot be seen
 	Shield - prevents an instance of damage
 
-Tutorial Map -> 0 Damage
+Tutorial Map drom How to play
 	
 	Selecting Timeline
 	Aiming
 	Moving
 	Shooting
 	Reloading
-	Picking Up Grenades
+	Zooming
+	Using Up Grenades
 	Using Cover
 	
 Maps
@@ -47,20 +49,8 @@ Maps
 
 Healthbars in overview round
 
-Input Controller
-
-Control Schemes
-	Movement	Aiming	Reload
-	WSAD		Mouse	RF
-	WSAD		QE		RF
-	IJKL		UO		YH
-	GP0			GP0		GP0
-	GP1			GP1		GP1
-
 Single Player vs AI
 
-Lobby area to add/remove players
-Lobby area to select control schemes
 
 
 	

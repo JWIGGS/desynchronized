@@ -11,6 +11,7 @@
 if(upPressed){
 	loadSelected--;
 	loadVars = true;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 }
 				
@@ -18,6 +19,7 @@ if(upPressed){
 if(downPressed){
 	loadSelected++;
 	loadVars = true;
+	alarm[4] = -1;
 	audio_play_sound(snd_blip,0,false);
 
 }
@@ -152,7 +154,13 @@ draw_text(displayWidth/2,64,"load preset");
 //preset list
 for(var i = loadPosition; i<loadPosition+loadHeight; i++){
 	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
+	
 	if(i<loadAmount){
+		
+		if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,144 + (80*(i-loadPosition))-24,displayWidth,144 + (80*(i-loadPosition)) +24)){
+			loadSelected = i;
+		}
+		
 		if(i = loadSelected){
 			draw_text_transformed(displayWidth/2,144 + (80*(i-loadPosition)),"- "+loadText[i]+" -",wave(1.25,1.5,1.5,0),wave(1.25,1.5,1.5,0),0);	
 		

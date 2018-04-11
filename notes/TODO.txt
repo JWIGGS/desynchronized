@@ -6,8 +6,6 @@ load preset back button
 
 room speeding up
 
-crosshairs dynamic ranges
-
 Healthbars in overview round
 
 Tutorial Map from How to play

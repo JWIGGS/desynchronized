@@ -57,6 +57,10 @@ throwablePowerMax = 20;
 throwablePowerAccel = .4;
 throwablePowerHold = false;
 
+crosshairLength = 0;
+
+
+
 
 
 

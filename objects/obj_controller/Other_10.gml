@@ -36,92 +36,98 @@ global.weaponData[weaponDataCrosshair] = global.weaponCrosshair;
 global.weaponDataStringRaw[weaponDataCrosshair] = "Crosshair";
 global.weaponDataString[weaponDataCrosshair] = string_space_caps("Crosshair");
 
+global.weaponCrosshairAngle = ds_map_create();
+#macro weaponDataCrosshairAngle 6
+global.weaponData[weaponDataCrosshairAngle] = global.weaponCrosshairAngle;
+global.weaponDataStringRaw[weaponDataCrosshairAngle] = "CrosshairAngle";
+global.weaponDataString[weaponDataCrosshairAngle] = string_space_caps("CrosshairAngle");
+
 global.weaponStance = ds_map_create();
-#macro weaponDataStance 6
+#macro weaponDataStance 7
 global.weaponData[weaponDataStance] = global.weaponStance;
 global.weaponDataStringRaw[weaponDataStance] = "Stance";
 global.weaponDataString[weaponDataStance] = string_space_caps("Stance");
 
 global.weaponDamage = ds_map_create();
-#macro weaponDataDamage 7
+#macro weaponDataDamage 8
 global.weaponData[weaponDataDamage] = global.weaponDamage;
 global.weaponDataStringRaw[weaponDataDamage] = "Damage";
 global.weaponDataString[weaponDataDamage] = string_space_caps("Damage");
 
 global.weaponRof = ds_map_create();
-#macro weaponDataRof 8
+#macro weaponDataRof 9
 global.weaponData[weaponDataRof] = global.weaponRof;
 global.weaponDataStringRaw[weaponDataRof] = "Rof";
 global.weaponDataString[weaponDataRof] = string_space_caps("Rof");
 
 global.weaponDisplayRange = ds_map_create();
-#macro weaponDataDisplayRange 9
+#macro weaponDataDisplayRange 10
 global.weaponData[weaponDataDisplayRange] = global.weaponDisplayRange;
 global.weaponDataStringRaw[weaponDataDisplayRange] = "DisplayRange";
 global.weaponDataString[weaponDataDisplayRange] = string_space_caps("DisplayRange");
 
 global.weaponRangeEffective = ds_map_create();
-#macro weaponDataRangeEffective 10
+#macro weaponDataRangeEffective 11
 global.weaponData[weaponDataRangeEffective] = global.weaponRangeEffective;
 global.weaponDataStringRaw[weaponDataRangeEffective] = "RangeEffective";
 global.weaponDataString[weaponDataRangeEffective] = string_space_caps("RangeEffective");
 
 global.weaponRangeMax = ds_map_create();
-#macro weaponDataRangeMax 11
+#macro weaponDataRangeMax 12
 global.weaponData[weaponDataRangeMax] = global.weaponRangeMax;
 global.weaponDataStringRaw[weaponDataRangeMax] = "RangeMax";
 global.weaponDataString[weaponDataRangeMax] = string_space_caps("RangeMax");
 
 global.weaponDeviation = ds_map_create();
-#macro weaponDataDeviation 12
+#macro weaponDataDeviation 13
 global.weaponData[weaponDataDeviation] = global.weaponDeviation;
 global.weaponDataStringRaw[weaponDataDeviation] = "Deviation";
 global.weaponDataString[weaponDataDeviation] = string_space_caps("Deviation");
 
 global.weaponShotAmount = ds_map_create();
-#macro weaponDataShotAmount 13
+#macro weaponDataShotAmount 14
 global.weaponData[weaponDataShotAmount] = global.weaponShotAmount;
 global.weaponDataStringRaw[weaponDataShotAmount] = "ShotAmount";
 global.weaponDataString[weaponDataShotAmount] = string_space_caps("ShotAmount");
 
 global.weaponClip = ds_map_create();
-#macro weaponDataClip 14
+#macro weaponDataClip 15
 global.weaponData[weaponDataClip] = global.weaponClip;
 global.weaponDataStringRaw[weaponDataClip] = "Clip";
 global.weaponDataString[weaponDataClip] = string_space_caps("Clip");
 
 global.weaponReloadTime = ds_map_create();
-#macro weaponDataReloadTime 15
+#macro weaponDataReloadTime 16
 global.weaponData[weaponDataReloadTime] = global.weaponReloadTime;
 global.weaponDataStringRaw[weaponDataReloadTime] = "ReloadTime";
 global.weaponDataString[weaponDataReloadTime] = string_space_caps("ReloadTime");
 
 global.weaponOffsetX = ds_map_create();
-#macro weaponDataOffsetX 16
+#macro weaponDataOffsetX 17
 global.weaponData[weaponDataOffsetX] = global.weaponOffsetX;
 global.weaponDataStringRaw[weaponDataOffsetX] = "OffsetX";
 global.weaponDataString[weaponDataOffsetX] = string_space_caps("OffsetX");
 
 global.weaponOffsetY = ds_map_create();
-#macro weaponDataOffsetY 17
+#macro weaponDataOffsetY 18
 global.weaponData[weaponDataOffsetY] = global.weaponOffsetY;
 global.weaponDataStringRaw[weaponDataOffsetY] = "OffsetY";
 global.weaponDataString[weaponDataOffsetY] = string_space_caps("OffsetY");
 
 global.weaponObjectCreate = ds_map_create();
-#macro weaponDataObjectCreate 18
+#macro weaponDataObjectCreate 19
 global.weaponData[weaponDataObjectCreate] = global.weaponObjectCreate;
 global.weaponDataStringRaw[weaponDataObjectCreate] = "ObjectCreate";
 global.weaponDataString[weaponDataObjectCreate] = string_space_caps("ObjectCreate");
 
 global.weaponSpeedMultiplier = ds_map_create();
-#macro weaponDataSpeedMultiplier 19
+#macro weaponDataSpeedMultiplier 20
 global.weaponData[weaponDataSpeedMultiplier] = global.weaponSpeedMultiplier;
 global.weaponDataStringRaw[weaponDataSpeedMultiplier] = "SpeedMultiplier";
 global.weaponDataString[weaponDataSpeedMultiplier] = string_space_caps("SpeedMultiplier");
 
 global.weaponDisplaySpeed = ds_map_create();
-#macro weaponDataDisplaySpeed 20
+#macro weaponDataDisplaySpeed 21
 global.weaponData[weaponDataDisplaySpeed] = global.weaponDisplaySpeed;
 global.weaponDataStringRaw[weaponDataDisplaySpeed] = "DisplaySpeed";
 global.weaponDataString[weaponDataDisplaySpeed] = string_space_caps("DisplaySpeed");
@@ -136,6 +142,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Handgun");
 ds_map_add(global.weaponCrosshair,object,"pistol");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,35.0);
 ds_map_add(global.weaponRof,object,10.0);
@@ -161,6 +168,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Handgun");
 ds_map_add(global.weaponCrosshair,object,"pistol");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,140.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -186,6 +194,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Handgun");
 ds_map_add(global.weaponCrosshair,object,"pistol");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,55.0);
 ds_map_add(global.weaponRof,object,15.0);
@@ -211,6 +220,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Shotgun");
 ds_map_add(global.weaponCrosshair,object,"shotgun");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,30.0);
 ds_map_add(global.weaponRof,object,90.0);
@@ -236,6 +246,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Shotgun");
 ds_map_add(global.weaponCrosshair,object,"shotgun");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,25.0);
 ds_map_add(global.weaponRof,object,50.0);
@@ -261,6 +272,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Assault");
 ds_map_add(global.weaponCrosshair,object,"rifle");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,27.0);
 ds_map_add(global.weaponRof,object,7.0);
@@ -286,6 +298,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Assault");
 ds_map_add(global.weaponCrosshair,object,"rifle");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,12.0);
 ds_map_add(global.weaponRof,object,5.0);
@@ -311,6 +324,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Burst");
 ds_map_add(global.weaponCrosshair,object,"rifle");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,15.0);
 ds_map_add(global.weaponRof,object,10.0);
@@ -336,6 +350,7 @@ ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"SMG");
 ds_map_add(global.weaponCrosshair,object,"rifle");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,14.0);
 ds_map_add(global.weaponRof,object,5.0);
@@ -361,6 +376,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Bolt Action");
 ds_map_add(global.weaponCrosshair,object,"sniper");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,300.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -386,6 +402,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Launcher");
 ds_map_add(global.weaponCrosshair,object,"rocket");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -410,7 +427,8 @@ ds_map_add(global.weaponDescription,object,"Gives a whole new meaning to the ter
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Flame");
-ds_map_add(global.weaponCrosshair,object,"flamethrower");
+ds_map_add(global.weaponCrosshair,object,"beam");
+ds_map_add(global.weaponCrosshairAngle,object,180.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,2.0);
 ds_map_add(global.weaponRof,object,1.0);
@@ -435,7 +453,8 @@ ds_map_add(global.weaponDescription,object,"Nothing like the sweet humming of a 
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Beam");
-ds_map_add(global.weaponCrosshair,object,"laser");
+ds_map_add(global.weaponCrosshair,object,"beam");
+ds_map_add(global.weaponCrosshairAngle,object,180.0);
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,5.0);
 ds_map_add(global.weaponRof,object,1.0);
@@ -461,6 +480,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Melee");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"push");
 ds_map_add(global.weaponDamage,object,12.0);
 ds_map_add(global.weaponRof,object,30.0);
@@ -486,6 +506,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Melee");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,4.0);
 ds_map_add(global.weaponRof,object,5.0);
@@ -511,6 +532,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Melee");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,20.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -536,6 +558,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -561,6 +584,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,1.0);
 ds_map_add(global.weaponRof,object,1.0);
@@ -586,6 +610,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,20.0);
 ds_map_add(global.weaponRof,object,600.0);
@@ -611,6 +636,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -636,6 +662,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,0.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -661,6 +688,7 @@ ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
 ds_map_add(global.weaponCrosshair,object,"none");
+ds_map_add(global.weaponCrosshairAngle,object,90.0);
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -675,6 +703,7 @@ ds_map_add(global.weaponOffsetX,object,8.0);
 ds_map_add(global.weaponOffsetY,object,4.0);
 ds_map_add(global.weaponObjectCreate,object,obj_mine);
 ds_map_add(global.weaponSpeedMultiplier,object,1.0);
+ds_map_add(global.weaponDisplaySpeed,object,"Normal");
 
 
 #macro weaponAmount 22

@@ -115,7 +115,7 @@ switch(global.mode){
 			}
 		
 			//select pressed
-			if(global.controlSelectPressed[i] or global.controlShoot[i]){
+			if(global.controlSelectPressed[i] or global.controlShootPressed[i]){
 					
 				if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
 						

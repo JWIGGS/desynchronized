@@ -199,7 +199,7 @@ playDescription[0] = "your default shooty shooty experience";
 playText[1] = "blitz battle";
 playDescription[1] = "speed, mayhem, explosions, and adrenaline";
 
-playText[2] = "world war V";
+playText[2] = "world war";
 playDescription[2] = "better plan ahead if you want to win";
 
 playText[3] = "custom battle";

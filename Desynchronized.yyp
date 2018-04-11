@@ -2110,25 +2110,6 @@
             }
         },
         {
-            "Key": "32b85db6-c717-4721-ba16-c72a752beb2b",
-            "Value": {
-                "id": "84aff445-94a7-4a92-8901-3c3e0c1a3f40",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "sprites\/spr_crosshair_laser\/spr_crosshair_laser.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "3340cd6b-1acc-418f-93c2-ef2aba359d58",
             "Value": {
                 "id": "4f7fd1f9-7eb0-45e6-becd-3e50376d5255",
@@ -4765,7 +4746,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_crosshair_flamethrower\/spr_crosshair_flamethrower.yy",
+                "resourcePath": "sprites\/spr_crosshair_beam\/spr_crosshair_beam.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8646,6 +8627,25 @@
             }
         },
         {
+            "Key": "ed57bcee-dc89-4326-9d23-ccbd83d76e74",
+            "Value": {
+                "id": "6a385031-2d32-4539-877f-2f9ddb8f5d42",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/raycast\/raycast.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eea3d883-d59a-45f8-a96a-0f9b107f5622",
             "Value": {
                 "id": "9a20825c-68e7-412f-8e1d-ba416be09e44",
@@ -9287,7 +9287,8 @@
         "e649f44c-e6f3-42d6-a5d0-5045e1462aff",
         "55f15d37-ccb8-4cea-be5d-f0c8002bd0bb",
         "7c546ac7-6922-440b-babd-24fc72701b2d",
-        "0f9e33ac-fa5e-4a6e-9bf5-93e7f65f7655"
+        "0f9e33ac-fa5e-4a6e-9bf5-93e7f65f7655",
+        "ed57bcee-dc89-4326-9d23-ccbd83d76e74"
     ],
     "tutorial": ""
 }

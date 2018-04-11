@@ -135,7 +135,7 @@ if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),glob
 }
 
 
-if(global.mode!="selection" and global.mode!="selection out"){
+if(global.mode!="selection in" and global.mode!="selection" and global.mode!="selection out"){
 	//friendly teammate arrows
 
 	for(var i = 0; i<global.roundTotal; i++){
@@ -164,51 +164,65 @@ if(global.mode!="selection" and global.mode!="selection out"){
 
 	}
 	
+	if(throwableWeapon = "" and !global.controlLook[teamNumber]){
 	
-	//crosshairs
-	draw_sprite_ext(asset_get_index("spr_crosshair_"+weapon_get_data(weaponDataCrosshair,weapon)),0,uiCenterX,displayHeight/2,1,1,0,c_white,.5);
+		crosshairLength += smooth_to_target(raycast(x,y,imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable)-16,crosshairLength,10);
+		var crosshairAngle = 0;
+		
+		if(reloading){
+			crosshairAngle = (alarm[0]/weapon_get_data(weaponDataReloadTime,weapon)) * weapon_get_data(weaponDataCrosshairAngle,weapon);
+		}
+
+		var drawX = uiCenterX;
+		var drawY = displayHeight-140 - (crosshairLength*2);
 	
 	
+		draw_sprite_ext(asset_get_index("spr_crosshair_"+weapon_get_data(weaponDataCrosshair,weapon)),0,drawX,drawY,1.2,1.2,crosshairAngle,global.color[teamNumber],1);
+
+	}
 	
 }
 
-with(obj_player){
-	if(alarm[3]!=-1 and id!=other.id){
-		if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent]="alive"){
+//healthbars
+if(!global.controlLook[teamNumber]){
+	with(obj_player){
+		if(alarm[3]!=-1 and id!=other.id){
+			if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent]="alive"){
 				
-			var alpha = 1;
-			if(alarm[3]<10){
-				alpha = alarm[3]/10;
-			}
-			else if(alarm[3]>170){
-				alpha = 1-((alarm[3]-170)/180);
-			}
+				var alpha = 1;
+				if(alarm[3]<10){
+					alpha = alarm[3]/10;
+				}
+				else if(alarm[3]>170){
+					alpha = 1-((alarm[3]-170)/180);
+				}
 			
-			var drawAngle = 90-other.imageAngle+point_direction(other.x,other.y,x,y);
-			var distance = point_distance(other.x,other.y,x,y);
+				var drawAngle = 90-other.imageAngle+point_direction(other.x,other.y,x,y);
+				var distance = point_distance(other.x,other.y,x,y);
 			
-			distance *= 2;
-			distance += 28;
+				distance *= 2;
+				distance += 28;
 			
-			var drawX = uiCenterX+lengthdir_x(distance,drawAngle) ;
-			var drawY = displayHeight-102+lengthdir_y(distance,drawAngle);
+				var drawX = uiCenterX+lengthdir_x(distance,drawAngle) ;
+				var drawY = displayHeight-102+lengthdir_y(distance,drawAngle);
 			
-			var clampedX = clamp(drawX,32+((displayWidth/2)*other.teamNumber),displayWidth/2+((displayWidth/2)*other.teamNumber)-32);
-			var clampedY = clamp(drawY,32,displayHeight-sprite_get_height(spr_ui_bar)-8);
+				var clampedX = clamp(drawX,32+((displayWidth/2)*other.teamNumber),displayWidth/2+((displayWidth/2)*other.teamNumber)-32);
+				var clampedY = clamp(drawY,32,displayHeight-sprite_get_height(spr_ui_bar)-8);
 			
-			if(clampedX = drawX and clampedY = drawY){
+				if(clampedX = drawX and clampedY = drawY){
 				
-				drawX -= lengthdir_x(sprite_get_width(spr_ui_bar_small)/2,drawAngle-90) - lengthdir_x(sprite_get_height(spr_ui_bar_small)/2,drawAngle-90);
-				drawY -= lengthdir_y(sprite_get_width(spr_ui_bar_small)/2,drawAngle-90) - lengthdir_y(sprite_get_height(spr_ui_bar_small)/2,drawAngle-90);
+					drawX -= lengthdir_x(sprite_get_width(spr_ui_bar_small)/2,drawAngle-90) - lengthdir_x(sprite_get_height(spr_ui_bar_small)/2,drawAngle-90);
+					drawY -= lengthdir_y(sprite_get_width(spr_ui_bar_small)/2,drawAngle-90) - lengthdir_y(sprite_get_height(spr_ui_bar_small)/2,drawAngle-90);
 			
-				draw_sprite_ext(spr_ui_bar_small,0,drawX,drawY,1,1,drawAngle-90,c_white,alpha);
+					draw_sprite_ext(spr_ui_bar_small,0,drawX,drawY,1,1,drawAngle-90,c_white,alpha);
 			
-				draw_sprite_general(spr_ui_bar,1,0,0,(hpEffect/hpMax)*sprite_get_width(spr_ui_bar_small),sprite_get_height(spr_ui_bar_small),drawX,drawY,1,1,drawAngle-90,c_white,c_white,c_white,c_white,alpha);
+					draw_sprite_general(spr_ui_bar,1,0,0,(hpEffect/hpMax)*sprite_get_width(spr_ui_bar_small),sprite_get_height(spr_ui_bar_small),drawX,drawY,1,1,drawAngle-90,c_white,c_white,c_white,c_white,alpha);
 
-				draw_sprite_general(spr_ui_bar,1,0,0,(hp/hpMax)*sprite_get_width(spr_ui_bar_small),sprite_get_height(spr_ui_bar_small),drawX,drawY,1,1,drawAngle-90,global.color[teamNumber],global.color[teamNumber],global.color[teamNumber],global.color[teamNumber],alpha)
-			}
+					draw_sprite_general(spr_ui_bar,1,0,0,(hp/hpMax)*sprite_get_width(spr_ui_bar_small),sprite_get_height(spr_ui_bar_small),drawX,drawY,1,1,drawAngle-90,global.color[teamNumber],global.color[teamNumber],global.color[teamNumber],global.color[teamNumber],alpha)
+				}
 				
 
+			}
 		}
 	}
 }

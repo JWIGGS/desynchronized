@@ -2110,6 +2110,25 @@
             }
         },
         {
+            "Key": "32b85db6-c717-4721-ba16-c72a752beb2b",
+            "Value": {
+                "id": "84aff445-94a7-4a92-8901-3c3e0c1a3f40",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_laser\/spr_crosshair_laser.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3340cd6b-1acc-418f-93c2-ef2aba359d58",
             "Value": {
                 "id": "4f7fd1f9-7eb0-45e6-becd-3e50376d5255",
@@ -2315,6 +2334,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_floor_road_faded\/spr_floor_road_faded.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "38f91435-a878-4520-8c26-1a4202ae229f",
+            "Value": {
+                "id": "0c2008a6-b20b-4667-8edd-42c383f72c2f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_none\/spr_crosshair_none.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4257,6 +4295,25 @@
             }
         },
         {
+            "Key": "79a7377e-9288-46ec-889c-fea849277e25",
+            "Value": {
+                "id": "36329713-f6b4-4477-80cd-6724b4726359",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_rocket\/spr_crosshair_rocket.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7a1d49c6-a30a-44af-9d23-e0c3ff5e88f1",
             "Value": {
                 "id": "6fc7cf50-9af0-4dd7-8832-b884bdd2376a",
@@ -4599,6 +4656,25 @@
             }
         },
         {
+            "Key": "83782c94-20d7-4b42-a5bb-49db941f3004",
+            "Value": {
+                "id": "883b194c-902a-4fcc-99d7-21cdf0e1729b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\/83782c94-20d7-4b42-a5bb-49db941f3004.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "83947372-d334-4d24-9f8e-c49bb636dc0d",
             "Value": {
                 "id": "11dde2ab-8f87-4e03-9f1a-cd016235eed9",
@@ -4672,6 +4748,25 @@
                 ],
                 "resourcePath": "views\/84b9c72c-9ae6-4c32-ae0e-0a4fbfe93471.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "855d901a-d724-4b0b-975a-efe5ad6d8171",
+            "Value": {
+                "id": "b46f3083-9224-4f48-97b4-b88ec306cf64",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_flamethrower\/spr_crosshair_flamethrower.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5340,6 +5435,25 @@
             }
         },
         {
+            "Key": "922a616f-9630-4b16-9927-4c46f587566a",
+            "Value": {
+                "id": "d2c5e991-3ce2-4133-8dd0-e1a7771de34b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_pistol\/spr_crosshair_pistol.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "92c52acb-8bde-4662-aad5-5f12ce68f85a",
             "Value": {
                 "id": "ec777f6a-c94d-4c6c-a07a-4e4d22008775",
@@ -5758,6 +5872,25 @@
             }
         },
         {
+            "Key": "9de6a651-4ab8-4bd5-811a-febf2615e0a1",
+            "Value": {
+                "id": "1a7f0214-e158-4b2b-bf36-523cb0bfb409",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_shotgun\/spr_crosshair_shotgun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9e15e04d-60fd-49ff-b16d-31ab0fe6f614",
             "Value": {
                 "id": "c959d4f4-199a-4385-8466-fdaf5b5d4fe5",
@@ -5868,6 +6001,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_floor_carpet_blue\/spr_floor_carpet_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a09d6f15-c033-485f-9441-ce04dace44ef",
+            "Value": {
+                "id": "3e11f819-c871-44d1-8b23-660e82e651a4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_sniper\/spr_crosshair_sniper.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9060,6 +9212,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_player_hair\/spr_player_hair.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fd8d33c3-a50d-48d2-a88f-40028a7b9dd8",
+            "Value": {
+                "id": "be05ca67-db7e-4248-90ae-fd6b34f966e9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_crosshair_rifle\/spr_crosshair_rifle.yy",
                 "resourceType": "GMSprite"
             }
         },

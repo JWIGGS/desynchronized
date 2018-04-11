@@ -5,6 +5,7 @@
 #macro control_gamepad1				1
 #macro control_keyboard				2
 #macro control_none					3
+
 #macro controlAmount				4
 
 
@@ -15,10 +16,14 @@
 global.controlAvailable[control_gamepad0] = gamepad_is_connected(0);
 global.controlAvailable[control_gamepad1] = gamepad_is_connected(1);
 global.controlAvailable[control_keyboard] = true;
+
 global.controlAvailable[control_none] = true;
 
 global.controlType[0] = control_keyboard;
 global.controlType[1] = control_none;
+
+global.controlSaved[0] = control_keyboard;
+global.controlSaved[1] = control_none;
 
 global.controlText[control_gamepad0] = "gamepad 1";
 global.controlText[control_gamepad1] = "gamepad 2";
@@ -35,13 +40,62 @@ global.controlText[control_none] = "none";
 #macro gp_control_back			gp_face2
 #macro gp_control_pause			gp_start
 
-
 #macro ky_control_shoot			mb_left
 #macro ky_control_look			mb_right
-#macro ky_control_reload		"R"
-#macro ky_control_pickup		"F"
-#macro ky_control_select		"E"
-#macro ky_control_back			vk_lshift
+#macro ky_control_reload		ord("R")
+#macro ky_control_pickup		ord("F")
+#macro ky_control_select		ord("C")
+#macro ky_control_back			ord("X")
+#macro ky_control_pause			vk_space
+#macro ky_control_up			ord("W")
+#macro ky_control_down			ord("S")
+#macro ky_control_left			ord("A")
+#macro ky_control_right			ord("D")
+
+
+#macro control_display_reload 0
+#macro control_display_pickup 1
+#macro control_display_select 2
+#macro control_display_pause 3
+#macro control_display_shoot 4
+#macro control_display_look 5
+#macro control_display_back 6
+
+
+
+global.controlDisplayDescription[control_display_shoot] = "shoot";
+global.controlDisplayDescription[control_display_reload] = "reload";
+global.controlDisplayDescription[control_display_select] = "select";
+global.controlDisplayDescription[control_display_pause] = "pause";
+global.controlDisplayDescription[control_display_look] = "look";
+global.controlDisplayDescription[control_display_pickup] = "pickup";
+global.controlDisplayDescription[control_display_back] = "back";
+
+global.controlDisplayText[control_gamepad0,control_display_shoot] = "RT";
+global.controlDisplayText[control_gamepad0,control_display_reload] = "LT";
+global.controlDisplayText[control_gamepad0,control_display_select] = "A";
+global.controlDisplayText[control_gamepad0,control_display_pause] = "START";
+global.controlDisplayText[control_gamepad0,control_display_look] = "RB";
+global.controlDisplayText[control_gamepad0,control_display_pickup] = "LB";
+global.controlDisplayText[control_gamepad0,control_display_back] = "B";
+
+global.controlDisplayText[control_gamepad1,control_display_shoot] = "RT";
+global.controlDisplayText[control_gamepad1,control_display_reload] = "LT";
+global.controlDisplayText[control_gamepad1,control_display_select] = "A";
+global.controlDisplayText[control_gamepad1,control_display_pause] = "START";
+global.controlDisplayText[control_gamepad1,control_display_look] = "RB";
+global.controlDisplayText[control_gamepad1,control_display_pickup] = "LB";
+global.controlDisplayText[control_gamepad1,control_display_back] = "B";
+
+global.controlDisplayText[control_keyboard,control_display_shoot] = "LMB";
+global.controlDisplayText[control_keyboard,control_display_reload] = "R";
+global.controlDisplayText[control_keyboard,control_display_select] = "C";
+global.controlDisplayText[control_keyboard,control_display_pause] = "SPACE";
+global.controlDisplayText[control_keyboard,control_display_look] = "RMB";
+global.controlDisplayText[control_keyboard,control_display_pickup] = "F";
+global.controlDisplayText[control_keyboard,control_display_back] = "X";
+
+
 
 
 for(var i = 0; i<2; i++){

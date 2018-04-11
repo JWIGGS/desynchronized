@@ -32,7 +32,7 @@ if(player!=-1 and instance_exists(global.playerControlObject[player]) and global
 	}
 	
 	
-	if(global.controlLook[playerObject.teamNumber]){
+	if(global.controlLook[playerObject.teamNumber] and global.mode = "play"){
 		zoomMultiplier += smooth_to_target(1,zoomMultiplier,10);
 	}
 	else{

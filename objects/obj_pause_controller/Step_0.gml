@@ -13,6 +13,7 @@ for(var i = 0; i<2; i++){
 	if(global.controlUp[i]){
 		if(alarm[i] = -1){
 			upPressed = true;
+			alarm[4] = -1;
 			alarm[i] = 10;
 		}
 	}
@@ -20,6 +21,7 @@ for(var i = 0; i<2; i++){
 	else if(global.controlDown[i]){
 		if(alarm[i] = -1){
 			downPressed = true;
+			alarm[4] = -1;
 			alarm[i] = 10;
 		}
 	}
@@ -27,6 +29,7 @@ for(var i = 0; i<2; i++){
 	else if(global.controlLeft[i]){
 		if(alarm[i] = -1){
 			leftPressed = true;
+			alarm[4] = -1;
 			alarm[i] = 10;
 		}
 	}
@@ -34,6 +37,7 @@ for(var i = 0; i<2; i++){
 	else if(global.controlRight[i]){
 		if(alarm[i] = -1){
 			rightPressed = true;
+			alarm[4] = -1;
 			alarm[i] = 10;
 		}
 	}

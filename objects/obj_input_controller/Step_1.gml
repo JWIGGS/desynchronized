@@ -4,7 +4,11 @@ global.controlAvailable[control_gamepad1] = gamepad_is_connected(1);
 global.controlAvailable[control_keyboard] = true;
 global.controlAvailable[control_none] = true;
 
-
+if(global.controlAvailable[global.controlSaved[0]] and global.controlAvailable[global.controlSaved[1]]){
+	global.controlType[0] = global.controlSaved[0];
+	global.controlType[1] = global.controlSaved[1];
+	
+}
 
 
 for(var i = 0; i<2; i++){
@@ -79,60 +83,67 @@ for(var i = 0; i<2; i++){
 				
 			case control_keyboard:
 			
-				global.controlUp[i] = keyboard_check(ord("W"));
-				global.controlUpPressed[i] = keyboard_check_pressed(ord("W"));
-				global.controlUpReleased[i] = keyboard_check_released(ord("W"));
+				global.controlUp[i] = keyboard_check(ky_control_up);
+				global.controlUpPressed[i] = keyboard_check_pressed(ky_control_up);
+				global.controlUpReleased[i] = keyboard_check_released(ky_control_up);
 
-				global.controlDown[i] = keyboard_check(ord("S"));
-				global.controlDownPressed[i] = keyboard_check_pressed(ord("S"));
-				global.controlDownReleased[i] = keyboard_check_released(ord("S"));
+				global.controlDown[i] = keyboard_check(ky_control_down);
+				global.controlDownPressed[i] = keyboard_check_pressed(ky_control_down);
+				global.controlDownReleased[i] = keyboard_check_released(ky_control_down);
 				
-				global.controlLeft[i] = keyboard_check(ord("A"));
-				global.controlLeftPressed[i] = keyboard_check_pressed(ord("A"));
-				global.controlLeftReleased[i] = keyboard_check_released(ord("A"));
+				global.controlLeft[i] = keyboard_check(ky_control_left);
+				global.controlLeftPressed[i] = keyboard_check_pressed(ky_control_left);
+				global.controlLeftReleased[i] = keyboard_check_released(ky_control_left);
 				
-				global.controlRight[i] = keyboard_check(ord("D"));
-				global.controlRightPressed[i] = keyboard_check_pressed(ord("D"));
-				global.controlRightReleased[i] = keyboard_check_released(ord("D"));
+				global.controlRight[i] = keyboard_check(ky_control_right);
+				global.controlRightPressed[i] = keyboard_check_pressed(ky_control_right);
+				global.controlRightReleased[i] = keyboard_check_released(ky_control_right);
 				
-				global.controlSelect[i] = mouse_check_button(mb_left);
-				global.controlSelectPressed[i] = mouse_check_button_pressed(mb_left);
-				global.controlSelectReleased[i] = mouse_check_button_released(mb_left);
+				global.controlSelect[i] = keyboard_check(ky_control_select);
+				global.controlSelectPressed[i] = keyboard_check_pressed(ky_control_select);
+				global.controlSelectReleased[i] = keyboard_check_released(ky_control_select);
 				
-				global.controlBack[i] = mouse_check_button(mb_right);
-				global.controlBackPressed[i] = mouse_check_button_pressed(mb_right);
-				global.controlBackReleased[i] = mouse_check_button_released(mb_right);
+				global.controlBack[i] = keyboard_check(ky_control_back);
+				global.controlBackPressed[i] = keyboard_check_pressed(ky_control_back);
+				global.controlBackReleased[i] = keyboard_check_released(ky_control_back);
 				
-				global.controlShoot[i] = mouse_check_button(mb_left);
-				global.controlShootPressed[i] = mouse_check_button_pressed(mb_left);
-				global.controlShootReleased[i] = mouse_check_button_released(mb_left);
+				global.controlShoot[i] = mouse_check_button(ky_control_shoot);
+				global.controlShootPressed[i] = mouse_check_button_pressed(ky_control_shoot);
+				global.controlShootReleased[i] = mouse_check_button_released(ky_control_shoot);
 				
-				global.controlLook[i] = mouse_check_button(mb_right);
-				global.controlLookPressed[i] = mouse_check_button_pressed(mb_right);
-				global.controlLookReleased[i] = mouse_check_button_released(mb_right);
+				global.controlLook[i] = mouse_check_button(ky_control_look);
+				global.controlLookPressed[i] = mouse_check_button_pressed(ky_control_look);
+				global.controlLookReleased[i] = mouse_check_button_released(ky_control_look);
 				
-				global.controlReload[i] = keyboard_check(ord("R"));
-				global.controlReloadPressed[i] = keyboard_check_pressed(ord("R"));
-				global.controlReloadReleased[i] = keyboard_check_released(ord("R"));
+				global.controlReload[i] = keyboard_check(ky_control_reload);
+				global.controlReloadPressed[i] = keyboard_check_pressed(ky_control_reload);
+				global.controlReloadReleased[i] = keyboard_check_released(ky_control_reload);
 				
-				global.controlPickup[i] = keyboard_check(ord("F"));
-				global.controlPickupPressed[i] = keyboard_check_pressed(ord("F"));
-				global.controlPickupReleased[i] = keyboard_check_released(ord("F"));
+				global.controlPickup[i] = keyboard_check(ky_control_pickup);
+				global.controlPickupPressed[i] = keyboard_check_pressed(ky_control_pickup);
+				global.controlPickupReleased[i] = keyboard_check_released(ky_control_pickup);
 				
-				global.controlPause[i] = keyboard_check(vk_space);
-				global.controlPausePressed[i] = keyboard_check_pressed(vk_space);
-				global.controlPauseReleased[i] = keyboard_check_released(vk_space);
+				global.controlPause[i] = keyboard_check(ky_control_pause);
+				global.controlPausePressed[i] = keyboard_check_pressed(ky_control_pause);
+				global.controlPauseReleased[i] = keyboard_check_released(ky_control_pause);
 
 				global.controlMoveX[i] = global.controlRight[i]-global.controlLeft[i];
 				global.controlMoveY[i] = global.controlDown[i]-global.controlUp[i];
 				
-				global.controlAim[i] = ((displayWidth/2)-window_mouse_get_x())/5;
+				global.controlAim[i] = ((displayWidth/2)-window_mouse_get_x());
 				
+				if((instance_exists(obj_player) or instance_exists(obj_player_ghost)) and window_has_focus()){
+					window_mouse_set(displayWidth/2,displayHeight/2);
+					window_set_cursor(cr_none);
+				}
+				else{
+					window_set_cursor(cr_default);	
+				}
 				
-				//window_mouse_set(displayWidth/2,displayHeight/2);
 				
 			
 				break;
+
 		}
 
 	}
@@ -199,8 +210,7 @@ for(var i = 0; i<2; i++){
 		global.controlPausePrev[i] = false;
 		
 		
-		
-		
+
 		if(global.controlType[0] != control_keyboard and global.controlType[1] != control_keyboard){
 			global.controlType[i] = control_keyboard;	
 		}

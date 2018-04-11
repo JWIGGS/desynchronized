@@ -193,23 +193,26 @@ settingsControlGrabFrom = -1;
 
 
 //play texts
-playText[0] = "quick battle";
-playDescription[0] = "3 rounds | 45 seconds | health regen";
+playText[0] = "standard battle";
+playDescription[0] = "your default shooty shooty experience";
 
 playText[1] = "blitz battle";
-playDescription[1] = "5 rounds | 30 seconds | more weapons";
+playDescription[1] = "speed, mayhem, explosions, and adrenaline";
 
-playText[2] = "custom battle";
-playDescription[2] = "whatever you say goes, even if it is absolute insanity";
+playText[2] = "world war V";
+playDescription[2] = "better plan ahead if you want to win";
 
-playText[3] = "load preset";
-playDescription[3] = "remember those rules you made a while back";
+playText[3] = "custom battle";
+playDescription[3] = "whatever you say goes, even if it is absolute insanity";
 
-playText[4] = "back";
-playDescription[4] = "";
+playText[4] = "load preset";
+playDescription[4] = "remember those rules you made a while ago";
+
+playText[5] = "back";
+playDescription[5] = "";
 
 
-playTextAmount = 5;
+playTextAmount = 6;
 playSelected = 0;
 
 //tutorial texts

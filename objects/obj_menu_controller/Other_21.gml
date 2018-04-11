@@ -85,14 +85,24 @@ for(var i = 0; i<controlAmount; i++){
 		if(mouse_check_button_released(mb_left) and hover and settingsControlGrabPlayer!=-1){
 			
 			if(hover and settingsControlGrabFrom!=i){
-			
+				
 				if(playerNumber = -1){
 					global.controlType[settingsControlGrabPlayer] = i;
+					changed = true;
 				}
 				else{
 					global.controlType[1-settingsControlGrabPlayer] = settingsControlGrabFrom;
 					global.controlType[settingsControlGrabPlayer] = i;
 				}
+				
+				
+				global.controlSaved[0] = global.controlType[0];
+				global.controlSaved[1] = global.controlType[1];
+				
+				ini_open(global.saveFile);
+				ini_write_real("_settings","control0",global.controlType[0]);
+				ini_write_real("_settings","control1",global.controlType[1]);
+				ini_close();
 				
 				audio_play_sound(snd_selected,1,false);	
 			}
@@ -127,6 +137,50 @@ for(var i = 0; i<controlAmount; i++){
 		pos++;	
 	}
 }
+
+
+
+for(var i = 0; i<2; i++){
+	
+	var uiCenterX = (displayWidth/4)*((i*2)+1);
+	var uiCenterDirection = 1-(i*2);
+	
+	var drawY = 352;
+	var drawX = uiCenterX-128;
+	
+	//name
+	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
+	draw_text(uiCenterX,drawY,global.controlText[global.controlType[i]]);
+	drawY += 64;
+			
+	if(global.controlType[i]!= control_none){	
+		
+		for(var j = 0; j<7; j++){
+			//type
+			
+			if(j=3){
+				drawX = uiCenterX;
+			}
+			
+			draw_text_formatting(c_white,fa_center,fa_middle,font_24);
+			draw_text(drawX,drawY,global.controlDisplayText[global.controlType[i],j]);
+			drawY += 28;
+			draw_text_formatting(c_white,fa_center,fa_middle,font_12);
+			draw_text(drawX,drawY,global.controlDisplayDescription[j]);
+			drawY += 48;
+			
+			if(j=3){
+				drawX = uiCenterX+128;
+				drawY -= (28+48)*4;
+			}
+			
+			
+		}
+	
+	}
+	
+}
+
 
 
 

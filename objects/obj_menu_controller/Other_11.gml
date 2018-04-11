@@ -32,20 +32,20 @@ if(selectPressed){
 	
 	switch(playSelected){
 		
-		//quick play
+		//standard play
 		case 0: 
 			
 			audio_play_sound(snd_selected,1,false);
 			
 			global.friendlyFire = false;
-			global.roundTotal = 3;
+			global.roundTotal = 4;
 			global.players = 2;
-			global.timeTotal = (60*60) + 2; //60 seconds
-			global.zone = false;
+			global.timeTotal = (60*45) + 2; //45 seconds
+			global.zone = true;
 			global.multiplierHealth = 1;
 			global.multiplierDamage = 1;
 			global.multiplierSpeed = 1;
-			global.weaponSpawnChance = .4;
+			global.weaponSpawnChance = .6;
 			global.spawnStaggered = false;
 			global.healthRegen = true;
 
@@ -59,14 +59,35 @@ if(selectPressed){
 			audio_play_sound(snd_selected,1,false);
 		
 			global.friendlyFire = false;
-			global.roundTotal = 5;
+			global.roundTotal = 3;
 			global.players = 2;
-			global.timeTotal = (45*60) + 2; //45 seconds
+			global.timeTotal = (30*60) + 2; //30 seconds
 			global.zone = true;
 			global.multiplierHealth = 1;
 			global.multiplierDamage = 1;
 			global.multiplierSpeed = 1;
-			global.weaponSpawnChance = .8;
+			global.weaponSpawnChance = 1;
+			global.spawnStaggered = false;
+			global.healthRegen = false;
+			
+			menuScreen = "map";
+		
+			break;
+			
+		//marathon play
+		case 2:
+			
+			audio_play_sound(snd_selected,1,false);
+		
+			global.friendlyFire = false;
+			global.roundTotal = 3;
+			global.players = 2;
+			global.timeTotal = (30*60) + 2; //30 seconds
+			global.zone = true;
+			global.multiplierHealth = 1;
+			global.multiplierDamage = 1;
+			global.multiplierSpeed = 1;
+			global.weaponSpawnChance = 1;
 			global.spawnStaggered = false;
 			global.healthRegen = false;
 			
@@ -75,21 +96,21 @@ if(selectPressed){
 			break;
 			
 		//custom game
-		case 2:
+		case 3:
 		
 			audio_play_sound(snd_selected,1,false);
 		
 			global.friendlyFire = false;
-			global.roundTotal = 3;
+			global.roundTotal = 5;
 			global.players = 2;
-			global.timeTotal = (45*60) + 2; //45 seconds
-			global.zone = false;
+			global.timeTotal = (60*60) + 2; //45 seconds
+			global.zone = true;
 			global.multiplierHealth = 1;
 			global.multiplierDamage = 1;
 			global.multiplierSpeed = 1;
-			global.weaponSpawnChance = .4;
+			global.weaponSpawnChance = .6;
 			global.spawnStaggered = false;
-			global.healthRegen = false;
+			global.healthRegen = true;
 			
 			customSelected = 0;
 			customPosition = 0;
@@ -100,7 +121,7 @@ if(selectPressed){
 			break;
 			
 		//load preset
-		case 3:
+		case 4:
 			
 			
 			ini_open("save.ini");

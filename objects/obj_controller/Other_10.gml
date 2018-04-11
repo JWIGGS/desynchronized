@@ -30,92 +30,98 @@ global.weaponData[weaponDataDisplayType] = global.weaponDisplayType;
 global.weaponDataStringRaw[weaponDataDisplayType] = "DisplayType";
 global.weaponDataString[weaponDataDisplayType] = string_space_caps("DisplayType");
 
+global.weaponCrosshair = ds_map_create();
+#macro weaponDataCrosshair 5
+global.weaponData[weaponDataCrosshair] = global.weaponCrosshair;
+global.weaponDataStringRaw[weaponDataCrosshair] = "Crosshair";
+global.weaponDataString[weaponDataCrosshair] = string_space_caps("Crosshair");
+
 global.weaponStance = ds_map_create();
-#macro weaponDataStance 5
+#macro weaponDataStance 6
 global.weaponData[weaponDataStance] = global.weaponStance;
 global.weaponDataStringRaw[weaponDataStance] = "Stance";
 global.weaponDataString[weaponDataStance] = string_space_caps("Stance");
 
 global.weaponDamage = ds_map_create();
-#macro weaponDataDamage 6
+#macro weaponDataDamage 7
 global.weaponData[weaponDataDamage] = global.weaponDamage;
 global.weaponDataStringRaw[weaponDataDamage] = "Damage";
 global.weaponDataString[weaponDataDamage] = string_space_caps("Damage");
 
 global.weaponRof = ds_map_create();
-#macro weaponDataRof 7
+#macro weaponDataRof 8
 global.weaponData[weaponDataRof] = global.weaponRof;
 global.weaponDataStringRaw[weaponDataRof] = "Rof";
 global.weaponDataString[weaponDataRof] = string_space_caps("Rof");
 
 global.weaponDisplayRange = ds_map_create();
-#macro weaponDataDisplayRange 8
+#macro weaponDataDisplayRange 9
 global.weaponData[weaponDataDisplayRange] = global.weaponDisplayRange;
 global.weaponDataStringRaw[weaponDataDisplayRange] = "DisplayRange";
 global.weaponDataString[weaponDataDisplayRange] = string_space_caps("DisplayRange");
 
 global.weaponRangeEffective = ds_map_create();
-#macro weaponDataRangeEffective 9
+#macro weaponDataRangeEffective 10
 global.weaponData[weaponDataRangeEffective] = global.weaponRangeEffective;
 global.weaponDataStringRaw[weaponDataRangeEffective] = "RangeEffective";
 global.weaponDataString[weaponDataRangeEffective] = string_space_caps("RangeEffective");
 
 global.weaponRangeMax = ds_map_create();
-#macro weaponDataRangeMax 10
+#macro weaponDataRangeMax 11
 global.weaponData[weaponDataRangeMax] = global.weaponRangeMax;
 global.weaponDataStringRaw[weaponDataRangeMax] = "RangeMax";
 global.weaponDataString[weaponDataRangeMax] = string_space_caps("RangeMax");
 
 global.weaponDeviation = ds_map_create();
-#macro weaponDataDeviation 11
+#macro weaponDataDeviation 12
 global.weaponData[weaponDataDeviation] = global.weaponDeviation;
 global.weaponDataStringRaw[weaponDataDeviation] = "Deviation";
 global.weaponDataString[weaponDataDeviation] = string_space_caps("Deviation");
 
 global.weaponShotAmount = ds_map_create();
-#macro weaponDataShotAmount 12
+#macro weaponDataShotAmount 13
 global.weaponData[weaponDataShotAmount] = global.weaponShotAmount;
 global.weaponDataStringRaw[weaponDataShotAmount] = "ShotAmount";
 global.weaponDataString[weaponDataShotAmount] = string_space_caps("ShotAmount");
 
 global.weaponClip = ds_map_create();
-#macro weaponDataClip 13
+#macro weaponDataClip 14
 global.weaponData[weaponDataClip] = global.weaponClip;
 global.weaponDataStringRaw[weaponDataClip] = "Clip";
 global.weaponDataString[weaponDataClip] = string_space_caps("Clip");
 
 global.weaponReloadTime = ds_map_create();
-#macro weaponDataReloadTime 14
+#macro weaponDataReloadTime 15
 global.weaponData[weaponDataReloadTime] = global.weaponReloadTime;
 global.weaponDataStringRaw[weaponDataReloadTime] = "ReloadTime";
 global.weaponDataString[weaponDataReloadTime] = string_space_caps("ReloadTime");
 
 global.weaponOffsetX = ds_map_create();
-#macro weaponDataOffsetX 15
+#macro weaponDataOffsetX 16
 global.weaponData[weaponDataOffsetX] = global.weaponOffsetX;
 global.weaponDataStringRaw[weaponDataOffsetX] = "OffsetX";
 global.weaponDataString[weaponDataOffsetX] = string_space_caps("OffsetX");
 
 global.weaponOffsetY = ds_map_create();
-#macro weaponDataOffsetY 16
+#macro weaponDataOffsetY 17
 global.weaponData[weaponDataOffsetY] = global.weaponOffsetY;
 global.weaponDataStringRaw[weaponDataOffsetY] = "OffsetY";
 global.weaponDataString[weaponDataOffsetY] = string_space_caps("OffsetY");
 
 global.weaponObjectCreate = ds_map_create();
-#macro weaponDataObjectCreate 17
+#macro weaponDataObjectCreate 18
 global.weaponData[weaponDataObjectCreate] = global.weaponObjectCreate;
 global.weaponDataStringRaw[weaponDataObjectCreate] = "ObjectCreate";
 global.weaponDataString[weaponDataObjectCreate] = string_space_caps("ObjectCreate");
 
 global.weaponSpeedMultiplier = ds_map_create();
-#macro weaponDataSpeedMultiplier 18
+#macro weaponDataSpeedMultiplier 19
 global.weaponData[weaponDataSpeedMultiplier] = global.weaponSpeedMultiplier;
 global.weaponDataStringRaw[weaponDataSpeedMultiplier] = "SpeedMultiplier";
 global.weaponDataString[weaponDataSpeedMultiplier] = string_space_caps("SpeedMultiplier");
 
 global.weaponDisplaySpeed = ds_map_create();
-#macro weaponDataDisplaySpeed 19
+#macro weaponDataDisplaySpeed 20
 global.weaponData[weaponDataDisplaySpeed] = global.weaponDisplaySpeed;
 global.weaponDataStringRaw[weaponDataDisplaySpeed] = "DisplaySpeed";
 global.weaponDataString[weaponDataDisplaySpeed] = string_space_caps("DisplaySpeed");
@@ -129,6 +135,7 @@ ds_map_add(global.weaponDescription,object,"Why would you want to use any other 
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Handgun");
+ds_map_add(global.weaponCrosshair,object,"pistol");
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,35.0);
 ds_map_add(global.weaponRof,object,10.0);
@@ -153,6 +160,7 @@ ds_map_add(global.weaponDescription,object,"A weapon that transforms you into  a
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Handgun");
+ds_map_add(global.weaponCrosshair,object,"pistol");
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,140.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -177,6 +185,7 @@ ds_map_add(global.weaponDescription,object,"An hitman's favourite weapon for mid
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Handgun");
+ds_map_add(global.weaponCrosshair,object,"pistol");
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,55.0);
 ds_map_add(global.weaponRof,object,15.0);
@@ -201,6 +210,7 @@ ds_map_add(global.weaponDescription,object,"A mid range weapon with a decent spr
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Shotgun");
+ds_map_add(global.weaponCrosshair,object,"shotgun");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,30.0);
 ds_map_add(global.weaponRof,object,90.0);
@@ -225,6 +235,7 @@ ds_map_add(global.weaponDescription,object,"A weapon useful only when fired at p
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Shotgun");
+ds_map_add(global.weaponCrosshair,object,"shotgun");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,25.0);
 ds_map_add(global.weaponRof,object,50.0);
@@ -249,6 +260,7 @@ ds_map_add(global.weaponDescription,object,"An incredibly reliable weapon that p
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Assault");
+ds_map_add(global.weaponCrosshair,object,"rifle");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,27.0);
 ds_map_add(global.weaponRof,object,7.0);
@@ -273,6 +285,7 @@ ds_map_add(global.weaponDescription,object,"A standard assault rifle with a dece
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Assault");
+ds_map_add(global.weaponCrosshair,object,"rifle");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,12.0);
 ds_map_add(global.weaponRof,object,5.0);
@@ -297,6 +310,7 @@ ds_map_add(global.weaponDescription,object,"Heal your teammates, kill your enemi
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Burst");
+ds_map_add(global.weaponCrosshair,object,"rifle");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,15.0);
 ds_map_add(global.weaponRof,object,10.0);
@@ -321,6 +335,7 @@ ds_map_add(global.weaponDescription,object,"Spews bullets like there is not tomo
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"SMG");
+ds_map_add(global.weaponCrosshair,object,"rifle");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,14.0);
 ds_map_add(global.weaponRof,object,5.0);
@@ -345,6 +360,7 @@ ds_map_add(global.weaponDescription,object,"An incredibly long range one shot we
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Bolt Action");
+ds_map_add(global.weaponCrosshair,object,"sniper");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,300.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -369,6 +385,7 @@ ds_map_add(global.weaponDescription,object,"I have a rocket launcher. Your argum
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Launcher");
+ds_map_add(global.weaponCrosshair,object,"rocket");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -393,6 +410,7 @@ ds_map_add(global.weaponDescription,object,"Gives a whole new meaning to the ter
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Flame");
+ds_map_add(global.weaponCrosshair,object,"flamethrower");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,2.0);
 ds_map_add(global.weaponRof,object,1.0);
@@ -417,6 +435,7 @@ ds_map_add(global.weaponDescription,object,"Nothing like the sweet humming of a 
 ds_map_add(global.weaponAutofire,object,true);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Beam");
+ds_map_add(global.weaponCrosshair,object,"laser");
 ds_map_add(global.weaponStance,object,"rifle");
 ds_map_add(global.weaponDamage,object,5.0);
 ds_map_add(global.weaponRof,object,1.0);
@@ -441,6 +460,7 @@ ds_map_add(global.weaponDescription,object,"Strong, sturdy, and only takes 20% o
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Melee");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"push");
 ds_map_add(global.weaponDamage,object,12.0);
 ds_map_add(global.weaponRof,object,30.0);
@@ -465,6 +485,7 @@ ds_map_add(global.weaponDescription,object,"The ultimate weapon to turn your foe
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Melee");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,4.0);
 ds_map_add(global.weaponRof,object,5.0);
@@ -489,6 +510,7 @@ ds_map_add(global.weaponDescription,object,"Hack first. Axe questions later.");
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"weapon");
 ds_map_add(global.weaponDisplayType,object,"Melee");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"handgun");
 ds_map_add(global.weaponDamage,object,20.0);
 ds_map_add(global.weaponRof,object,60.0);
@@ -513,6 +535,7 @@ ds_map_add(global.weaponDescription,object,"Walk away and look cool while things
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -537,6 +560,7 @@ ds_map_add(global.weaponDescription,object,"Exhausts a stream of fire once deton
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,1.0);
 ds_map_add(global.weaponRof,object,1.0);
@@ -561,6 +585,7 @@ ds_map_add(global.weaponDescription,object,"A dense bomb full of a slowly expand
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,20.0);
 ds_map_add(global.weaponRof,object,600.0);
@@ -585,6 +610,7 @@ ds_map_add(global.weaponDescription,object,"You get free healing! And You get fr
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -609,6 +635,7 @@ ds_map_add(global.weaponDescription,object,"Creates a protective barrier of ice 
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,0.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -633,6 +660,7 @@ ds_map_add(global.weaponDescription,object,"Nothing better to claim territory th
 ds_map_add(global.weaponAutofire,object,false);
 ds_map_add(global.weaponType,object,"throwable");
 ds_map_add(global.weaponDisplayType,object,"Grenade");
+ds_map_add(global.weaponCrosshair,object,"none");
 ds_map_add(global.weaponStance,object,"throw");
 ds_map_add(global.weaponDamage,object,150.0);
 ds_map_add(global.weaponRof,object,0.0);
@@ -646,6 +674,7 @@ ds_map_add(global.weaponReloadTime,object,60.0);
 ds_map_add(global.weaponOffsetX,object,8.0);
 ds_map_add(global.weaponOffsetY,object,4.0);
 ds_map_add(global.weaponObjectCreate,object,obj_mine);
+ds_map_add(global.weaponSpeedMultiplier,object,1.0);
 
 
 #macro weaponAmount 22

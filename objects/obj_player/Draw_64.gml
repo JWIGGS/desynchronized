@@ -163,6 +163,13 @@ if(global.mode!="selection" and global.mode!="selection out"){
 			
 
 	}
+	
+	
+	//crosshairs
+	draw_sprite_ext(asset_get_index("spr_crosshair_"+weapon_get_data(weaponDataCrosshair,weapon)),0,uiCenterX,displayHeight/2,1,1,0,c_white,.5);
+	
+	
+	
 }
 
 with(obj_player){

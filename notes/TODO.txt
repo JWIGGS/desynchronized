@@ -2,20 +2,15 @@ BUGS:
 
 TODO:
 
-Keyboard control mouse lock only in game
-
-load preset back button*
+load preset back button
 
 room speeding up
 
+crosshairs dynamic ranges
 
-	
-Status Effects?
-	Fire - from fire weapons
-	Invisibility - cannot be seen
-	Shield - prevents an instance of damage
+Healthbars in overview round
 
-Tutorial Map drom How to play
+Tutorial Map from How to play
 	
 	Selecting Timeline
 	Aiming
@@ -26,6 +21,13 @@ Tutorial Map drom How to play
 	Using Up Grenades
 	Using Cover
 	
+Single Player vs AI
+	
+Status Effects?
+	Fire - from fire weapons
+	Invisibility - cannot be seen
+	Shield - prevents an instance of damage
+
 Maps
 	Park
 		Benches
@@ -47,9 +49,9 @@ Maps
 		--pretty boring right now
 		
 
-Healthbars in overview round
 
-Single Player vs AI
+
+
 
 
 

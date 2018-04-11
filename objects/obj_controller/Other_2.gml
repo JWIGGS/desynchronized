@@ -23,6 +23,8 @@ if(!ini_key_exists("_settings","exists")){
 	ini_write_real("_settings","pretty",0);
 	ini_write_real("_settings","debug",0);
 	ini_write_real("_settings","vsync",0);
+	ini_write_real("_settings","control0",2);
+	ini_write_real("_settings","control1",3);
 }
 
 //load save settings
@@ -42,6 +44,9 @@ show_debug_overlay(global.settingsDebug);
 
 global.settingsVsync = ini_read_real("_settings","vsync",0);
 display_reset(0,global.settingsVsync);
+
+global.controlSaved[0] = ini_read_real("_settings","control0",2);
+global.controlSaved[1] = ini_read_real("_settings","control1",3);
 
 
 

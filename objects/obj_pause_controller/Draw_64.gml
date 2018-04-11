@@ -31,6 +31,10 @@ draw_text(displayWidth/2,128,"paused");
 for(var i = 0; i<pauseTextAmount; i++){
 	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
 				
+				
+	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,256 + (64*i)-32,displayWidth,256 + (64*i) +32)){
+		pauseSelected = i;
+	}
 			
 	if(i = pauseSelected){
 		

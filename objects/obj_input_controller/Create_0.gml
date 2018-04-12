@@ -53,13 +53,18 @@ global.controlText[control_none] = "none";
 #macro ky_control_right			ord("D")
 
 
-#macro control_display_reload 0
-#macro control_display_pickup 1
-#macro control_display_select 2
-#macro control_display_pause 3
-#macro control_display_shoot 4
-#macro control_display_look 5
-#macro control_display_back 6
+#macro control_display_move 0
+#macro control_display_reload 1
+#macro control_display_pickup 2
+#macro control_display_select 3
+#macro control_display_pause 4
+
+#macro control_display_aim 5
+#macro control_display_shoot 6
+#macro control_display_look 7
+#macro control_display_back 8
+
+
 
 
 
@@ -70,6 +75,8 @@ global.controlDisplayDescription[control_display_pause] = "pause";
 global.controlDisplayDescription[control_display_look] = "look";
 global.controlDisplayDescription[control_display_pickup] = "pickup";
 global.controlDisplayDescription[control_display_back] = "back";
+global.controlDisplayDescription[control_display_move] = "move";
+global.controlDisplayDescription[control_display_aim] = "aim";
 
 global.controlDisplayText[control_gamepad0,control_display_shoot] = "RT";
 global.controlDisplayText[control_gamepad0,control_display_reload] = "LT";
@@ -78,6 +85,8 @@ global.controlDisplayText[control_gamepad0,control_display_pause] = "START";
 global.controlDisplayText[control_gamepad0,control_display_look] = "RB";
 global.controlDisplayText[control_gamepad0,control_display_pickup] = "LB";
 global.controlDisplayText[control_gamepad0,control_display_back] = "B";
+global.controlDisplayText[control_gamepad0,control_display_move] = "LSTICK";
+global.controlDisplayText[control_gamepad0,control_display_aim] = "RSTICK";
 
 global.controlDisplayText[control_gamepad1,control_display_shoot] = "RT";
 global.controlDisplayText[control_gamepad1,control_display_reload] = "LT";
@@ -86,6 +95,8 @@ global.controlDisplayText[control_gamepad1,control_display_pause] = "START";
 global.controlDisplayText[control_gamepad1,control_display_look] = "RB";
 global.controlDisplayText[control_gamepad1,control_display_pickup] = "LB";
 global.controlDisplayText[control_gamepad1,control_display_back] = "B";
+global.controlDisplayText[control_gamepad1,control_display_move] = "LSTICK";
+global.controlDisplayText[control_gamepad1,control_display_aim] = "RSTICK";
 
 global.controlDisplayText[control_keyboard,control_display_shoot] = "LMB";
 global.controlDisplayText[control_keyboard,control_display_reload] = "R";
@@ -94,6 +105,8 @@ global.controlDisplayText[control_keyboard,control_display_pause] = "SPACE";
 global.controlDisplayText[control_keyboard,control_display_look] = "RMB";
 global.controlDisplayText[control_keyboard,control_display_pickup] = "F";
 global.controlDisplayText[control_keyboard,control_display_back] = "X";
+global.controlDisplayText[control_keyboard,control_display_move] = "WSAD";
+global.controlDisplayText[control_keyboard,control_display_aim] = "MOUSE";
 
 
 

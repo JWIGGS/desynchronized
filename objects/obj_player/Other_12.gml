@@ -8,7 +8,6 @@ aimAngle = global.controlAim[teamNumber];
 
 imageAngle += aimAngle/50;
 
-
 	
 
 

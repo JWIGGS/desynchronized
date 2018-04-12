@@ -9,4 +9,6 @@ image_angle = angle;
 x -= xSpd*4;
 y -= ySpd*4;
 
+parentTeamNumber = parent.teamNumber;
+
 

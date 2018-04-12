@@ -20,11 +20,7 @@ if(global.mode = "play"){
 	
 
 }
-else if(playerControl and global.mode != "flyover" and global.mode!= "selection" and global.mode!= "selection in" and global.mode!= "selection out"){
-	//allow player to aim
-	event_user(2);	
-	
-}
+
 
 if(global.mode = "play" or global.mode = "overview"){
 	//zone damage

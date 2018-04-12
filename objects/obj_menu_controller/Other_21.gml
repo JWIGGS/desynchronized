@@ -15,7 +15,7 @@ for(var i = 0; i<controlAmount; i++){
 }
 
 for(var i = 0; i<2; i++){
-	if(global.controlUpPressed[i] or global.controlDownPressed[i] or global.controlLeftPressed[i] or global.controlRightPressed[i]){
+	if(global.controlUpPressed[i] or global.controlDownPressed[i] or global.controlLeftPressed[i] or global.controlRightPressed[i] or global.controlSelectPressed[i]){
 			
 		var colorSelectedPrev = global.colorSelected[i];
 			
@@ -51,16 +51,16 @@ if(backPressed){
 
 //title
 draw_text_formatting(c_white,fa_center,fa_middle,font_36);
-draw_text(displayWidth/2,128,"input settings");
+draw_text(displayWidth/2,64,"input settings");
 
 draw_text_formatting(c_white,fa_center,fa_middle,font_12);
-draw_text(displayWidth/2,160,"drag player icons to inputs");
+draw_text(displayWidth/2,94,"drag player icons to inputs");
 
 var pos = 0;
 for(var i = 0; i<controlAmount; i++){
 	if(global.controlAvailable[i]){
 		var hover = false;
-		hover = point_in_rectangle(mouse_x,mouse_y,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256)-96,256-96,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256)+96,256+96);
+		hover = point_in_rectangle(mouse_x,mouse_y,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256)-96,192-96,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256)+96,192+96);
 			
 		var playerNumber = -1;
 		for(var j = 0; j<2;j++){
@@ -121,17 +121,17 @@ for(var i = 0; i<controlAmount; i++){
 				draw_sprite_ext(spr_player_indicator,0,mouse_x,mouse_y,wave(4.8,5.2,3,0),wave(4.8,5.2,3,0),0,global.color[playerNumber],.5);
 			}
 			else {
-				draw_sprite_ext(spr_player_indicator,0,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256),256,wave(4.8,5.2,3,0),wave(4.8,5.2,3,0),0,global.color[playerNumber],.5);
+				draw_sprite_ext(spr_player_indicator,0,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256),192,wave(4.8,5.2,3,0),wave(4.8,5.2,3,0),0,global.color[playerNumber],.5);
 			}
 		}
 		
 		
 		
 		
-		draw_sprite_ext(spr_ui_control,i,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256),256,1+(.25*hover),1+(.25*hover),0,c_white,1);
+		draw_sprite_ext(spr_ui_control,i,(displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256),192,1+(.25*hover),1+(.25*hover),0,c_white,1);
 		if(i<2){
 			draw_text_formatting(c_white,fa_center,fa_middle,font_24);
-			draw_text((displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256),256,string(i+1))
+			draw_text((displayWidth/2)-128-((controlAmountTotal*256)/2) + ((pos+1)*256),192,string(i+1))
 		}
 		
 		pos++;	
@@ -145,7 +145,7 @@ for(var i = 0; i<2; i++){
 	var uiCenterX = (displayWidth/4)*((i*2)+1);
 	var uiCenterDirection = 1-(i*2);
 	
-	var drawY = 352;
+	var drawY = 288;
 	var drawX = uiCenterX-128;
 	
 	//name
@@ -155,10 +155,10 @@ for(var i = 0; i<2; i++){
 			
 	if(global.controlType[i]!= control_none){	
 		
-		for(var j = 0; j<7; j++){
+		for(var j = 0; j<9; j++){
 			//type
 			
-			if(j=3){
+			if(j=4){
 				drawX = uiCenterX;
 			}
 			
@@ -169,9 +169,9 @@ for(var i = 0; i<2; i++){
 			draw_text(drawX,drawY,global.controlDisplayDescription[j]);
 			drawY += 48;
 			
-			if(j=3){
+			if(j=4){
 				drawX = uiCenterX+128;
-				drawY -= (28+48)*4;
+				drawY -= (28+48)*5;
 			}
 			
 			

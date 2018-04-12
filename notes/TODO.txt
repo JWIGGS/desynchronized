@@ -3,12 +3,11 @@ BUGS:
 TODO:
 
 load preset back button
-
 room speeding up
-
 Healthbars in overview round
-
 Tutorial Map from How to play
+Rocket launcher crosshair is not ranged
+Grenade crosshair
 	
 	Selecting Timeline
 	Aiming

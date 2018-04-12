@@ -66,9 +66,6 @@ global.mapSelected = 0;
 event_user(0);
 
 
-//quit button
-quitTime = 0;
-
 
 
 

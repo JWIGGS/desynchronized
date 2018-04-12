@@ -44,3 +44,26 @@ else if(throwableActive){
 	draw_text(uiCenterX+(uiCenterDirection*240),displayHeight-12,string(((throwableTime-1) div 60)+1));
 		
 }
+
+
+	
+if(throwableWeapon = ""){
+	
+	crosshairLength += smooth_to_target(raycast(x,y,imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable)-16,crosshairLength,10);
+	var crosshairAngle = 0;
+		
+	if(reloading){
+		crosshairAngle = (alarm[0]/weapon_get_data(weaponDataReloadTime,weapon)) * weapon_get_data(weaponDataCrosshairAngle,weapon);
+	}
+
+	var drawX = uiCenterX+weapon_get_data(weaponDataOffsetY,weapon);
+	var drawY = displayHeight-64 - (crosshairLength);
+	
+	draw_sprite_ext(asset_get_index("spr_crosshair_"+weapon_get_data(weaponDataCrosshair,weapon)),0,drawX,drawY,1.2,1.2,crosshairAngle,global.color[teamNumber],boolean_return(reloading,.5,1));
+
+	if(weapon_get_data(weaponDataClip,weapon) !=0){
+		draw_text_formatting(c_white,fa_center,fa_middle,font_12);
+		draw_text_color(drawX,drawY+32,string(clipCurrent)+"/"+string(clipSize),c_white,c_white,c_white,c_white,.5)
+	}
+
+}

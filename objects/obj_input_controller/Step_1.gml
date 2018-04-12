@@ -7,7 +7,6 @@ global.controlAvailable[control_none] = true;
 if(global.controlAvailable[global.controlSaved[0]] and global.controlAvailable[global.controlSaved[1]]){
 	global.controlType[0] = global.controlSaved[0];
 	global.controlType[1] = global.controlSaved[1];
-	
 }
 
 

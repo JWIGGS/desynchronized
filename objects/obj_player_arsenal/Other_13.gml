@@ -1,4 +1,5 @@
 ///@description shoot
+
 if(clipCurrent>0 or clipSize = 0){
 
 	if(reloading){

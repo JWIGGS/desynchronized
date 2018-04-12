@@ -198,6 +198,26 @@ switch(global.mode){
 		
 		//check if someone is resyncing to speed up game
 		
+		var speedCount = 0;
+		var controlCount = 0;
+		
+		with(obj_player){
+			if(playerControl){
+				controlCount ++;
+				if(resyncTime-global.timeCurrent>0){
+					speedCount ++;	
+				}
+			}
+		}
+		
+		if(speedCount>=global.players or controlCount = 0){
+			room_speed = 120;
+		}
+		else{
+			room_speed = 60;	
+		}
+		
+		
 		/*
 		var isResync = false;
 		var closestResyncTime = global.timeTotal;
@@ -406,4 +426,9 @@ switch(global.mode){
 		}
 
 		break;
+}
+
+
+if(global.mode!="play"){
+	room_speed = 60;	
 }

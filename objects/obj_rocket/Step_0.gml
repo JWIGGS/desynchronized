@@ -6,30 +6,34 @@ spd = clamp(spd+.2,0,10);
 xSpd = lengthdir_x(spd,angle);
 ySpd = lengthdir_y(spd,angle);
 
+var distance = 0;
 
-var collisionObject = instance_position(x+xSpd,y+ySpd,par_destructable);
+while(distance<spd){
 
-if(collisionObject !=noone){
+	var collisionObject = instance_position(x+lengthdir_x(distance,angle),y+lengthdir_y(distance,angle),par_destructable);
+
+	if(collisionObject !=noone){
 	
-	if(coverObject = -1 and flightTime<5 and object_is_ancestor(collisionObject.object_index,par_cover)){
-		coverObject = collisionObject;	
-	}
+		if(coverObject = -1 and flightTime<5 and object_is_ancestor(collisionObject.object_index,par_cover)){
+			coverObject = collisionObject;	
+		}
 	
-	if(collisionObject != coverObject){
+		if(collisionObject != coverObject){
 		
-		if(collisionObject.object_index = obj_player){
-			if(global.friendlyFire or collisionObject.teamNumber!= parent.teamNumber){
+			if(collisionObject.object_index = obj_player){
+				if(global.friendlyFire or collisionObject.teamNumber!= parentTeamNumber){
+					event_user(5);	
+				}
+			}
+			else{
 				event_user(5);	
 			}
 		}
-		else{
-			event_user(5);	
-		}
+	
 	}
 	
-	
-		
-	
+	distance += spd;
+
 }
 
 if(x<0 or x>room_width or y<0 or y>room_height){

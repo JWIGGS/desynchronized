@@ -1,29 +1,52 @@
 BUGS:
 
-TODO:
+minor:
 
-load preset back button
-room speeding up
+game sometimes lags in countdown
+dying to zone in overview becomes a desync
+sometime you resync into instant death - due to future predictions
+	desyncing freezes you for .5 seconds
+	play animation during overview
+
+major:
+
+
+
+TODO:
+timeline player status at top
+
+add fire effect to rocket
+
+
+
+
 Healthbars in overview round
-Tutorial Map from How to play
-Rocket launcher crosshair is not ranged
+
+
+
 Grenade crosshair
-	
+
+
+
+pause menu mouse interaction
+
+glass shatter sound
+
+
+Tutorial Map from How to play
 	Selecting Timeline
 	Aiming
 	Moving
 	Shooting
 	Reloading
 	Zooming
-	Using Up Grenades
+	Using Grenades
 	Using Cover
-	
-Single Player vs AI
-	
+
+
 Status Effects?
 	Fire - from fire weapons
-	Invisibility - cannot be seen
-	Shield - prevents an instance of damage
+	Bubble - prevents an instance of damage
 
 Maps
 	Park
@@ -35,7 +58,8 @@ Maps
 		Caravan Car
 		Truck/Jeep Car
 		small lake
-		
+		Mud
+
 
 	Wareshouse
 		Crate
@@ -43,44 +67,9 @@ Maps
 		Explosives
 		Crate Container
 		Long Semi truck
-		--pretty boring right now
-		
+		Conveyor
+
+Research Lab
 
 
-
-
-
-
-
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
+	Teleporter

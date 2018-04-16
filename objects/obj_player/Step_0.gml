@@ -4,11 +4,19 @@ if(global.mode = "play"){
 	if(playerControl and global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent] = "desync"){
 	
 		if(global.timeCurrent>playerNumber*60 or !global.spawnStaggered){
+			
+			//ai
+			if(global.controlType[teamNumber] = control_none){
+				event_user(15);	
+			}
+			
 			//movement
 			event_user(0);
 
 			//actions control
 			event_user(1);
+			
+			
 		}
 
 		//aiming

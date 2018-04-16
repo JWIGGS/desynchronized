@@ -61,6 +61,34 @@ crosshairLength = 0;
 
 
 
+aiTargetObject = -1;
+aiTargetAngle = 0;
+
+aiTargetX = 0;
+aiTargetY = 0;
+
+aiAimX = 0;
+aiAimY = 0;
+
+aiTargetOffsetX = 0;
+aiTargetOffsetY = 0;
+
+aiMode = "start";
+
+aiFire = false;
+
+aiReached = false;
+aiPathPosition = 0;
+aiPathNextX = 0;
+aiPathNextY = 0;
+
+
+
+aiPath = path_add();
+aiMap = -1;
+aiPathPoint = 0;
+
+
 
 
 

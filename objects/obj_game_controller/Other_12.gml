@@ -51,6 +51,15 @@ switch(global.mode){
 				
 			//select timeline
 			if(!global.playerSelectionReady[i]){
+				
+				//ai select
+				if(global.controlType[i] = control_none){
+					global.controlRight[i] = true;
+					if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
+						global.controlSelectPressed[i] = random_chance(.3);
+					}
+					
+				}
 					
 				//right
 				if(global.controlRight[i]){
@@ -111,11 +120,11 @@ switch(global.mode){
 				else{
 					alarm[i+1] = -1;
 				}
-				
+
 			}
 		
 			//select pressed
-			if(global.controlSelectPressed[i] or global.controlShootPressed[i]){
+			if(global.controlSelectPressed[i] or global.controlShootPressed[i] and !global.playerSelectionReady[i]){
 					
 				if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
 						
@@ -217,32 +226,6 @@ switch(global.mode){
 			room_speed = 60;	
 		}
 		
-		
-		/*
-		var isResync = false;
-		var closestResyncTime = global.timeTotal;
-		var playerControlCount = 0;
-		with(obj_player){
-			if(playerControl and resyncTime-global.timeCurrent>0 and resyncTime-global.timeCurrent<closestResyncTime and closestResyncTime != global.timeTotal+1){
-				closestResyncTime = resyncTime-global.timeCurrent;
-			}
-			if(playerControl){
-				playerControlCount++;	
-			}
-			if(resyncTime<3){
-				closestResyncTime = global.timeTotal+1;	
-			}
-		}
-		
-		if((closestResyncTime > 0 and closestResyncTime< global.timeTotal) or playerControlCount = 0 and !global.controlSelect[0] and !global.controlSelect[1]){
-			//speed up - nothing here yet
-			room_speed = 90;
-		}
-		else{
-			//normal - nothing here yet
-			room_speed = 60;
-		}
-		*/
 		
 
 		//zone shrinking
@@ -359,6 +342,36 @@ switch(global.mode){
 						shotFromX = lengthdir_x(-10,point_direction(x,y,room_width/2,room_height/2));
 						shotFromY = lengthdir_y(-10,point_direction(x,y,room_width/2,room_height/2));
 					}
+					
+				}
+				else{
+					with(obj_player){
+		
+						//force player desync
+						event_user(7);
+		
+						//create desync effect
+						event_user(8);
+		
+		
+						//stop reloading
+						if(reloading){
+							audio_stop_sound(reloadingSound);
+						}
+
+						//create ghost for camera to follow
+						if(playerControl){
+							with(instance_create_depth(x,y,0,obj_player_ghost)){
+								teamNumber = other.teamNumber;
+								global.playerControlObject[teamNumber] = id;
+								imageAngle = other.imageAngle;
+								status = "desynchronized";
+							}
+						}
+		
+		
+					}
+					
 				}
 				
 				
@@ -395,9 +408,6 @@ switch(global.mode){
 		
 			//end round
 			event_user(1);
-	
-			//begin new round
-			event_user(0);
 	
 			global.mode = "fade in";
 			with(obj_fade_controller){

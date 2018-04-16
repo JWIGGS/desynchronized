@@ -34,8 +34,8 @@ with(obj_player){
 targetX = targetXSum/totalTarget;
 targetY = targetYSum/totalTarget;
 
-x += smooth_to_target(targetX,x,50);
-y += smooth_to_target(targetY,y,50);
+x += smooth_to_target(targetX,x,75);
+y += smooth_to_target(targetY,y,75);
 
 var distanceX = (largeX-smallX)+256;
 var distanceY = (largeY-smallY)+256;
@@ -51,7 +51,7 @@ else{
 	zoom = zoomY;	
 }
 
-targetZoom += smooth_to_target(zoom,targetZoom,20);
+targetZoom += smooth_to_target(zoom,targetZoom,50);
 
 if(totalTarget !=0){
 	camera_movement(view_camera[7],displayWidth,displayHeight,targetZoom);

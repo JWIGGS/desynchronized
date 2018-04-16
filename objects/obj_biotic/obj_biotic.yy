@@ -1,33 +1,14 @@
 {
-    "id": "e8b5d130-bd79-4166-a27d-9edccfc8a9fd",
+    "id": "f098c5cb-0a06-44ea-86e2-eed36f7b6a1a",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "obj_biotic",
     "eventList": [
-        {
-            "id": "c9c022e0-6f25-4c85-92e0-0e67a89dd373",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "e8b5d130-bd79-4166-a27d-9edccfc8a9fd"
-        },
-        {
-            "id": "21c2e46a-3c7e-4b53-b389-2ae6c2c0e179",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 10,
-            "eventtype": 7,
-            "m_owner": "e8b5d130-bd79-4166-a27d-9edccfc8a9fd"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "60bb01f1-a86e-4741-b4fb-50c45daaebbc",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

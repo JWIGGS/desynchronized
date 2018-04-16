@@ -49,15 +49,20 @@ else if(throwableActive){
 	
 if(throwableWeapon = ""){
 	
-	crosshairLength += smooth_to_target(raycast(x,y,imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable)-16,crosshairLength,10);
+	var crosshairDelta = raycast_length(rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"x"),rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"y"),imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable);
+		
+	crosshairLength += smooth_to_target(crosshairDelta,crosshairLength,10);
+		
 	var crosshairAngle = 0;
 		
 	if(reloading){
 		crosshairAngle = (alarm[0]/weapon_get_data(weaponDataReloadTime,weapon)) * weapon_get_data(weaponDataCrosshairAngle,weapon);
 	}
 
-	var drawX = uiCenterX+weapon_get_data(weaponDataOffsetY,weapon);
-	var drawY = displayHeight-64 - (crosshairLength);
+	var drawX = uiCenterX+(weapon_get_data(weaponDataOffsetX,weapon)/2);
+	var drawY = displayHeight-140 - (crosshairLength);
+		
+	drawY = clamp(drawY,32,displayHeight-sprite_get_height(spr_ui_bar)-8);
 	
 	draw_sprite_ext(asset_get_index("spr_crosshair_"+weapon_get_data(weaponDataCrosshair,weapon)),0,drawX,drawY,1.2,1.2,crosshairAngle,global.color[teamNumber],boolean_return(reloading,.5,1));
 

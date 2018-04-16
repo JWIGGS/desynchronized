@@ -65,6 +65,12 @@ array_fill_1d(global.playerSelection,global.players,0);
 global.playerEndHealth[0] = 0;
 array_fill_1d(global.playerEndHealth,global.roundTotal*global.players,0);
 
+global.playerEndWeapon[0] = "";
+array_fill_1d(global.playerEndWeapon,global.roundTotal*global.players,"");
+
+global.playerEndAmmo[0] = 0;
+array_fill_1d(global.playerEndAmmo,global.roundTotal*global.players,0);
+
 global.weaponPlayerSpawn[0] = "pistol";
 array_fill_1d(global.weaponPlayerSpawn,global.roundTotal,"pistol");
 

@@ -1,10 +1,16 @@
 /// @description collision checking and bullet effect
 
+
+
 flightTime++;
 spd = clamp(spd+.2,0,10);
 
 xSpd = lengthdir_x(spd,angle);
 ySpd = lengthdir_y(spd,angle);
+
+if(point_distance(startX,startY,x,y)>weapon_get_data(weaponDataRangeMax,weapon)){
+	event_user(5);
+}
 
 var distance = 0;
 
@@ -32,7 +38,7 @@ while(distance<spd){
 	
 	}
 	
-	distance += spd;
+	distance ++;
 
 }
 
@@ -43,11 +49,5 @@ if(x<0 or x>room_width or y<0 or y>room_height){
 x += xSpd;
 y += ySpd;
 
-repeat(irandom_range(5,8)){
-	with(instance_create_depth(rotate_around_point(x-16+random_range(-3,3),y+random_range(-3,3),x,y,image_angle+90,"x"),rotate_around_point(x-16+random_range(-3,3),y+random_range(-3,3),x,y,image_angle+90,"y"),depth,obj_fire_effect)){
-		image_angle = other.angle+random_range(-10,10);
-	}
-	
-}
 
 

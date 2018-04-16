@@ -14,10 +14,13 @@ switch(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),
 		
 		}
 		else{
+			
+			//desync due to end of previous round
+			event_user(7);	
+			
 			//create desync animation
 			event_user(8);
-			//desync due to end of previous round
-			instance_destroy();	
+			
 		}
 	
 		break;
@@ -37,11 +40,14 @@ switch(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),
 		if(global.timeCurrent>1){
 			
 			if(weapon != global.playerWeapon[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent-1] or throwableWeapon != global.playerThrowable[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent-1]){
-			
+
+				
 				//force desync
 				event_user(7);
+				
 				//create desync animation
 				event_user(8);
+				
 				exit;
 			
 			}
@@ -71,13 +77,19 @@ switch(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),
 		
 
 		//check for walking through walls
-		if(place_meeting(x,y,par_collideable) or place_meeting(x,y,par_indestructable)){
-			
-			//force desync
-			event_user(7);
-			//create desync animation
-			event_user(8);
-			exit;
+		if(global.timeCurrent>1){
+			if((place_meeting(global.playerX[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent-1],global.playerY[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent-1],par_collideable) or place_meeting(global.playerX[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent-1],global.playerY[value_to_1d(playerNumber,teamNumber,global.roundTotal),global.timeCurrent-1],par_indestructable))){
+				
+				
+				//force desync
+				event_user(7);
+				
+				//create desync animation
+				event_user(8);
+
+				
+				exit;
+			}
 		}
 		
 		

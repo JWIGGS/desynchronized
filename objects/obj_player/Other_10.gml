@@ -1,6 +1,7 @@
 /// @description movement and aiming player control
 
-
+var xPrev = x;
+var yPrev = y;
 	
 //aiming
 	
@@ -49,3 +50,8 @@ y += ySpd;
 
 x = clamp(x,0,room_width);
 y = clamp(y,0,room_height);
+
+if(place_meeting(x,y,par_collideable) or place_meeting(x,y,par_indestructable)){
+	x = xPrev;
+	y = yPrev;
+}

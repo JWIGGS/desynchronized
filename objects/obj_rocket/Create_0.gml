@@ -12,3 +12,5 @@ flightTime = 0;
 coverObject = -1;
 
 sndFly = audio_play_sound_player(snd_rocket_fly,1);
+startX = x;
+startY = y;

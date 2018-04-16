@@ -40,6 +40,7 @@ if(playerControl){
 		global.playerControlObject[teamNumber] = id;
 		imageAngle = other.imageAngle;
 		status = "dead";
+		alarm[0] = 10;
 	}
 }
 

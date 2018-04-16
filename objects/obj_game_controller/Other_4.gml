@@ -5,6 +5,8 @@ with(obj_loading_controller){
 	loading = false;	
 }
 
+room_speed = 60;
+
 
 if(room != rm_game_setup){
 	
@@ -14,8 +16,8 @@ if(room != rm_game_setup){
 		randomize();
 		
 		//set random zone center
-		global.zoneX = irandom_range(128,room_width-128);
-		global.zoneY = (room_height-global.zoneX)+irandom_range(-256,256);
+		global.zoneX = irandom_range(256,room_width-256);
+		global.zoneY = clamp((room_height-global.zoneX)+irandom_range(-256,256),256,room_height-256);
 		
 		//set random weapon spawn
 		with(obj_weapon_spawner){

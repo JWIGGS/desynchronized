@@ -74,14 +74,23 @@ if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),glob
 	
 	//main weapon
 	if(throwableWeapon = ""){
-		if(alarm[0] = -1 or weapon_get_data(weaponDataDamage,weapon) = 0){
-			draw_sprite_ext(asset_get_index("spr_ui_weapon_"+weapon),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,alpha);
+		
+		//preview weapon
+		if(global.mode = "selection" and resyncTime!=-1 and global.playerEndWeapon[value_to_1d(playerNumber,teamNumber,global.roundTotal)]!=""){
+			draw_sprite_ext(asset_get_index("spr_ui_weapon_"+global.playerEndWeapon[value_to_1d(playerNumber,teamNumber,global.roundTotal)]),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,alpha);
 		}
-		else if(reloading){
-			draw_sprite_ext(asset_get_index("spr_ui_weapon_"+weapon),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,.25+(.5*(1-((alarm[0]/weapon_get_data(weaponDataReloadTime,weapon))/2))));
-		}
+		
+		//actual weapon
 		else{
-			draw_sprite_ext(asset_get_index("spr_ui_weapon_"+weapon),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,.25+(.5*(1-(alarm[0]/weapon_get_data(weaponDataRof,weapon)))));
+			if(alarm[0] = -1 or weapon_get_data(weaponDataDamage,weapon) = 0){
+				draw_sprite_ext(asset_get_index("spr_ui_weapon_"+weapon),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,alpha);
+			}
+			else if(reloading){
+				draw_sprite_ext(asset_get_index("spr_ui_weapon_"+weapon),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,.25+(.5*(1-((alarm[0]/weapon_get_data(weaponDataReloadTime,weapon))/2))));
+			}
+			else{
+				draw_sprite_ext(asset_get_index("spr_ui_weapon_"+weapon),0,uiCenterX+(uiCenterDirection*240),displayHeight-8,-4*uiCenterDirection,4,0,c_white,.25+(.5*(1-(alarm[0]/weapon_get_data(weaponDataRof,weapon)))));
+			}
 		}
 	}
 	//throwable weapon
@@ -98,10 +107,23 @@ if(global.playerMode[value_to_1d(playerNumber,teamNumber,global.roundTotal),glob
 	
 	//ammo - no throwable weapon
 	if(throwableWeapon = ""){
-		if(weapon_get_data(weaponDataClip,weapon) !=0){
-			draw_text_formatting(c_white,2-(teamNumber*2),fa_middle,font_12);
-			draw_text(uiCenterX+(uiCenterDirection*240),displayHeight-16,string(clipCurrent)+"/"+string(clipSize))
+		
+		//preview ammo
+		if(global.mode = "selection" and resyncTime!=-1){
+			if(global.playerEndWeapon[value_to_1d(playerNumber,teamNumber,global.roundTotal)]!= "" and weapon_get_data(weaponDataClip,global.playerEndWeapon[value_to_1d(playerNumber,teamNumber,global.roundTotal)]) !=0){
+				draw_text_formatting(c_white,2-(teamNumber*2),fa_middle,font_12);
+				draw_text(uiCenterX+(uiCenterDirection*240),displayHeight-16,string(global.playerEndAmmo[value_to_1d(playerNumber,teamNumber,global.roundTotal)])+"/"+string(weapon_get_data(weaponDataClip,global.playerEndWeapon[value_to_1d(playerNumber,teamNumber,global.roundTotal)])))
+			}
 		}
+		//actual ammo
+		else{
+			if(weapon_get_data(weaponDataClip,weapon) !=0){
+				draw_text_formatting(c_white,2-(teamNumber*2),fa_middle,font_12);
+				draw_text(uiCenterX+(uiCenterDirection*240),displayHeight-16,string(clipCurrent)+"/"+string(clipSize));
+			
+			}
+		}
+		
 	}
 	//throwable timer
 	else if(throwableActive){
@@ -164,8 +186,11 @@ if(global.mode!="selection in" and global.mode!="selection" and global.mode!="se
 	}
 	
 	if(throwableWeapon = "" and !global.controlLook[teamNumber]){
-	
-		crosshairLength += smooth_to_target(raycast(x,y,imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable)-16,crosshairLength,10);
+
+		var crosshairDelta = raycast_length(rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"x"),rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"y"),imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable);
+		
+		crosshairLength += smooth_to_target(crosshairDelta,crosshairLength,10);
+		
 		var crosshairAngle = 0;
 		
 		if(reloading){
@@ -174,7 +199,8 @@ if(global.mode!="selection in" and global.mode!="selection" and global.mode!="se
 
 		var drawX = uiCenterX+(weapon_get_data(weaponDataOffsetX,weapon)/2);
 		var drawY = displayHeight-140 - (crosshairLength*2);
-	
+		
+		drawY = clamp(drawY,32,displayHeight-sprite_get_height(spr_ui_bar)-8);
 	
 		draw_sprite_ext(asset_get_index("spr_crosshair_"+weapon_get_data(weaponDataCrosshair,weapon)),0,drawX,drawY,1.2,1.2,crosshairAngle,global.color[teamNumber],boolean_return(reloading,.5,1));
 		

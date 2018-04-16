@@ -18,5 +18,14 @@ draw_text(uiCenterX,displayHeight-96,"spectating");
 draw_text_formatting(c_white,fa_center,fa_middle,font_24);
 draw_text(uiCenterX,displayHeight-56,status);
 
+if(alarm[0]>0){
+	draw_set_alpha(clamp(alarm[0]/8,0,1));
+	draw_set_color(c_red)
+	draw_rectangle(teamNumber*(displayWidth/2),0,(teamNumber*(displayWidth/2))+(displayWidth/2),displayHeight,false);
+	
+	draw_set_alpha(1);
+}
+
+
 	
 	

@@ -80,16 +80,16 @@ if(selectPressed){
 			audio_play_sound(snd_selected,1,false);
 		
 			global.friendlyFire = false;
-			global.roundTotal = 3;
+			global.roundTotal = 5;
 			global.players = 2;
-			global.timeTotal = (30*60) + 2; //30 seconds
+			global.timeTotal = (60*60) + 2; //30 seconds
 			global.zone = true;
 			global.multiplierHealth = 1;
 			global.multiplierDamage = 1;
 			global.multiplierSpeed = 1;
-			global.weaponSpawnChance = 1;
+			global.weaponSpawnChance = .7;
 			global.spawnStaggered = false;
-			global.healthRegen = false;
+			global.healthRegen = true;
 			
 			menuScreen = "map";
 		

@@ -63,6 +63,7 @@ else if(global.mode = "selection in" or global.mode = "selection" or global.mode
 }
 
 
+
 if(global.mode = "selection out"){
 	alpha = 1;	
 }

@@ -145,6 +145,39 @@ else{
 					draw_text(uiCenterX,displayHeight/2,"select timeline");
 				}
 				
+				for(var j = 0; j <global.roundTotal; j++){
+					
+					var drawWeapon = global.playerEndWeapon[value_to_1d(j,i,global.roundTotal)];
+					
+					if(drawWeapon = ""){
+						drawWeapon = global.weaponPlayerSpawn[j];	
+					}
+					
+					var selected = false;
+					with(obj_player){
+						if(playerControl and playerNumber = j and teamNumber = i){
+							selected = true;	
+						}
+					}
+					
+					
+					if(global.playerMode[value_to_1d(j,i,global.roundTotal),global.timeMax]="dead"){
+						draw_sprite_ext(spr_active_throwable_indicator,0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),0,c_white,.5);
+					}
+					else{
+						draw_sprite_ext(spr_player_indicator,0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),0,global.color[i],.5 + (.25*selected));
+					}
+					
+					
+					draw_sprite_ext(asset_get_index("spr_player_stance_"+weapon_get_data(weaponDataStance,drawWeapon)),0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,2,2,90,global.color[i],1);
+					draw_sprite_ext(asset_get_index("spr_player_"+drawWeapon),0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,2,2,90,c_white,1);
+					draw_sprite_ext(spr_player_hair,global.hairPlayerSpawn[j],uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,2,2,90,c_white,1);
+
+					
+					
+					
+				}
+				
 
 				
 				break;

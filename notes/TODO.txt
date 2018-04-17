@@ -1,9 +1,14 @@
 BUGS:
 
+custom battle mouse interaction with menuis buggy
+
+
 minor:
 
 game sometimes lags in countdown
+
 dying to zone in overview becomes a desync
+
 sometime you resync into instant death - due to future predictions
 	desyncing freezes you for .5 seconds
 	play animation during overview
@@ -13,20 +18,14 @@ major:
 
 
 TODO:
-timeline player status at top
+
+add healthbars to timeline status
 
 add fire effect to rocket
 
-
-
-
 Healthbars in overview round
 
-
-
 Grenade crosshair
-
-
 
 pause menu mouse interaction
 
@@ -42,11 +41,6 @@ Tutorial Map from How to play
 	Zooming
 	Using Grenades
 	Using Cover
-
-
-Status Effects?
-	Fire - from fire weapons
-	Bubble - prevents an instance of damage
 
 Maps
 	Park

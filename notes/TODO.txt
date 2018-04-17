@@ -2,10 +2,9 @@ BUGS:
 
 custom battle mouse interaction with menuis buggy
 
+if resync is less than 1, then player indicator is massive
 
 minor:
-
-game sometimes lags in countdown
 
 dying to zone in overview becomes a desync
 
@@ -19,17 +18,9 @@ major:
 
 TODO:
 
-add healthbars to timeline status
-
-add fire effect to rocket
-
 Healthbars in overview round
 
-Grenade crosshair
-
 pause menu mouse interaction
-
-glass shatter sound
 
 
 Tutorial Map from How to play

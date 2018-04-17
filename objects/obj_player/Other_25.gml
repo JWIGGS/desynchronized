@@ -184,15 +184,17 @@ if(alarm[7] = 0){
 
 				aiTargetX = lengthdir_x(-targetRange,targetAngle);
 				aiTargetY = lengthdir_y(-targetRange,targetAngle);
-			
+				
+				if(point_distance(x,y,runFrom.x,runFrom.y) >runFromRange){
+					aiMode = "tactical";	
+				}
+				
 			}
 			else{
 				aiMode = "tactical";
 			}
 			
-			if(point_distance(x,y,runFrom.x,runFrom.y) >runFromRange){
-				aiMode = "tactical";	
-			}
+			
 			break;
 			
 		case "zone":

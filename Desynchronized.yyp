@@ -2452,6 +2452,25 @@
             }
         },
         {
+            "Key": "40e293c6-b3be-41d9-9807-20c9c65d80d7",
+            "Value": {
+                "id": "24891f1c-2b9c-486c-8bd1-13fc0de68e5e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_glass_shatter\/snd_glass_shatter.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "41e71790-b4d6-48ba-9ce0-1fca08f46382",
             "Value": {
                 "id": "146a43ea-d635-43f1-be9e-78e66069e2ff",

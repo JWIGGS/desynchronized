@@ -136,6 +136,19 @@ else{
 				
 				
 			case "selection":
+			case "selection in":
+			case "selection out":
+				
+				var alpha = 1;
+				
+				if(global.mode = "selection in"){
+					alpha = 1-(alarm[0]/10);
+				}
+				else if(global.mode = "selection out"){
+					alpha = alarm[0]/10;
+				}
+				
+				draw_set_alpha(alpha)
 			
 				draw_text_formatting(c_white,fa_center,fa_middle,font_24);
 				if(global.playerSelectionReady[i]){
@@ -162,22 +175,23 @@ else{
 					
 					
 					if(global.playerMode[value_to_1d(j,i,global.roundTotal),global.timeMax]="dead"){
-						draw_sprite_ext(spr_active_throwable_indicator,0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),0,c_white,.5);
+						draw_sprite_ext(spr_active_throwable_indicator,0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),(displayHeight/2)+64,1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),0,c_white,.5*alpha);
 					}
 					else{
-						draw_sprite_ext(spr_player_indicator,0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),0,global.color[i],.5 + (.25*selected));
+						draw_sprite_ext(spr_player_indicator,0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),(displayHeight/2)+64,1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),1.5+boolean_return(selected,.5+wave(-.2,.2,3,0),0),0,global.color[i],(.5 + (.25*selected))*alpha);
 					}
 					
 					
-					draw_sprite_ext(asset_get_index("spr_player_stance_"+weapon_get_data(weaponDataStance,drawWeapon)),0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,2,2,90,global.color[i],1);
-					draw_sprite_ext(asset_get_index("spr_player_"+drawWeapon),0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,2,2,90,c_white,1);
-					draw_sprite_ext(spr_player_hair,global.hairPlayerSpawn[j],uiCenterX - (32*(global.roundTotal-1)) + (64*j),64,2,2,90,c_white,1);
+					draw_sprite_ext(asset_get_index("spr_player_stance_"+weapon_get_data(weaponDataStance,drawWeapon)),0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),(displayHeight/2)+64,2,2,90,global.color[i],alpha);
+					draw_sprite_ext(asset_get_index("spr_player_"+drawWeapon),0,uiCenterX - (32*(global.roundTotal-1)) + (64*j),(displayHeight/2)+64,2,2,90,c_white,alpha);
+					draw_sprite_ext(spr_player_hair,global.hairPlayerSpawn[j],uiCenterX - (32*(global.roundTotal-1)) + (64*j),(displayHeight/2)+64,2,2,90,c_white,alpha);
 
 					
 					
 					
 				}
 				
+				draw_set_alpha(1);
 
 				
 				break;

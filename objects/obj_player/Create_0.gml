@@ -5,8 +5,8 @@ event_inherited();
 xSpd = 0;
 ySpd = 0;
 
-spdWalk= 1.5*global.multiplierSpeed;
-spdAim = 1.4*global.multiplierSpeed;
+spdWalk= 1.3*global.multiplierSpeed;
+spdAim = 1.2*global.multiplierSpeed;
 
 //angle
 imageAngle = 0;

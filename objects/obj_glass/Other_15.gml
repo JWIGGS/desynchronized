@@ -1,5 +1,7 @@
 /// @description 
 
+audio_play_sound_player(snd_glass_shatter,false);
+
 setForDestruction = true;
 
 top = instance_place(x,y-1,object_index);

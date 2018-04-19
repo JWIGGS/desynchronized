@@ -153,7 +153,7 @@ for(var i = 0; i<2; i++){
 	draw_text(uiCenterX,drawY,global.controlText[global.controlType[i]]);
 	drawY += 64;
 			
-	if(global.controlType[i]!= control_none){	
+	if(global.controlType[i]!= control_bot_easy and global.controlType[i] != control_bot_hard){	
 		
 		for(var j = 0; j<9; j++){
 			//type

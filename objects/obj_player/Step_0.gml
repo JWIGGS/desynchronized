@@ -6,7 +6,11 @@ if(global.mode = "play"){
 		if(global.timeCurrent>playerNumber*60 or !global.spawnStaggered){
 			
 			//ai
-			if(global.controlType[teamNumber] = control_none){
+			if(global.controlType[teamNumber] = control_bot_easy){
+				event_user(14);	
+			}
+			
+			if(global.controlType[teamNumber] = control_bot_hard){
 				event_user(15);	
 			}
 			

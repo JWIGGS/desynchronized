@@ -25,6 +25,13 @@ if(downPressed){
 //clamp selection
 customSelected = clamp(customSelected,0,customTextAmount-1);
 
+if(mouse_wheel_up()){
+	customPosition = clamp(customPosition+1,0,customTextAmount - customHeight);
+}
+if(mouse_wheel_down()){
+	customPosition = clamp(customPosition-1,0,customTextAmount - customHeight);
+}
+
 //selection movement
 if(customSelected> customPosition+customHeight-1){
 	customPosition ++;	
@@ -285,7 +292,7 @@ for(var i = customPosition; i<customPosition+customHeight; i++){
 	
 	draw_text_formatting(c_white,fa_center,fa_middle,font_24);
 	
-	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,144 + (64*i)-24,displayWidth,144 + (64*i) +24)){
+	if(alarm[4] !=-1 and point_in_rectangle(mouse_x,mouse_y,0,144 + (64*(i-customPosition))-24,displayWidth,144 + (64*(i-customPosition)) +24)){
 		customSelected = i;
 	}
 	

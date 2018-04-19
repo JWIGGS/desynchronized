@@ -21,7 +21,8 @@ if(alarm[7] = 0){
 	if(point_distance(x,y,aiTargetX,aiTargetY)<weapon_get_data(weaponDataRangeMax,weapon) and point_distance(x,y,aiTargetX,aiTargetY)>weapon_get_data(weaponDataRangeAoe,weapon)){
 		aiFire = true;
 	}
-	if(collision_line(x,y,aiTargetX,aiTargetY,obj_glass,true,true) or collision_line(x,y,aiTargetX,aiTargetY,obj_ice,true,true)){
+
+	if(collision_line(x,y,aiTargetX,aiTargetY,obj_glass,true,true)!=noone or collision_line(x,y,aiTargetX,aiTargetY,obj_ice,true,true)!=noone){
 		aiFire = true;	
 	}
 	
@@ -222,7 +223,11 @@ if(alarm[7] = 0){
 	
 
 	mp_grid_add_instances(aiMap,par_avoid,true);
-
+	
+	
+	if(raycast_length(x,y,imageAngle,1024,par_collideable)<weapon_get_data(weaponDataRangeAoe,weapon)*2){
+		aiFire = false;
+	}
 	
 	
 	

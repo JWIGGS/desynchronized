@@ -53,12 +53,19 @@ switch(global.mode){
 			if(!global.playerSelectionReady[i]){
 				
 				//ai select
-				if(global.controlType[i] = control_none){
+				
+				if(global.controlType[i] = control_bot_easy){
+					if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
+						global.controlSelectPressed[i] = random_chance(.1);
+					}
 					global.controlRight[i] = true;
+				}
+				
+				if(global.controlType[i] = control_bot_hard){
 					if(global.playerMode[value_to_1d(global.playerSelection[i],i,global.roundTotal),global.timeMax]!="dead"){
 						global.controlSelectPressed[i] = random_chance(.3);
 					}
-					
+					global.controlRight[i] = true;
 				}
 					
 				//right

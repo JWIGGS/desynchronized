@@ -1,27 +1,19 @@
-BUGS:
+BUGS
 
-custom battle mouse interaction with menuis buggy
+sometime when players are supposed to die they desync instead
 
-if resync is less than 1, then player indicator is massive
+sometime you resync into instant death
 
-minor:
+sometimes you get desynced into a blank screen where obj_player_desync was not created
 
-dying to zone in overview becomes a desync
+background music is still messed up
 
-sometime you resync into instant death - due to future predictions
-	desyncing freezes you for .5 seconds
-	play animation during overview
-
-major:
-
-
+glass sound is too loud
 
 TODO:
-
 Healthbars in overview round
 
 pause menu mouse interaction
-
 
 Tutorial Map from How to play
 	Selecting Timeline
@@ -45,14 +37,12 @@ Maps
 		small lake
 		Mud
 
-
 	Wareshouse
 		Crate
 		Forklift car
 		Explosives
 		Crate Container
 		Long Semi truck
-		Conveyor
 
 Research Lab
 

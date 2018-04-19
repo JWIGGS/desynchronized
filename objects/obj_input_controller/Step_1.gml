@@ -2,7 +2,8 @@
 global.controlAvailable[control_gamepad0] = gamepad_is_connected(0);
 global.controlAvailable[control_gamepad1] = gamepad_is_connected(1);
 global.controlAvailable[control_keyboard] = true;
-global.controlAvailable[control_none] = true;
+global.controlAvailable[control_bot_easy] = true;
+global.controlAvailable[control_bot_hard] = true;
 
 if(global.controlAvailable[global.controlSaved[0]] and global.controlAvailable[global.controlSaved[1]]){
 	global.controlType[0] = global.controlSaved[0];
@@ -276,7 +277,7 @@ for(var i = 0; i<2; i++){
 		}
 		
 		else{
-			global.controlType[i] = control_none;	
+			global.controlType[i] = control_bot_easy;	
 		}	
 		
 		

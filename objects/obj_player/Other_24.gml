@@ -131,9 +131,16 @@ if(aiFire){
 	global.controlShootPressed[teamNumber] = random_chance(.7);	
 	global.controlShoot[teamNumber] = global.controlShootPressed[teamNumber];
 }
+
+var xPrev = x;
+var yPrev = y;
+
 mp_potential_step_object(aiTargetX,aiTargetY,moveSpd,par_collideable);	
 
-
+if(place_meeting(x,y,par_collideable) or place_meeting(x,y,par_indestructable)){
+	x = xPrev;
+	y = yPrev;
+}
 
 
 

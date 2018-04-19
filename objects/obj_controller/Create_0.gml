@@ -58,7 +58,8 @@ global.healthRegen = false;
 global.map[0] = "neighborhood";
 global.map[1] = "mansion";
 global.map[2] = "office";
-global.mapAmount = 3;
+global.map[3] = "warehouse";
+global.mapAmount = 4;
 global.mapSelected = 0;
 
 

@@ -4504,6 +4504,25 @@
             }
         },
         {
+            "Key": "7acd00f2-02e9-4464-95bd-bd7c31d7d6d3",
+            "Value": {
+                "id": "ddd9c6e9-941c-41dc-99ed-50e90953043e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_ui_tutorial\/spr_ui_tutorial.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7b4e0d6b-f5c3-4ba3-8513-863ad2136873",
             "Value": {
                 "id": "0edfe3a1-0e70-4258-b682-e64c6293775f",
@@ -8434,6 +8453,25 @@
                 ],
                 "resourcePath": "scripts\/array_fill_1d\/array_fill_1d.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e0ad5065-f2b8-4bf4-a806-5d0b48712359",
+            "Value": {
+                "id": "cbbafd51-03bc-43da-87e5-d96ef15c2ceb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/par_crate\/par_crate.yy",
+                "resourceType": "GMObject"
             }
         },
         {

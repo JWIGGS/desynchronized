@@ -15,16 +15,6 @@ Healthbars in overview round
 
 pause menu mouse interaction
 
-Tutorial Map from How to play
-	Selecting Timeline
-	Aiming
-	Moving
-	Shooting
-	Reloading
-	Zooming
-	Using Grenades
-	Using Cover
-
 Maps
 	Park
 		Benches

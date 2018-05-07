@@ -219,18 +219,14 @@ playSelected = 0;
 
 tutorialScreen = 0;
 tutorialTitle[0] = "controls";
-tutorialTitle[1] = "rules";
+tutorialTitle[1] = "select a timeline to play each round";
+tutorialTitle[2] = "your actions are recorded to the timeline";
+tutorialTitle[3] = "previous timeline will play out simultaneously";
+tutorialTitle[4] = "you get desynchronized when things have changed";
+tutorialTitle[5] = "eliminate all of your opponents to win";
 
-tutorialScreenAmount = 2;
+tutorialScreenAmount = 6;
 
-rulesText[0] = "You control a new character each round.";
-rulesText[1] = "Your actions are recorded to the timeline.";
-rulesText[2] = "Previously controlled characters play back their timeline while you control new characters.";
-rulesText[3] = "Characters are desynchronized when their life, weapon, or position do not match the timeline.";
-rulesText[4] = "Desynchronized timelines are resynchronized in their own rounds before controlling new characters.";
-rulesText[5] = "Eliminate all the opposing team to end each round and ultimately win the game.";
-
-rulesTextAmount = 6;
 
 
 //preset texts

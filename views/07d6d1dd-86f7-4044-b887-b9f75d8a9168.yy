@@ -46,7 +46,8 @@
         "8e14bbd7-8afe-4b07-b162-f808ec4b44ec",
         "2f5d24e9-ed9f-43dd-8d0a-320244bff69c",
         "cdd06aba-e890-479d-8817-1f39f57b197d",
-        "2aeda310-2882-42df-b299-a13baccda15b"
+        "2aeda310-2882-42df-b299-a13baccda15b",
+        "e0ad5065-f2b8-4bf4-a806-5d0b48712359"
     ],
     "filterType": "GMObject",
     "folderName": "cover",

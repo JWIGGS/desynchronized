@@ -34,45 +34,49 @@ tutorialScreen = wrap(tutorialScreen,0,tutorialScreenAmount);
 //							//
 //////////////////////////////
 
-//title
-draw_text_formatting(c_white,fa_center,fa_middle,font_36);
-draw_text(displayWidth/2,128,tutorialTitle[tutorialScreen]);
+
 
 //tutorial pages
 switch(tutorialScreen){
 	
+	
+	
 	//controls overlay on gamepad
 	case 0:
-		draw_sprite(spr_ui_gamepad,0,displayWidth/2,displayHeight/2);
+	
+		//title
+		draw_text_formatting(c_white,fa_center,fa_middle,font_36);
+		draw_text(displayWidth/2,128,tutorialTitle[tutorialScreen]);
+		
+		draw_sprite(spr_ui_gamepad,0,displayWidth/2,(displayHeight/2)+100);
 		
 		draw_text_formatting(c_white,fa_center,fa_middle,font_24);
-		draw_text(590,448,"aim");
+		draw_text(590,550,"aim");
 		
-		draw_text(380,380,"move");
+		draw_text(380,484,"move");
 		
 		draw_text_formatting(c_white,fa_left,fa_middle,font_24);
-		draw_text(672,212,"shoot");
+		draw_text(572,260,"RT - shoot/throw");
+		draw_text(572,300,"RB - zoom");
+		
 		
 		draw_text_formatting(c_white,fa_right,fa_middle,font_24);
-		draw_text(352,212,"pickup/reload");
+		draw_text(452,260,"LT - reload");
+		draw_text(452,300,"Lb - pickup/prime");
 		
 		break;
 		
 		
 	//rules
-	case 1:
+	default:
 	
-		draw_text_formatting(c_white,fa_left,fa_middle,font_16);
-		
-		for(var i = 0; i<rulesTextAmount; i++){
-			
-			draw_text_ext(128,256+(i*64),rulesText[i],24,768);
-			
-		}
+		//title
+		draw_text_formatting(c_white,fa_center,fa_middle,font_24);
+		draw_text(displayWidth/2,128,tutorialTitle[tutorialScreen]);
+	
+		draw_sprite_ext(spr_ui_tutorial,tutorialScreen-1,displayWidth/2,displayHeight/2,.25,.25,0,c_white,1);
 	
 		break;
 	
-	
-	
-	
 }
+

@@ -187,8 +187,60 @@ if(global.mode!="selection in" and global.mode!="selection" and global.mode!="se
 	}
 	
 	if(throwableWeapon = "" and !global.controlLook[teamNumber]){
+		
+		var range = weapon_get_data(weaponDataRangeMax,weapon)*2;
+		
+		list = raycast_object_list(rotate_around_point(x+weapon_get_data(weaponDataOffsetY,weapon),y,x,y,imageAngle,"x"),rotate_around_point(x+weapon_get_data(weaponDataOffsetY,weapon),y,x,y,imageAngle,"y"),imageAngle,range,par_destructable)
+		
+		var coverObject = -1;
+		
+		for(var i = 0; i<array_height_2d(list); i++){
+			collisionObject = list[i,0];
+	
+			if(collisionObject != noone and instance_exists(collisionObject) and collisionObject!=id and ((instance_exists(coverObject) and collisionObject!=coverObject) or !instance_exists(coverObject))){
+		
+				//hit player
+				if(collisionObject.object_index = obj_player){
+			
+					if(collisionObject.teamNumber= teamNumber and weapon_get_data(weaponDataHeal,weapon)){
+						distance = list[i,1];
+						i = array_height_2d(list);
+					}
+			
+					else if(global.friendlyFire or collisionObject.teamNumber!= teamNumber){
+						distance = list[i,1];
+						i = array_height_2d(list);
+					}	
+				}
+				//hit cover
+				else if(object_is_ancestor(collisionObject.object_index,par_cover)){
+			
+					if(list[i,1]>20){
+						distance = list[i,1];
+						i = array_height_2d(list);
+					}
+					else{
+						coverObject = collisionObject;	
+					}
+				}
+				else{
+					distance = list[i,1];
+					i = array_height_2d(list);
+				}
 
-		var crosshairDelta = raycast_length(rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"x"),rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"y"),imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable);
+				distance -= weapon_get_data(weaponDataOffsetX,weapon);
+		
+			}
+			else{
+				distance = range;
+			}
+	
+		}
+
+		
+		
+		
+		var crosshairDelta = distance;//raycast_length(rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"x"),rotate_around_point(x+weapon_get_data(weaponDataOffsetX,weapon),y+weapon_get_data(weaponDataOffsetY,weapon),x,y,imageAngle+90,"y"),imageAngle,weapon_get_data(weaponDataRangeMax,weapon),par_destructable);
 		
 		crosshairLength += smooth_to_target(crosshairDelta,crosshairLength,10);
 		

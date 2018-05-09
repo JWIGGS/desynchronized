@@ -12,7 +12,8 @@
         "29f849f2-aec3-4741-ac05-090f77b32d16",
         "90e35550-1915-491c-a81f-9ad5df8197c3",
         "18425497-b987-44a4-a158-c98bae0c7d0a",
-        "0969bb05-9f2b-466d-90ce-1171674305ee"
+        "0969bb05-9f2b-466d-90ce-1171674305ee",
+        "e57dd2e0-04ea-452c-88fd-1aa58e4f2cee"
     ],
     "filterType": "GMSound",
     "folderName": "background",

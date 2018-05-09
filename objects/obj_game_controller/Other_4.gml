@@ -63,7 +63,7 @@ if(room != rm_game_setup){
 		
 		with(obj_background_controller){
 			//start track
-			event_user(0);
+			event_user(7);
 		}
 		
 		

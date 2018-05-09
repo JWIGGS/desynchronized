@@ -42,3 +42,5 @@ loopOffset = 0;
 dynamic = 2;
 dynamicDirection = 1;
 dynamicPrev = dynamic;
+
+global.soundBackgroundFull = -1;

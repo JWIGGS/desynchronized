@@ -82,7 +82,7 @@ if(selectPressed){
 			global.friendlyFire = false;
 			global.roundTotal = 5;
 			global.players = 2;
-			global.timeTotal = (60*60) + 2; //30 seconds
+			global.timeTotal = (60*60) + 2; //60 seconds
 			global.zone = true;
 			global.multiplierHealth = 1;
 			global.multiplierDamage = 1;

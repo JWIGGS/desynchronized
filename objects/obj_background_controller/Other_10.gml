@@ -24,3 +24,7 @@ array_fill_1d(global.soundBackgroundId,sndAmount,-1);
 sound_background_play(sndBloop);
 sound_background_play(sndDloop);
 
+if(global.soundBackgroundFull!=-1){
+	audio_stop_sound(global.soundBackgroundFull);
+}
+

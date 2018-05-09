@@ -1407,6 +1407,25 @@
             }
         },
         {
+            "Key": "2836d611-8c93-4361-a0cb-faa580891ee0",
+            "Value": {
+                "id": "bf427161-97be-4b30-91e6-5f4dd0aff9be",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_background5\/snd_background5.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "2843455d-7064-4634-9f9c-3aa22d1799e7",
             "Value": {
                 "id": "1032c17d-269d-4917-85a4-7dc0aa1dc2b9",
@@ -2775,6 +2794,25 @@
             }
         },
         {
+            "Key": "47bbfda6-e361-4f0f-ac73-c4520dda9144",
+            "Value": {
+                "id": "1641bffa-e4f9-43a2-b55f-9c80fa493182",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_background1\/snd_background1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "489f59e3-b7ad-4aaa-ae49-976d269aac66",
             "Value": {
                 "id": "9404154e-7074-43f3-9f99-7a6f72b9a7fc",
@@ -2791,6 +2829,25 @@
                 ],
                 "resourcePath": "sprites\/spr_player_zone\/spr_player_zone.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4a36d3bd-2336-492d-8bd7-ecf458e01513",
+            "Value": {
+                "id": "dd2f8407-3e03-4d3f-b726-386a6202b517",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_background3\/snd_background3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5891,6 +5948,25 @@
             }
         },
         {
+            "Key": "99417bca-4730-4b10-874b-0ab210c31cba",
+            "Value": {
+                "id": "a4e41edd-b65a-4a71-b020-e516c7790fc3",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_background4\/snd_background4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "99c30832-2635-4e72-91a9-3f7a93c2bb04",
             "Value": {
                 "id": "c00c96a6-2590-4cb9-b067-49076e944539",
@@ -7753,6 +7829,25 @@
             }
         },
         {
+            "Key": "cca43dc6-0e96-47c2-88f1-abf1315ac362",
+            "Value": {
+                "id": "7311646e-78f9-4415-92b3-266871583ace",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_background0\/snd_background0.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "cd3fe570-a077-47f9-82cd-a61e7217e43c",
             "Value": {
                 "id": "56fecc75-1ae4-4e26-89e7-312e5b737425",
@@ -8662,6 +8757,44 @@
                 ],
                 "resourcePath": "sprites\/spr_sofa_corner_blue\/spr_sofa_corner_blue.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e55e35ea-962f-4f83-afeb-69871bca7d8c",
+            "Value": {
+                "id": "6b91b7b4-01d4-4a77-9e8e-70c087fd4853",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_background2\/snd_background2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e57dd2e0-04ea-452c-88fd-1aa58e4f2cee",
+            "Value": {
+                "id": "f3ec2312-e3ee-4c93-996b-de8f7aca2112",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\/e57dd2e0-04ea-452c-88fd-1aa58e4f2cee.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

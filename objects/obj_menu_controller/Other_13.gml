@@ -69,12 +69,12 @@ switch(tutorialScreen){
 		
 	//rules
 	default:
+
+		draw_sprite_ext(spr_ui_tutorial,tutorialScreen-1,displayWidth/2,displayHeight/2,.5,.5,0,c_white,1);
 	
 		//title
 		draw_text_formatting(c_white,fa_center,fa_middle,font_24);
 		draw_text(displayWidth/2,128,tutorialTitle[tutorialScreen]);
-	
-		draw_sprite_ext(spr_ui_tutorial,tutorialScreen-1,displayWidth/2,displayHeight/2,.25,.25,0,c_white,1);
 	
 		break;
 	
